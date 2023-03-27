@@ -1,0 +1,100 @@
+site_name: IT Center docs
+site_url: https://avacuum.xyz/
+site_description: Справочник по Python
+site_author: Асет Дюсенов
+copyright: 2020-2020, Школа компьютерных технологий IT Center
+nav:
+    - Старт: index.md
+    - Основы языка Python:
+      - Способы создания переменных: basic/variables.md
+      - Ввод и вывод данных. Функции print() и input(): basic/input.md
+      - If, else, elif: basic/if.md
+      - Цикл while: basic/while-python.md
+      - Цикл for: basic/lesson5-for.md
+      - Типы данных:
+        - Типы данных: basic/datatypes/datatypes-intro.md
+        - Строки: basic/datatypes/lesson6-strings.md
+        - Списки: basic/datatypes/lesson4-lists.md
+        - Кортежи: basic/datatypes/tuples.md
+        - Словари: basic/datatypes/dict.md
+        - Множества: basic/datatypes/set.md
+        - Коллекции: basic/datatypes/collections.md
+      - Срезы: basic/lesson6-slices.md
+      - Исключения. Try, except, finally: basic/exception.md
+      - Функции:
+        - Создание функций: basic/functions/functions.md
+        - args и kwargs: basic/functions/args.md
+        - Рекурсия в функциях: basic/functions/recurtion.md
+      - Файлы:
+        - Открытие и чтение файлов: basic/text_files/files_read.md
+        - Запись в файлы: basic/text_files/files_write.md
+    - Базы данных:
+      - SQL и реляционные базы данных: db/sql.md
+      - SQLite 3: db/sqlite.md
+    - Модули:
+      - Datetime. Работа со временем и датой: modules/datetime.md
+      - Prettytable. Красивые таблицы: modules/prettytable.md
+      - Requests. Запросы: modules/requests.md
+      - Faker. Генерация фейковых данных: modules/faker.md
+      - Virtualenv. Создание виртуального окружения: modules/venv.md
+    - Git:
+      - Git в Windows: git/git_windows.md
+    - Django:
+      - Что такое Django?: django/intro.md
+      - Создание проекта Django: django/init.md
+      - Создание приложения в проекте: django/creating_app.md
+      - Маршрутизация и шаблоны URL: django/routing.md
+      - Переадресация и отправка статусных кодов: django/redirect_and_status.md
+      - Создание моделей: django/creating_models.md
+    - JavaScript:
+      - Работа с DOM деревом: js/dom.md
+
+markdown_extensions:
+    - smarty
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/logo.svg
+  language: ru
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+
+
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+use_directory_urls: true
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+extra:
+  analytics:
+    provider: google
+    property: G-GPHQZETNLC
+  social:
+      - icon: fontawesome/brands/instagram
+        link: 'https://www.instagram.com/it_center_krg/'
+        name: IT Center on instagram
