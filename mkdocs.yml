@@ -1,7 +1,8 @@
 site_name: IT Center docs
+site_url: https://wiki.dyussenov.dev/
 site_description: Справочник по Python
 site_author: Асет Дюсенов
-copyright: 2020-2020, Школа компьютерных технологий IT Center
+copyright: 2020-2023, Школа компьютерных технологий IT Center
 nav:
     - Старт: index.md
     - Основы языка Python:
@@ -31,7 +32,7 @@ nav:
       - SQL и реляционные базы данных: db/sql.md
       - SQLite 3: db/sqlite.md
     - Модули:
-      - Datetime. Работа со временем и датой: modules/datetime.md
+      - Datetime. Работа с временем и датой: modules/datetime.md
       - Prettytable. Красивые таблицы: modules/prettytable.md
       - Requests. Запросы: modules/requests.md
       - Faker. Генерация фейковых данных: modules/faker.md
