@@ -25,6 +25,7 @@ nav:
         - Создание функций: basic/functions/functions.md
         - args и kwargs: basic/functions/args.md
         - Рекурсия в функциях: basic/functions/recurtion.md
+        - Анонимные функции: basic/functions/lambda.md
         - Декораторы: basic/functions/decorators.md
       - Файлы:
         - Открытие и чтение файлов: basic/text_files/files_read.md
