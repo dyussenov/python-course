@@ -19,7 +19,8 @@ nav:
         - Словари: basic/datatypes/dict.md
         - Множества: basic/datatypes/set.md
         - Коллекции: basic/datatypes/collections.md
-      - Срезы: basic/lesson6-slices.md
+        - Срезы: basic/datatypes/lesson6-slices.md
+        - Byte-строки: basic/datatypes/bytestring.md
       - Исключения. Try, except, finally: basic/exception.md
       - Функции:
         - Создание функций: basic/functions/functions.md
