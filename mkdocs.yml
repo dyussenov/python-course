@@ -31,6 +31,8 @@ nav:
       - Файлы:
         - Открытие и чтение файлов: basic/text_files/files_read.md
         - Запись в файлы: basic/text_files/files_write.md
+      - ООП:
+        - Введение в ООП: basic/oop/intro.md
     - Базы данных:
       - SQL и реляционные базы данных: db/sql.md
       - SQLite 3: db/sqlite.md
