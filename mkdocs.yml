@@ -33,6 +33,7 @@ nav:
         - Запись в файлы: basic/text_files/files_write.md
       - ООП:
         - Введение в ООП: basic/oop/intro.md
+        - Классы, объекты, методы: basic/oop/create.md
     - Базы данных:
       - SQL и реляционные базы данных: db/sql.md
       - SQLite 3: db/sqlite.md
