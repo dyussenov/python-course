@@ -22,6 +22,7 @@ nav:
         - Срезы: basic/datatypes/lesson6-slices.md
         - Byte-строки: basic/datatypes/bytestring.md
       - Исключения. Try, except, finally: basic/exception.md
+      - Аннотации типов: basic/typehints.md
       - Функции:
         - Создание функций: basic/functions/functions.md
         - args и kwargs: basic/functions/args.md
