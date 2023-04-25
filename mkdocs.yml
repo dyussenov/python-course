@@ -15,6 +15,7 @@ nav:
         - Типы данных: basic/datatypes/datatypes-intro.md
         - Строки: basic/datatypes/lesson6-strings.md
         - Списки: basic/datatypes/lesson4-lists.md
+        - Генераторы списков: basic/datatypes/comprehensions.md
         - Кортежи: basic/datatypes/tuples.md
         - Словари: basic/datatypes/dict.md
         - Множества: basic/datatypes/set.md
