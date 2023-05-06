@@ -814,10 +814,95 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SQL и реляционные базы данных
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         SQL и реляционные базы данных
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Реляционные базы данных
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql_1" class="md-nav__link">
+    Что такое SQL?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql_2" class="md-nav__link">
+    SQL запросы
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          SQLite 3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SQLite 3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          SQLite 3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sqlite/01_ddl/" class="md-nav__link">
+        DDL запросы. Создание, изменение, удаление таблиц
+      </a>
     </li>
   
 
@@ -830,8 +915,15 @@
   
     <li class="md-nav__item">
       <a href="../sqlite/" class="md-nav__link">
-        SQLite 3
+        Заключение
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1181,6 +1273,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Реляционные базы данных
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql_1" class="md-nav__link">
+    Что такое SQL?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql_2" class="md-nav__link">
+    SQL запросы
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1195,6 +1316,90 @@
 
 
 <h1 id="sql">SQL и реляционные базы данных</h1>
+<h2 id="_1">Реляционные базы данных</h2>
+<p>База данных (далее БД) - это организованная коллекция структурированных данных, которые могут быть легко доступны и управляемы компьютерной системой.</p>
+<p>Из чего состоит база данных: </p>
+<ul>
+<li>
+<p><strong>Таблицы</strong>. В них описываются <strong>поля</strong> и хранятся <strong>записи</strong>.</p>
+</li>
+<li>
+<p><strong>Поля</strong>. Каждое отдельное <strong>поле</strong> имет свое название и тип данных, которое оно хранит.</p>
+</li>
+<li>
+<p><strong>Записи</strong>. Это набор данных, хранящихся в каждой строке <strong>таблицы</strong>, где каждое значение соответствует типу, указанным в его <strong>поле</strong>.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Возраст</th>
+<th>Город</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Анна</td>
+<td>25</td>
+<td>Москва</td>
+</tr>
+<tr>
+<td>Иван</td>
+<td>30</td>
+<td>Санкт-Петербург</td>
+</tr>
+<tr>
+<td>Катя</td>
+<td>21</td>
+<td>Новосибирск</td>
+</tr>
+<tr>
+<td>Петр</td>
+<td>28</td>
+<td>Екатеринбург</td>
+</tr>
+</tbody>
+</table>
+<p>Рассмотрим таблицу, представленную выше:</p>
+<ul>
+<li>
+<p><code>Имя</code>, <code>Возраст</code>, <code>Город</code> - это <strong>поля</strong>. Поля <code>Имя</code> и <code>Город</code> - хранят текстовые значения, а <code>Возраст</code> - числовые. </p>
+</li>
+<li>
+<p><code>Анна 25 Москва</code>, <code>Иван 30 Санкт-Петербург</code> и т.д. - это <strong>записи</strong>. </p>
+</li>
+<li>
+<p>Совокупность <strong>полей</strong> и <strong>записей</strong> - <strong>таблица</strong>.</p>
+</li>
+</ul>
+<blockquote>
+<p>Таблиц в базе данных может быть множество. И между ними могут устанавливаться различные <strong>связи</strong> (отсюда и уточнение - <strong>реляционные</strong> БД). О том какие виды связей существуют и как их устанавливать мы поговорим в следующих статьях. </p>
+</blockquote>
+<h2 id="sql_1">Что такое SQL?</h2>
+<p>SQL - это язык запросов, который используется для работы с данными в реляционных базах данных. Он позволяет выполнять множество операций с данными, включая выборку, вставку, изменение и удаление данных из таблиц, а также объединение и фильтрацию данных. SQL является стандартом в области баз данных и широко используется в различных отраслях, где важна работа с данными.</p>
+<h2 id="sql_2">SQL запросы</h2>
+<p>Работа ваших приложений с базой данных происходит посредством SQL запросов к БД. Сами запросы можно поделить на следующие категории:</p>
+<ul>
+<li>
+<p>DDL (Data Definition Language) - язык определения данных. Он используется для создания, изменения и удаления структур данных, таких как таблицы, индексы, представления, процедуры и другие объекты базы данных. Операторы DDL включают CREATE, ALTER и DROP.</p>
+</li>
+<li>
+<p>DML (Data Manipulation Language) - язык манипулирования данными. Он используется для вставки, изменения и удаления данных в таблицах. Операторы DML включают INSERT, UPDATE и DELETE.</p>
+</li>
+<li>
+<p>DQL (Data Query Language) - используется для выборки данных из таблиц базы данных. Он включает оператор SELECT, который позволяет выбрать данные из одной или нескольких таблиц в базе данных. Оператор SELECT может также содержать различные операторы, такие как WHERE, GROUP BY, ORDER BY и другие, которые позволяют уточнять условия выборки и управлять выводом данных. DQL часто используется для получения отчетов, статистики и другой информации из баз данных.</p>
+</li>
+<li>
+<p>DCL (Data Control Language) - язык управления данными. Он используется для определения прав доступа к данным и управления безопасностью базы данных. Операторы DCL включают GRANT и REVOKE.</p>
+</li>
+<li>
+<p>TCL (Transaction Control Language) - язык управления транзакциями. Он используется для управления транзакциями, то есть группами операций, которые должны быть выполнены вместе и должны быть либо полностью выполнены, либо не выполнены вовсе. Операторы TCL включают COMMIT, ROLLBACK и SAVEPOINT.</p>
+</li>
+</ul>
+<blockquote>
+<p>Все описанные выше операторы будут рассмотренны в следующих статьях</p>
+</blockquote>
 
 
   
@@ -1233,13 +1438,13 @@
       
       
         
-        <a href="../sqlite/" class="md-footer__link md-footer__link--next" aria-label="Вперед: SQLite 3" rel="next">
+        <a href="../sqlite/01_ddl/" class="md-footer__link md-footer__link--next" aria-label="Вперед: DDL запросы. Создание, изменение, удаление таблиц" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              SQLite 3
+              DDL запросы. Создание, изменение, удаление таблиц
             </div>
           </div>
           <div class="md-footer__button md-icon">

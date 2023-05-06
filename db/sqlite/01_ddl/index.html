@@ -12,14 +12,14 @@
         <meta name="author" content="Асет Дюсенов">
       
       
-        <link rel="canonical" href="https://wiki.dyussenov.dev/basic/datatypes/datatypes-intro/">
+        <link rel="canonical" href="https://wiki.dyussenov.dev/db/sqlite/01_ddl/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>Типы данных - База знаний</title>
+        <title>DDL запросы. Создание, изменение, удаление таблиц - База знаний</title>
       
     
     
@@ -83,11 +83,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#python" class="md-skip">
-          Перейти к содержанию
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -116,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Типы данных
+              DDL запросы. Создание, изменение, удаление таблиц
             
           </span>
         </div>
@@ -245,14 +240,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -275,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../variables/" class="md-nav__link">
+      <a href="../../../basic/variables/" class="md-nav__link">
         Способы создания переменных
       </a>
     </li>
@@ -289,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../input/" class="md-nav__link">
+      <a href="../../../basic/input/" class="md-nav__link">
         Ввод и вывод данных. Функции print() и input()
       </a>
     </li>
@@ -303,7 +296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../if/" class="md-nav__link">
+      <a href="../../../basic/if/" class="md-nav__link">
         If, else, elif
       </a>
     </li>
@@ -317,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../while-python/" class="md-nav__link">
+      <a href="../../../basic/while-python/" class="md-nav__link">
         Цикл while
       </a>
     </li>
@@ -331,7 +324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson5-for/" class="md-nav__link">
+      <a href="../../../basic/lesson5-for/" class="md-nav__link">
         Цикл for
       </a>
     </li>
@@ -343,14 +336,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
       
       
       
@@ -371,59 +362,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Типы данных
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../basic/datatypes/datatypes-intro/" class="md-nav__link">
         Типы данных
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    О типизации в Python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#id" class="md-nav__link">
-    Изменяемость, Неизменяемость и id
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -435,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson6-strings/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson6-strings/" class="md-nav__link">
         Строки
       </a>
     </li>
@@ -449,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson4-lists/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson4-lists/" class="md-nav__link">
         Списки
       </a>
     </li>
@@ -463,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comprehensions/" class="md-nav__link">
+      <a href="../../../basic/datatypes/comprehensions/" class="md-nav__link">
         Генераторы списков
       </a>
     </li>
@@ -477,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tuples/" class="md-nav__link">
+      <a href="../../../basic/datatypes/tuples/" class="md-nav__link">
         Кортежи
       </a>
     </li>
@@ -491,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dict/" class="md-nav__link">
+      <a href="../../../basic/datatypes/dict/" class="md-nav__link">
         Словари
       </a>
     </li>
@@ -505,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../set/" class="md-nav__link">
+      <a href="../../../basic/datatypes/set/" class="md-nav__link">
         Множества
       </a>
     </li>
@@ -519,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../collections/" class="md-nav__link">
+      <a href="../../../basic/datatypes/collections/" class="md-nav__link">
         Коллекции
       </a>
     </li>
@@ -533,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson6-slices/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson6-slices/" class="md-nav__link">
         Срезы
       </a>
     </li>
@@ -547,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bytestring/" class="md-nav__link">
+      <a href="../../../basic/datatypes/bytestring/" class="md-nav__link">
         Byte-строки
       </a>
     </li>
@@ -568,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exception/" class="md-nav__link">
+      <a href="../../../basic/exception/" class="md-nav__link">
         Исключения. Try, except, finally
       </a>
     </li>
@@ -582,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../typehints/" class="md-nav__link">
+      <a href="../../../basic/typehints/" class="md-nav__link">
         Аннотации типов
       </a>
     </li>
@@ -622,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/functions/" class="md-nav__link">
+      <a href="../../../basic/functions/functions/" class="md-nav__link">
         Создание функций
       </a>
     </li>
@@ -636,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/args/" class="md-nav__link">
+      <a href="../../../basic/functions/args/" class="md-nav__link">
         args и kwargs
       </a>
     </li>
@@ -650,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/recurtion/" class="md-nav__link">
+      <a href="../../../basic/functions/recurtion/" class="md-nav__link">
         Рекурсия в функциях
       </a>
     </li>
@@ -664,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/lambda/" class="md-nav__link">
+      <a href="../../../basic/functions/lambda/" class="md-nav__link">
         Анонимные функции
       </a>
     </li>
@@ -678,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/decorators/" class="md-nav__link">
+      <a href="../../../basic/functions/decorators/" class="md-nav__link">
         Декораторы
       </a>
     </li>
@@ -725,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../text_files/files_read/" class="md-nav__link">
+      <a href="../../../basic/text_files/files_read/" class="md-nav__link">
         Открытие и чтение файлов
       </a>
     </li>
@@ -739,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../text_files/files_write/" class="md-nav__link">
+      <a href="../../../basic/text_files/files_write/" class="md-nav__link">
         Запись в файлы
       </a>
     </li>
@@ -786,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oop/intro/" class="md-nav__link">
+      <a href="../../../basic/oop/intro/" class="md-nav__link">
         Введение в ООП
       </a>
     </li>
@@ -800,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oop/create/" class="md-nav__link">
+      <a href="../../../basic/oop/create/" class="md-nav__link">
         Классы, объекты, методы
       </a>
     </li>
@@ -827,12 +770,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -855,7 +800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/sql/" class="md-nav__link">
+      <a href="../../sql/" class="md-nav__link">
         SQL и реляционные базы данных
       </a>
     </li>
@@ -867,11 +812,68 @@
               
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          SQLite 3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SQLite 3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          SQLite 3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        DDL запросы. Создание, изменение, удаление таблиц
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
-      <a href="../../../db/sqlite/" class="md-nav__link">
-        SQLite 3
+      <a href="../" class="md-nav__link">
+        Заключение
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1218,30 +1220,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    О типизации в Python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#id" class="md-nav__link">
-    Изменяемость, Неизменяемость и id
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1256,25 +1234,9 @@
                   
 
 
-<h1 id="python">О типах данных в Python</h1>
-<h2 id="python_1">О типизации в Python</h2>
-<p>Python обладает неявной сильной динамической типизацией. Давайте разберем это определение. Начнем с неявности.</p>
-<p><strong>Неявная</strong> типизация означает, что при объявлении переменной не нужно указывать её тип данных. Сравним создание переменной типа <code>int</code> в Python (неявная типизация) и Java (явная типизация).</p>
-<p>Python:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-</code></pre></div>
-<p>Java:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-<p><strong>Динамическая</strong>  типизация является противоположностью статической. В первом случае тип переменной определяется непосредственно при выполнении программы, во втором – на этапе компиляции.</p>
-<p><strong>Сильная</strong> типизация означает, что взаимодействие посредством операндов может происходить между данными одного типа. Сравним Python (сильная) и PHP (слабая):</p>
-<p>Python:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">+</span> <span class="s1">&#39;9&#39;</span><span class="p">)</span> <span class="c1">#TypeError</span>
-</code></pre></div>
-<p>Php</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">echo 6 + &#39;9&#39; #69</span>
-</code></pre></div>
-<h2 id="id">Изменяемость, Неизменяемость и id</h2>
+  <h1>DDL запросы. Создание, изменение, удаление таблиц</h1>
+
+
 
 
   
@@ -1297,7 +1259,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
       
         
-        <a href="../../lesson5-for/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Цикл for" rel="prev">
+        <a href="../../sql/" class="md-footer__link md-footer__link--prev" aria-label="Назад: SQL и реляционные базы данных" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1306,20 +1268,20 @@
               <span class="md-footer__direction">
                 Назад
               </span>
-              Цикл for
+              SQL и реляционные базы данных
             </div>
           </div>
         </a>
       
       
         
-        <a href="../lesson6-strings/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Строки" rel="next">
+        <a href="../" class="md-footer__link md-footer__link--next" aria-label="Вперед: Заключение" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              Строки
+              Заключение
             </div>
           </div>
           <div class="md-footer__button md-icon">
