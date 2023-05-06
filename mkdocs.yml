@@ -38,7 +38,9 @@ nav:
         - Классы, объекты, методы: basic/oop/create.md
     - Базы данных:
       - SQL и реляционные базы данных: db/sql.md
-      - SQLite 3: db/sqlite.md
+      - SQLite 3: 
+        - DDL запросы. Создание, изменение, удаление таблиц: db/sqlite/01_ddl.md
+        - Заключение: db/sqlite.md
     - Модули:
       - Datetime. Работа с временем и датой: modules/datetime.md
       - Prettytable. Красивые таблицы: modules/prettytable.md
