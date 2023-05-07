@@ -1368,7 +1368,7 @@
 <hr />
 <p>Давайте для начала попробуем создать такую же в приложении SQLite DB Browser. Для этого нажмите кнопку "Новая база данных" и в открывшемся окне добавьте необходимые поля нажимая кнопку "add":</p>
 <p><img alt="создание таблицы в sqlite db browser" src="/assets/sqlite/dll/table-creation.png" /></p>
-<p>Обратите внимание на SQL запрос, составляемый в ходе определения полей в создаваемой таблицы. Именно этот запрос выполнится при нажатии кнопки "ОК". Это зарпос <code>CREATE</code>. Он же является первым запросом из семейства DLL.</p>
+<p>Обратите внимание на SQL запрос, составляемый в ходе определения полей создаваемой таблицы. Именно этот запрос выполнится при нажатии кнопки "ОК". Это зарпос <code>CREATE</code>. Он же является первым запросом из семейства DLL.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">&quot;users&quot;</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="ss">&quot;name&quot;</span><span class="w">  </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="ss">&quot;age&quot;</span><span class="w">   </span><span class="nb">INTEGER</span><span class="p">,</span><span class="w"></span>
@@ -1391,7 +1391,7 @@
 </li>
 </ul>
 <blockquote>
-<p>Обратите внимание, что в указываемя поля группируются скобками и в конце зарпоса стоит точка с зяпятой.</p>
+<p>Обратите внимание, что в указываемя поля группируются скобками, названия полей заключаются в кавычки и в конце зарпоса стоит точка с зяпятой.</p>
 </blockquote>
 <hr />
 <p>Теперь во вкладке "данные" мы можем наблюдать созданную таблицу и сохраненные записи (вы можете их добавить вручную)</p>
@@ -1426,7 +1426,7 @@
 <p>Обратите внимание на то, что после добавления поля <code>email</code> у старой записи выставляется значение <code>Null</code></p>
 </blockquote>
 <h2 id="_3">Очистка таблицы</h2>
-<p>В "каноничном" SQL существует оператор <code>TRUNCATE</code>, который полностью удаляет все строки в таблице. Но в SQLite он отсутствует. Вместо этого можно использовать оператор <code>DELETE</code> из семейства DML:</p>
+<p>В "каноничном" SQL существует оператор <code>TRUNCATE</code>, который полностью удаляет все записи в таблице. Но в SQLite он отсутствует. Вместо этого можно использовать оператор <code>DELETE</code> из семейства DML:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">customers</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <blockquote>
@@ -1437,9 +1437,9 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">customers</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>После этой операции таблица со всеми её данными удаляется. Также удалить можно и всю базу данных:</p>
-<p><img alt="промежуточный резулбтат" src="/assets/sqlite/dll/dropdatabase.jpg" /></p>
+<p><img alt="sql injection" src="/assets/sqlite/dll/dropdatabase.jpg" /></p>
 <blockquote>
-<p>SQLite является встраиваемой базой данных, что означает - база хранится в качестве файла на жестком диске, в отличие от Postgresql, который "висит" на отдельном серверном процессе. Поэтому база удаляется как обычный файл - перемещением в корзину, а не SQL запросом</p>
+<p>SQLite является встраиваемой базой данных, что означает - база хранится в качестве файла на жестком диске, в отличие от, например, Postgresql, который "висит" на отдельном серверном процессе. Поэтому база удаляется как обычный файл - перемещением в корзину, а не SQL запросом</p>
 </blockquote>
 
 
