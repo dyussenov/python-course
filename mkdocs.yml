@@ -37,8 +37,8 @@ nav:
         - Введение в ООП: basic/oop/intro.md
         - Классы, объекты, методы: basic/oop/create.md
     - Базы данных:
-      - SQL и реляционные базы данных: db/sql.md
-      - SQLite 3: 
+      - SQLite 3:
+        - SQL и реляционные базы данных: db/sqlite/sql.md
         - DDL запросы. Создание, изменение, удаление таблиц: db/sqlite/01_ddl.md
         - Заключение: db/sqlite.md
     - Модули:
