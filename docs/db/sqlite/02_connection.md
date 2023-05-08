@@ -45,6 +45,23 @@ cur.execute('''CREATE TABLE "users" (
 connection.close()
 ```
 
+Также стоит заметить, что если вы попытаетесь повторно создать таблицу, то получите сообщение об ошибке. Чтобы избежать повторных созданий таблиц, можно добавить оператор `IF NOT EXISTS`:
+
+```python
+from sqlite3 import connect
+
+connection = connect('database.db')
+cur = connection.cursor()
+
+cur.execute('''CREATE TABLE IF NOT EXISTS "users" (
+"name"  TEXT,
+"age"   INTEGER,
+"city"  TEXT
+);''')
+
+connection.close()
+```
+
 > Если файл базы данных заблокирован другим процессом, то подключение к нему может завершиться неудачно. Например, не следует вносить изменения через приложение DB Browser и параллельно пробовать подключаться через Python скрипт
 
 ## Подключение к базе в ОЗУ
