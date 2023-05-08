@@ -12,14 +12,14 @@
         <meta name="author" content="Асет Дюсенов">
       
       
-        <link rel="canonical" href="https://wiki.dyussenov.dev/basic/datatypes/datatypes-intro/">
+        <link rel="canonical" href="https://wiki.dyussenov.dev/db/sqlite/03_dml/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>Типы данных - База знаний</title>
+        <title>DML запросы. INSERT, UPDATE и DELETE - База знаний</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python" class="md-skip">
+        <a href="#dml-insert-update-delete" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Типы данных
+              DML запросы. INSERT, UPDATE и DELETE
             
           </span>
         </div>
@@ -245,14 +245,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -275,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../variables/" class="md-nav__link">
+      <a href="../../../basic/variables/" class="md-nav__link">
         Способы создания переменных
       </a>
     </li>
@@ -289,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../input/" class="md-nav__link">
+      <a href="../../../basic/input/" class="md-nav__link">
         Ввод и вывод данных. Функции print() и input()
       </a>
     </li>
@@ -303,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../if/" class="md-nav__link">
+      <a href="../../../basic/if/" class="md-nav__link">
         If, else, elif
       </a>
     </li>
@@ -317,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../while-python/" class="md-nav__link">
+      <a href="../../../basic/while-python/" class="md-nav__link">
         Цикл while
       </a>
     </li>
@@ -331,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lesson5-for/" class="md-nav__link">
+      <a href="../../../basic/lesson5-for/" class="md-nav__link">
         Цикл for
       </a>
     </li>
@@ -343,14 +341,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
       
       
       
@@ -371,59 +367,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Типы данных
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../basic/datatypes/datatypes-intro/" class="md-nav__link">
         Типы данных
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    О типизации в Python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#id" class="md-nav__link">
-    Изменяемость, Неизменяемость и id
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -435,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson6-strings/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson6-strings/" class="md-nav__link">
         Строки
       </a>
     </li>
@@ -449,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson4-lists/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson4-lists/" class="md-nav__link">
         Списки
       </a>
     </li>
@@ -463,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../comprehensions/" class="md-nav__link">
+      <a href="../../../basic/datatypes/comprehensions/" class="md-nav__link">
         Генераторы списков
       </a>
     </li>
@@ -477,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tuples/" class="md-nav__link">
+      <a href="../../../basic/datatypes/tuples/" class="md-nav__link">
         Кортежи
       </a>
     </li>
@@ -491,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dict/" class="md-nav__link">
+      <a href="../../../basic/datatypes/dict/" class="md-nav__link">
         Словари
       </a>
     </li>
@@ -505,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../set/" class="md-nav__link">
+      <a href="../../../basic/datatypes/set/" class="md-nav__link">
         Множества
       </a>
     </li>
@@ -519,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../collections/" class="md-nav__link">
+      <a href="../../../basic/datatypes/collections/" class="md-nav__link">
         Коллекции
       </a>
     </li>
@@ -533,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson6-slices/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson6-slices/" class="md-nav__link">
         Срезы
       </a>
     </li>
@@ -547,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bytestring/" class="md-nav__link">
+      <a href="../../../basic/datatypes/bytestring/" class="md-nav__link">
         Byte-строки
       </a>
     </li>
@@ -568,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exception/" class="md-nav__link">
+      <a href="../../../basic/exception/" class="md-nav__link">
         Исключения. Try, except, finally
       </a>
     </li>
@@ -582,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../typehints/" class="md-nav__link">
+      <a href="../../../basic/typehints/" class="md-nav__link">
         Аннотации типов
       </a>
     </li>
@@ -622,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/functions/" class="md-nav__link">
+      <a href="../../../basic/functions/functions/" class="md-nav__link">
         Создание функций
       </a>
     </li>
@@ -636,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/args/" class="md-nav__link">
+      <a href="../../../basic/functions/args/" class="md-nav__link">
         args и kwargs
       </a>
     </li>
@@ -650,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/recurtion/" class="md-nav__link">
+      <a href="../../../basic/functions/recurtion/" class="md-nav__link">
         Рекурсия в функциях
       </a>
     </li>
@@ -664,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/lambda/" class="md-nav__link">
+      <a href="../../../basic/functions/lambda/" class="md-nav__link">
         Анонимные функции
       </a>
     </li>
@@ -678,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/decorators/" class="md-nav__link">
+      <a href="../../../basic/functions/decorators/" class="md-nav__link">
         Декораторы
       </a>
     </li>
@@ -725,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../text_files/files_read/" class="md-nav__link">
+      <a href="../../../basic/text_files/files_read/" class="md-nav__link">
         Открытие и чтение файлов
       </a>
     </li>
@@ -739,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../text_files/files_write/" class="md-nav__link">
+      <a href="../../../basic/text_files/files_write/" class="md-nav__link">
         Запись в файлы
       </a>
     </li>
@@ -786,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oop/intro/" class="md-nav__link">
+      <a href="../../../basic/oop/intro/" class="md-nav__link">
         Введение в ООП
       </a>
     </li>
@@ -800,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oop/create/" class="md-nav__link">
+      <a href="../../../basic/oop/create/" class="md-nav__link">
         Классы, объекты, методы
       </a>
     </li>
@@ -827,12 +775,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -853,12 +803,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
       
       
       
@@ -881,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/sqlite/sql/" class="md-nav__link">
+      <a href="../sql/" class="md-nav__link">
         SQL и реляционные базы данных
       </a>
     </li>
@@ -895,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/sqlite/01_ddl/" class="md-nav__link">
+      <a href="../01_ddl/" class="md-nav__link">
         DDL запросы. Создание, изменение, удаление таблиц
       </a>
     </li>
@@ -909,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/sqlite/02_connection/" class="md-nav__link">
+      <a href="../02_connection/" class="md-nav__link">
         Подключение к базе данных через Python
       </a>
     </li>
@@ -921,11 +873,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../db/sqlite/03_dml/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          DML запросы. INSERT, UPDATE и DELETE
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         DML запросы. INSERT, UPDATE и DELETE
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dml" class="md-nav__link">
+    Определение DML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    INSERT. Оператор добавления записей.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    UPDATE. Обновление записей
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    DELETE. Удаление записей
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -937,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/sqlite/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Заключение
       </a>
     </li>
@@ -1303,15 +1317,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    О типизации в Python
+  <a href="#dml" class="md-nav__link">
+    Определение DML
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#id" class="md-nav__link">
-    Изменяемость, Неизменяемость и id
+  <a href="#insert" class="md-nav__link">
+    INSERT. Оператор добавления записей.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    UPDATE. Обновление записей
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    DELETE. Удаление записей
   </a>
   
 </li>
@@ -1331,25 +1359,118 @@
                   
 
 
-<h1 id="python">О типах данных в Python</h1>
-<h2 id="python_1">О типизации в Python</h2>
-<p>Python обладает неявной сильной динамической типизацией. Давайте разберем это определение. Начнем с неявности.</p>
-<p><strong>Неявная</strong> типизация означает, что при объявлении переменной не нужно указывать её тип данных. Сравним создание переменной типа <code>int</code> в Python (неявная типизация) и Java (явная типизация).</p>
-<p>Python:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<h1 id="dml-insert-update-delete">DML запросы: INSERT, UPDATE и DELETE</h1>
+<h2 id="dml">Определение DML</h2>
+<p>DML (Data Manipulation Language) - язык манипулирования данными. Под манипулированием данными подразумевается изменение состояния записей в таблицах: добавление новых, изменинение или удаление старых. За эти действия отвечают операторы <code>INSERT</code>, <code>DELETE</code> и <code>UPDATE</code>.</p>
+<blockquote>
+<p>В рамках некоторых определений считается, что к DML можно отнести оператор <code>SELECT</code>. В данном цикле статей оператор SELECT выносится в отдельную категорию DQL.</p>
+</blockquote>
+<p>Для начала работы с примерами из данной статьи, запустите скрипт для создания базы данных и таблицы (этот скрипт подробно рассматривался в предыдущей статье):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;CREATE TABLE &quot;users&quot; (</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s1">    &quot;name&quot;  TEXT,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s1">    &quot;age&quot;   INTEGER,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s1">    &quot;city&quot;  TEXT</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s1">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 </code></pre></div>
-<p>Java:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<h2 id="insert">INSERT. Оператор добавления записей.</h2>
+<p>SQL запрос на добавление новой записи выглядит так:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="ss">&quot;users&quot;</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;age&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;city&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;Ваня&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Москва&quot;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Динамическая</strong>  типизация является противоположностью статической. В первом случае тип переменной определяется непосредственно при выполнении программы, во втором – на этапе компиляции.</p>
-<p><strong>Сильная</strong> типизация означает, что взаимодействие посредством операндов может происходить между данными одного типа. Сравним Python (сильная) и PHP (слабая):</p>
-<p>Python:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">+</span> <span class="s1">&#39;9&#39;</span><span class="p">)</span> <span class="c1">#TypeError</span>
+<ul>
+<li>
+<p>INSERT - оператор добавления записи.</p>
+</li>
+<li>
+<p>INTO "users" ("name", "age", "city") - название таблицы и список полей, в которые будут помещаться данные.</p>
+</li>
+<li>
+<p>VALUES("Ваня", 25, "Москва") - значения, которые будут помещены в соответствующие поля.</p>
+</li>
+</ul>
+<hr />
+<p>В простейшем виде подобный запрос в Python приложении выполняется так:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;age&quot;, &quot;city&quot;) VALUES(&quot;Ваня&quot;, 25, &quot;Москва&quot;);&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </code></pre></div>
-<p>Php</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">echo 6 + &#39;9&#39; #69</span>
+<blockquote>
+<p>При всех DML запросах нужно выполнять коммит <code>connection.commit()</code></p>
+</blockquote>
+<hr />
+<p>Запрос описанный выше работает, но не считается хорошей практикой. В такой запрос неудобно подставлять необходимые данные, а также уязвим к потенциальным SQL-инъекциям. Хорошей практикой является использование знаков вопроса в строке запроса: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Иван&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;Москва&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;age&quot;, &quot;city&quot;) VALUES (?, ?, ?)&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="id">Изменяемость, Неизменяемость и id</h2>
+<p>В этом примере, мы создали кортеж <code>data</code> и передали его как параметры в запрос на добавление записи. Вместо <code>?</code> в запросе будут подставлены соответствующие значения переменных.</p>
+<hr />
+<p>Также мы можем передать список кортежей и обработать его при помощи метода <code>executemany()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="p">(</span><span class="s1">&#39;Иван&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;Москва&#39;</span><span class="p">),</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="p">(</span><span class="s1">&#39;Дмитрий&#39;</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="s1">&#39;Казань&#39;</span><span class="p">),</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="p">(</span><span class="s1">&#39;Елена&#39;</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;Краснодар&#39;</span><span class="p">),</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="p">]</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s1">&#39;INSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;age&quot;, &quot;city&quot;) VALUES (?, ?, ?)&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="update">UPDATE. Обновление записей</h2>
+<p>Для обновления информации в существующих записях используется оператор <code>UPDATE</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="ss">&quot;users&quot;</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="ss">&quot;city&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Санкт-Петербург&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;age&quot;</span><span class="o">=</span><span class="mi">24</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Данный запрос установит город Санкт-Петербург и возраст 24 для всех записей в таблице. Подобное обновление всех записей нужно крайне редко, а вот наоборот - изменить поле в какой-то конкретной записи необходимо довольно часто. Для этого мы можем установить фильтрацию при помощи оператора <code>WHERE</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="ss">&quot;users&quot;</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="ss">&quot;city&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Санкт-Петербург&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;age&quot;</span><span class="o">=</span><span class="mi">24</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">&quot;name&quot;</span><span class="o">=</span><span class="ss">&quot;Ваня&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Данный запрос установит новые значения полей только для записей, где поле "имя" имеет значение "Ваня". В выражении <code>WHERE</code> можно использовать различные операторы сравнения и логические операторы, такие как:</p>
+<ul>
+<li><code>=</code> - равно</li>
+<li><code>&lt;&gt;</code> или <code>!=</code> - не равно</li>
+<li><code>&lt;</code> - меньше</li>
+<li><code>&gt;</code> - больше</li>
+<li><code>&lt;=</code> - меньше или равно</li>
+<li><code>&gt;=</code> - больше или равно</li>
+<li><code>AND</code> - логическое И</li>
+<li><code>OR</code> - логическое ИЛИ</li>
+<li><code>NOT</code> - логическое НЕ</li>
+</ul>
+<p>Пример запроса на обновление в Python:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;UPDATE &quot;users&quot; SET &quot;city&quot; = &quot;Санкт-Петербург&quot;, &quot;age&quot;=24 WHERE &quot;name&quot;=&quot;Ваня&quot;;&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="delete">DELETE. Удаление записей</h2>
+<p>Команда <code>DELETE</code> используется для удаления строк из таблицы. Она позволяет удалить все строки из таблицы или только те строки, которые удовлетворяют определенному условию, заданному в выражении <code>WHERE</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;users&quot;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">&quot;name&quot;</span><span class="o">=</span><span class="ss">&quot;Ваня&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Пример запроса на удаление в Python:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;DELETE FROM users WHERE age &gt; 23;&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</code></pre></div>
+<p>В в одной из предыдущих статей рассматривался запрос на удаление всех записей в таблице как замена отсутствующего оператора <code>TRUNCATE</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 
 
   
@@ -1372,7 +1493,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
       
         
-        <a href="../../lesson5-for/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Цикл for" rel="prev">
+        <a href="../02_connection/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Подключение к базе данных через Python" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1381,20 +1502,20 @@
               <span class="md-footer__direction">
                 Назад
               </span>
-              Цикл for
+              Подключение к базе данных через Python
             </div>
           </div>
         </a>
       
       
         
-        <a href="../lesson6-strings/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Строки" rel="next">
+        <a href="../" class="md-footer__link md-footer__link--next" aria-label="Вперед: Заключение" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              Строки
+              Заключение
             </div>
           </div>
           <div class="md-footer__button md-icon">

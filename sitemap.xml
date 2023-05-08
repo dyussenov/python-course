@@ -156,6 +156,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.dyussenov.dev/db/sqlite/03_dml/</loc>
+         <lastmod>2023-05-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.dyussenov.dev/db/sqlite/sql/</loc>
          <lastmod>2023-05-08</lastmod>
          <changefreq>daily</changefreq>
