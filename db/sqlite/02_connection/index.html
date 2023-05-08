@@ -12,21 +12,21 @@
         <meta name="author" content="Асет Дюсенов">
       
       
-        <link rel="canonical" href="https://wiki.dyussenov.dev/basic/lesson5-for/">
+        <link rel="canonical" href="https://wiki.dyussenov.dev/db/sqlite/02_connection/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>Цикл for - База знаний</title>
+        <title>Подключение к базе данных через Python - База знаний</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#for" class="md-skip">
+        <a href="#python" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -98,9 +98,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href="../.." title="База знаний" class="md-header__button md-logo" aria-label="База знаний" data-md-component="logo">
+    <a href="../../.." title="База знаний" class="md-header__button md-logo" aria-label="База знаний" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Цикл for
+              Подключение к базе данных через Python
             
           </span>
         </div>
@@ -214,9 +214,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="База знаний" class="md-nav__button md-logo" aria-label="База знаний" data-md-component="logo">
+    <a href="../../.." title="База знаний" class="md-nav__button md-logo" aria-label="База знаний" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     База знаний
@@ -232,7 +232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Старт
       </a>
     </li>
@@ -245,14 +245,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -275,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../variables/" class="md-nav__link">
+      <a href="../../../basic/variables/" class="md-nav__link">
         Способы создания переменных
       </a>
     </li>
@@ -289,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../input/" class="md-nav__link">
+      <a href="../../../basic/input/" class="md-nav__link">
         Ввод и вывод данных. Функции print() и input()
       </a>
     </li>
@@ -303,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../if/" class="md-nav__link">
+      <a href="../../../basic/if/" class="md-nav__link">
         If, else, elif
       </a>
     </li>
@@ -317,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../while-python/" class="md-nav__link">
+      <a href="../../../basic/while-python/" class="md-nav__link">
         Цикл while
       </a>
     </li>
@@ -329,66 +327,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Цикл for
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../basic/lesson5-for/" class="md-nav__link">
         Цикл for
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#range" class="md-nav__link">
-    Функция range()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    Задачи
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -426,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/datatypes-intro/" class="md-nav__link">
+      <a href="../../../basic/datatypes/datatypes-intro/" class="md-nav__link">
         Типы данных
       </a>
     </li>
@@ -440,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/lesson6-strings/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson6-strings/" class="md-nav__link">
         Строки
       </a>
     </li>
@@ -454,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/lesson4-lists/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson4-lists/" class="md-nav__link">
         Списки
       </a>
     </li>
@@ -468,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/comprehensions/" class="md-nav__link">
+      <a href="../../../basic/datatypes/comprehensions/" class="md-nav__link">
         Генераторы списков
       </a>
     </li>
@@ -482,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/tuples/" class="md-nav__link">
+      <a href="../../../basic/datatypes/tuples/" class="md-nav__link">
         Кортежи
       </a>
     </li>
@@ -496,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/dict/" class="md-nav__link">
+      <a href="../../../basic/datatypes/dict/" class="md-nav__link">
         Словари
       </a>
     </li>
@@ -510,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/set/" class="md-nav__link">
+      <a href="../../../basic/datatypes/set/" class="md-nav__link">
         Множества
       </a>
     </li>
@@ -524,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/collections/" class="md-nav__link">
+      <a href="../../../basic/datatypes/collections/" class="md-nav__link">
         Коллекции
       </a>
     </li>
@@ -538,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/lesson6-slices/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson6-slices/" class="md-nav__link">
         Срезы
       </a>
     </li>
@@ -552,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/bytestring/" class="md-nav__link">
+      <a href="../../../basic/datatypes/bytestring/" class="md-nav__link">
         Byte-строки
       </a>
     </li>
@@ -573,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exception/" class="md-nav__link">
+      <a href="../../../basic/exception/" class="md-nav__link">
         Исключения. Try, except, finally
       </a>
     </li>
@@ -587,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../typehints/" class="md-nav__link">
+      <a href="../../../basic/typehints/" class="md-nav__link">
         Аннотации типов
       </a>
     </li>
@@ -627,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/functions/" class="md-nav__link">
+      <a href="../../../basic/functions/functions/" class="md-nav__link">
         Создание функций
       </a>
     </li>
@@ -641,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/args/" class="md-nav__link">
+      <a href="../../../basic/functions/args/" class="md-nav__link">
         args и kwargs
       </a>
     </li>
@@ -655,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/recurtion/" class="md-nav__link">
+      <a href="../../../basic/functions/recurtion/" class="md-nav__link">
         Рекурсия в функциях
       </a>
     </li>
@@ -669,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/lambda/" class="md-nav__link">
+      <a href="../../../basic/functions/lambda/" class="md-nav__link">
         Анонимные функции
       </a>
     </li>
@@ -683,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/decorators/" class="md-nav__link">
+      <a href="../../../basic/functions/decorators/" class="md-nav__link">
         Декораторы
       </a>
     </li>
@@ -730,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../text_files/files_read/" class="md-nav__link">
+      <a href="../../../basic/text_files/files_read/" class="md-nav__link">
         Открытие и чтение файлов
       </a>
     </li>
@@ -744,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../text_files/files_write/" class="md-nav__link">
+      <a href="../../../basic/text_files/files_write/" class="md-nav__link">
         Запись в файлы
       </a>
     </li>
@@ -791,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/intro/" class="md-nav__link">
+      <a href="../../../basic/oop/intro/" class="md-nav__link">
         Введение в ООП
       </a>
     </li>
@@ -805,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/create/" class="md-nav__link">
+      <a href="../../../basic/oop/create/" class="md-nav__link">
         Классы, объекты, методы
       </a>
     </li>
@@ -832,12 +775,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -858,12 +803,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
       
       
       
@@ -886,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/sqlite/sql/" class="md-nav__link">
+      <a href="../sql/" class="md-nav__link">
         SQL и реляционные базы данных
       </a>
     </li>
@@ -900,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/sqlite/01_ddl/" class="md-nav__link">
+      <a href="../01_ddl/" class="md-nav__link">
         DDL запросы. Создание, изменение, удаление таблиц
       </a>
     </li>
@@ -912,11 +859,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../db/sqlite/02_connection/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Подключение к базе данных через Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Подключение к базе данных через Python
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Подключение к базе на жестком диске
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Подключение к базе в ОЗУ
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -928,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/sqlite/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Заключение
       </a>
     </li>
@@ -983,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/datetime/" class="md-nav__link">
+      <a href="../../../modules/datetime/" class="md-nav__link">
         Datetime. Работа с временем и датой
       </a>
     </li>
@@ -997,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/prettytable/" class="md-nav__link">
+      <a href="../../../modules/prettytable/" class="md-nav__link">
         Prettytable. Красивые таблицы
       </a>
     </li>
@@ -1011,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/requests/" class="md-nav__link">
+      <a href="../../../modules/requests/" class="md-nav__link">
         Requests. Запросы
       </a>
     </li>
@@ -1025,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/faker/" class="md-nav__link">
+      <a href="../../../modules/faker/" class="md-nav__link">
         Faker. Генерация фейковых данных
       </a>
     </li>
@@ -1039,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/venv/" class="md-nav__link">
+      <a href="../../../modules/venv/" class="md-nav__link">
         Virtualenv. Создание виртуального окружения
       </a>
     </li>
@@ -1087,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git_windows/" class="md-nav__link">
+      <a href="../../../git/git_windows/" class="md-nav__link">
         Git в Windows
       </a>
     </li>
@@ -1135,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/intro/" class="md-nav__link">
+      <a href="../../../django/intro/" class="md-nav__link">
         Что такое Django?
       </a>
     </li>
@@ -1149,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/init/" class="md-nav__link">
+      <a href="../../../django/init/" class="md-nav__link">
         Создание проекта Django
       </a>
     </li>
@@ -1163,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/creating_app/" class="md-nav__link">
+      <a href="../../../django/creating_app/" class="md-nav__link">
         Создание приложения в проекте
       </a>
     </li>
@@ -1177,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/routing/" class="md-nav__link">
+      <a href="../../../django/routing/" class="md-nav__link">
         Маршрутизация и шаблоны URL
       </a>
     </li>
@@ -1191,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/redirect_and_status/" class="md-nav__link">
+      <a href="../../../django/redirect_and_status/" class="md-nav__link">
         Переадресация и отправка статусных кодов
       </a>
     </li>
@@ -1205,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/creating_models/" class="md-nav__link">
+      <a href="../../../django/creating_models/" class="md-nav__link">
         Создание моделей
       </a>
     </li>
@@ -1253,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../js/dom/" class="md-nav__link">
+      <a href="../../../js/dom/" class="md-nav__link">
         Работа с DOM деревом
       </a>
     </li>
@@ -1294,22 +1289,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#range" class="md-nav__link">
-    Функция range()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    Задачи
+    Подключение к базе на жестком диске
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Подключение к базе в ОЗУ
   </a>
   
 </li>
@@ -1329,133 +1317,61 @@
                   
 
 
-<h1 id="for">Цикл <code>for</code></h1>
-<p>Вы уже знакомы с циклом <code>while</code>, а также перебором списков с его помощью. Помимо него, в Python есть цикл <code>for</code>, для которого перебор списков (и не только) это основная цель.</p>
-<p>Для начала рассмотрим, как при помощи каждого из них происходит перебор элементов списка. Начнем с знакомого нам <code>while</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">,</span> <span class="s1">&#39;Blue&#39;</span><span class="p">,</span> <span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">]</span>
+<h1 id="python">Подключение к БД в Python приложении</h1>
+<h2 id="_1">Подключение к базе на жестком диске</h2>
+<p>Работа с базами данных SQLite происходит через стандартный модуль <code>sqlite3</code>. Рассмотрим скрипт, который подключается к базе данных и создает в ней таблицу:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">):</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;CREATE TABLE &quot;users&quot; (</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s1">    &quot;name&quot;  TEXT,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s1">    &quot;age&quot;   INTEGER,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s1">    &quot;city&quot;  TEXT</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s1">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 </code></pre></div>
-<p>Теперь рассмотрим <code>for</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">,</span> <span class="s1">&#39;Blue&#39;</span><span class="p">,</span> <span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">]</span>
+<p>Разберемся, что делает данный скрипт:</p>
+<ul>
+<li>
+<p><code>from sqlite3 import connect</code> - имортируем функцию <code>connect()</code>. Она устанавливает соединение с базой данных.</p>
+</li>
+<li>
+<p><code>with connect('database.db') as connection:</code> - создаем объект подключения при помощи функции <code>connect()</code>. В качестве аргумента передается путь к файлу с базой данных. Если по указанному пути база данных отсутствует, то создастся новая.</p>
+</li>
+<li>
+<p><code>cur = connection.cursor()</code> - создаем объект курсора. Курсор позволяет выполнять запросы.</p>
+</li>
+<li>
+<p><code>cur.execute()</code> - выполняем запрос, описанный в предыдущей статье. Фактически, произойдет создание таблицы "users" внутри базы данных</p>
+</li>
+</ul>
+<p>В предыдущем примере подключение совершается через конструкцию <code>with</code>, что позволяет после окончания работы с базой данных закрыть соединение. Если соединение открывается без использования <code>with</code>, то закрывать его следует через метод <code>close()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">connection</span> <span class="o">=</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;CREATE TABLE &quot;users&quot; (</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="s1">&quot;name&quot;  TEXT,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="s1">&quot;age&quot;   INTEGER,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="s1">&quot;city&quot;  TEXT</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="s1">);&#39;&#39;&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
-<p>Впечатляет простота и лаконичность записи в примере с циклом <code>for</code>. Давайте разберемся подробно в синтаксисе. После <code>for</code> необходимо создать переменную (<code>colors</code>), которая будет на каждой итерации цикла принимать поочередно каждое значение из последовательности (<code>colors</code>), указанной после <code>in</code>. Далее в теле цикла мы можем использовать эту переменную как нам угодно.</p>
-<p>Важный нюанс - переменная, указанная после <code>for</code> является <em>копией</em> значения из списка. Это значит, что она никак не может влиять на оригинальный список:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">prices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">105</span><span class="p">]</span>
+<blockquote>
+<p>Если файл базы данных заблокирован другим процессом, то подключение к нему может завершиться неудачно. Например, не следует вносить изменения через приложение DB Browser и параллельно пробовать подключаться через Python скрипт</p>
+</blockquote>
+<h2 id="_2">Подключение к базе в ОЗУ</h2>
+<p>SQLite позволяет создавать базы данных в оперативной памяти, что может быть полезным в некоторых случаях, например, если нужно быстро обработать большой объем данных или если не требуется сохранять данные после завершения работы программы.</p>
+<p>Для создания базы данных в оперативной памяти в SQLite нужно указать специальный путь к файлу базы данных, начинающийся с двоеточия. Например, следующий код создает пустую базу данных в оперативной памяти:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">for</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">prices</span><span class="p">:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">price</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span> <span class="c1">#значения в списке не изменились</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;:memory:&#39;</span><span class="p">)</span>
 </code></pre></div>
-<p>Также, последоавтельность можно указывать не переменной, а прописать сразу после <code>in</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">,</span> <span class="s1">&#39;Blue&#39;</span><span class="p">:</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-</code></pre></div>
-<p>В цикле <code>for</code> можно использовать ранее изученные <code>break</code>, <code>continue</code> и <code>else</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">,</span> <span class="s1">&#39;Blue&#39;</span><span class="p">,</span> <span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">]</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1">#цикл для поиска синего цвета в списке</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">if</span> <span class="n">color</span> <span class="o">==</span> <span class="s1">&#39;Blue&#39;</span><span class="p">:</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="c1">#если синий найден, то сообщаем об этом и останавливаем цикл</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We found blue color!&#39;</span><span class="p">)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="k">break</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="c1">#иначе сообщаем об отсутствии синего в списке</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;there is no blue color in list&#39;</span><span class="p">)</span> 
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">#вывод нечетных чисел из списка</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">#если число четное, то пропускаем итерацию</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="k">continue</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="range">Функция <code>range()</code></h2>
-<p>Цикл <code>for</code> отлично подходит для прохождения по коллекциям. Но как его использовать для повторения заданного количества раз? Здесь пригодится встроенная функция <code>range()</code>. "Range" переводится как "диапазон" и это хорошо отражает её суть.</p>
-<p>В зависимости от количества переданных аргументов изменяется поведение функции. Если передать 1 число, то функция создаст диапозон от 0 до указанного числа:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="c1">#равносильно for i in 0, 1, 2, 3, 4, 5:</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div>
-<p>При передачи двух аргументов будет сгенерирован диапозон от первого до второго <strong>невключительно</strong>. Поэтому важно чтобы первый аргумент был меньше второго. Для разнообразия в примере в качестве аргументов будем использовать переменные, не стоит забывать что это допустимо и в некоторых случаях необходимо:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="c1">#равносильно for i in 0, 1, 2, 3, 4:</span>
-</code></pre></div>
-<p>При добавлении третьего аргумента он задаст шаг, через который будет генерироваться последовательность:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">step</span> <span class="o">=</span> <span class="mi">2</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span> <span class="c1"># равносильно for i in 0, 2, 4, 6, 8</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div>
-<p>Также если шаг сделать отрицательным, а первый аргумент больше второго, то можно получить обратный отсчет спомощью цикла <code>for</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">step</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="summary">Summary</h2>
-<p>Цикл <code>for</code> - это один из наиболее универсальных и часто используемых инструментов в Python. Он позволяет проходить по элементам любой последовательности (например, списку или строке) и выполнять над ними определенные действия.</p>
-<p>В заключении по теме цикла <code>for</code> в Python можно отметить следующие моменты:</p>
-<ul>
-<li>
-<p>Цикл <code>for</code> позволяет проходить по элементам любой последовательности, включая списки, кортежи, строки и даже словари.</p>
-</li>
-<li>
-<p>Цикл <code>for</code> может быть использован совместно с операторами continue и break для управления выполнением цикла.</p>
-</li>
-<li>
-<p>В цикле <code>for</code> можно использовать встроенные функции и методы, такие как <code>range()</code> или <code>enumerate()</code>.</p>
-</li>
-<li>
-<p>Цикл <code>for</code> может быть использован для решения многих задач, связанных с обработкой и анализом данных.</p>
-</li>
-</ul>
-<p>Цикл <code>for</code> - это важный инструмент для программирования на Python, который может быть использован для решения широкого круга задач. Кроме того, использование цикла <code>for</code> может существенно упростить написание кода и сделать его более читаемым и понятным.</p>
-<h2 id="_1">Задачи</h2>
-<ul>
-<li>
-<p>Напишите программу, которая выводит все числа от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит сумму всех чисел от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит среднее арифметическое всех чисел от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит сумму всех чисел в заданном списке.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит среднее арифметическое всех чисел в заданном списке.</p>
-</li>
-<li>
-<p>Напишите программу, которая выводит все четные числа от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит сумму всех четных чисел от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит среднее арифметическое всех четных чисел от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит максимальное и минимальное значения в заданном списке чисел.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит наиболее часто встречающийся элемент в заданном списке.</p>
-</li>
-</ul>
+<p>После выполнения этого кода переменная conn будет содержать объект соединения с базой данных, созданной в оперативной памяти.</p>
+<p>Как и в случае с обычными базами данных, с базами данных в оперативной памяти можно работать с помощью курсоров и выполнять SQL-запросы. При завершении работы с базой данных в оперативной памяти также необходимо закрыть соединение с помощью метода <code>close()</code> объекта соединения.</p>
 
 
   
@@ -1478,7 +1394,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
       
         
-        <a href="../while-python/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Цикл while" rel="prev">
+        <a href="../01_ddl/" class="md-footer__link md-footer__link--prev" aria-label="Назад: DDL запросы. Создание, изменение, удаление таблиц" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1487,20 +1403,20 @@
               <span class="md-footer__direction">
                 Назад
               </span>
-              Цикл while
+              DDL запросы. Создание, изменение, удаление таблиц
             </div>
           </div>
         </a>
       
       
         
-        <a href="../datatypes/datatypes-intro/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Типы данных" rel="next">
+        <a href="../" class="md-footer__link md-footer__link--next" aria-label="Вперед: Заключение" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              Типы данных
+              Заключение
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1564,10 +1480,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
       
     
   </body>
