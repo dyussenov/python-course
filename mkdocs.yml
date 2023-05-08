@@ -40,6 +40,7 @@ nav:
       - SQLite 3:
         - SQL и реляционные базы данных: db/sqlite/sql.md
         - DDL запросы. Создание, изменение, удаление таблиц: db/sqlite/01_ddl.md
+        - Подключение к базе данных через Python: db/sqlite/02_connection.md
         - Заключение: db/sqlite.md
     - Модули:
       - Datetime. Работа с временем и датой: modules/datetime.md
