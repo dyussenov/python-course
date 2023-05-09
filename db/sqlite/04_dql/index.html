@@ -12,21 +12,21 @@
         <meta name="author" content="Асет Дюсенов">
       
       
-        <link rel="canonical" href="https://wiki.dyussenov.dev/django/init/">
+        <link rel="canonical" href="https://wiki.dyussenov.dev/db/sqlite/04_dql/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>Создание проекта Django - База знаний</title>
+        <title>DQL запрос. SELECT - База знаний</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#django" class="md-skip">
+        <a href="#select" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -98,9 +98,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href="../.." title="База знаний" class="md-header__button md-logo" aria-label="База знаний" data-md-component="logo">
+    <a href="../../.." title="База знаний" class="md-header__button md-logo" aria-label="База знаний" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Создание проекта Django
+              DQL запрос. SELECT
             
           </span>
         </div>
@@ -214,9 +214,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="База знаний" class="md-nav__button md-logo" aria-label="База знаний" data-md-component="logo">
+    <a href="../../.." title="База знаний" class="md-nav__button md-logo" aria-label="База знаний" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     База знаний
@@ -232,7 +232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Старт
       </a>
     </li>
@@ -273,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/variables/" class="md-nav__link">
+      <a href="../../../basic/variables/" class="md-nav__link">
         Способы создания переменных
       </a>
     </li>
@@ -287,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/input/" class="md-nav__link">
+      <a href="../../../basic/input/" class="md-nav__link">
         Ввод и вывод данных. Функции print() и input()
       </a>
     </li>
@@ -301,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/if/" class="md-nav__link">
+      <a href="../../../basic/if/" class="md-nav__link">
         If, else, elif
       </a>
     </li>
@@ -315,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/while-python/" class="md-nav__link">
+      <a href="../../../basic/while-python/" class="md-nav__link">
         Цикл while
       </a>
     </li>
@@ -329,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/lesson5-for/" class="md-nav__link">
+      <a href="../../../basic/lesson5-for/" class="md-nav__link">
         Цикл for
       </a>
     </li>
@@ -369,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/datatypes/datatypes-intro/" class="md-nav__link">
+      <a href="../../../basic/datatypes/datatypes-intro/" class="md-nav__link">
         Типы данных
       </a>
     </li>
@@ -383,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/datatypes/lesson6-strings/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson6-strings/" class="md-nav__link">
         Строки
       </a>
     </li>
@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/datatypes/lesson4-lists/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson4-lists/" class="md-nav__link">
         Списки
       </a>
     </li>
@@ -411,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/datatypes/comprehensions/" class="md-nav__link">
+      <a href="../../../basic/datatypes/comprehensions/" class="md-nav__link">
         Генераторы списков
       </a>
     </li>
@@ -425,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/datatypes/tuples/" class="md-nav__link">
+      <a href="../../../basic/datatypes/tuples/" class="md-nav__link">
         Кортежи
       </a>
     </li>
@@ -439,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/datatypes/dict/" class="md-nav__link">
+      <a href="../../../basic/datatypes/dict/" class="md-nav__link">
         Словари
       </a>
     </li>
@@ -453,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/datatypes/set/" class="md-nav__link">
+      <a href="../../../basic/datatypes/set/" class="md-nav__link">
         Множества
       </a>
     </li>
@@ -467,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/datatypes/collections/" class="md-nav__link">
+      <a href="../../../basic/datatypes/collections/" class="md-nav__link">
         Коллекции
       </a>
     </li>
@@ -481,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/datatypes/lesson6-slices/" class="md-nav__link">
+      <a href="../../../basic/datatypes/lesson6-slices/" class="md-nav__link">
         Срезы
       </a>
     </li>
@@ -495,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/datatypes/bytestring/" class="md-nav__link">
+      <a href="../../../basic/datatypes/bytestring/" class="md-nav__link">
         Byte-строки
       </a>
     </li>
@@ -516,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/exception/" class="md-nav__link">
+      <a href="../../../basic/exception/" class="md-nav__link">
         Исключения. Try, except, finally
       </a>
     </li>
@@ -530,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/typehints/" class="md-nav__link">
+      <a href="../../../basic/typehints/" class="md-nav__link">
         Аннотации типов
       </a>
     </li>
@@ -570,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/functions/functions/" class="md-nav__link">
+      <a href="../../../basic/functions/functions/" class="md-nav__link">
         Создание функций
       </a>
     </li>
@@ -584,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/functions/args/" class="md-nav__link">
+      <a href="../../../basic/functions/args/" class="md-nav__link">
         args и kwargs
       </a>
     </li>
@@ -598,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/functions/recurtion/" class="md-nav__link">
+      <a href="../../../basic/functions/recurtion/" class="md-nav__link">
         Рекурсия в функциях
       </a>
     </li>
@@ -612,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/functions/lambda/" class="md-nav__link">
+      <a href="../../../basic/functions/lambda/" class="md-nav__link">
         Анонимные функции
       </a>
     </li>
@@ -626,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/functions/decorators/" class="md-nav__link">
+      <a href="../../../basic/functions/decorators/" class="md-nav__link">
         Декораторы
       </a>
     </li>
@@ -673,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/text_files/files_read/" class="md-nav__link">
+      <a href="../../../basic/text_files/files_read/" class="md-nav__link">
         Открытие и чтение файлов
       </a>
     </li>
@@ -687,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/text_files/files_write/" class="md-nav__link">
+      <a href="../../../basic/text_files/files_write/" class="md-nav__link">
         Запись в файлы
       </a>
     </li>
@@ -734,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/oop/intro/" class="md-nav__link">
+      <a href="../../../basic/oop/intro/" class="md-nav__link">
         Введение в ООП
       </a>
     </li>
@@ -748,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/oop/create/" class="md-nav__link">
+      <a href="../../../basic/oop/create/" class="md-nav__link">
         Классы, объекты, методы
       </a>
     </li>
@@ -775,12 +775,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -801,12 +803,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
       
       
       
@@ -829,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/sqlite/sql/" class="md-nav__link">
+      <a href="../sql/" class="md-nav__link">
         SQL и реляционные базы данных
       </a>
     </li>
@@ -843,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/sqlite/01_ddl/" class="md-nav__link">
+      <a href="../01_ddl/" class="md-nav__link">
         DDL запросы. Создание, изменение, удаление таблиц
       </a>
     </li>
@@ -857,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/sqlite/02_connection/" class="md-nav__link">
+      <a href="../02_connection/" class="md-nav__link">
         Подключение к базе данных через Python
       </a>
     </li>
@@ -871,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/sqlite/03_dml/" class="md-nav__link">
+      <a href="../03_dml/" class="md-nav__link">
         DML запросы. INSERT, UPDATE и DELETE
       </a>
     </li>
@@ -883,11 +887,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../db/sqlite/04_dql/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          DQL запрос. SELECT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         DQL запрос. SELECT
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fetchall-fetchone-fetchmany" class="md-nav__link">
+    Получение всех записей. Методы fetchall(), fetchone(), fetchmany()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -899,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/sqlite/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Заключение
       </a>
     </li>
@@ -954,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/datetime/" class="md-nav__link">
+      <a href="../../../modules/datetime/" class="md-nav__link">
         Datetime. Работа с временем и датой
       </a>
     </li>
@@ -968,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/prettytable/" class="md-nav__link">
+      <a href="../../../modules/prettytable/" class="md-nav__link">
         Prettytable. Красивые таблицы
       </a>
     </li>
@@ -982,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/requests/" class="md-nav__link">
+      <a href="../../../modules/requests/" class="md-nav__link">
         Requests. Запросы
       </a>
     </li>
@@ -996,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/faker/" class="md-nav__link">
+      <a href="../../../modules/faker/" class="md-nav__link">
         Faker. Генерация фейковых данных
       </a>
     </li>
@@ -1010,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/venv/" class="md-nav__link">
+      <a href="../../../modules/venv/" class="md-nav__link">
         Virtualenv. Создание виртуального окружения
       </a>
     </li>
@@ -1058,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git_windows/" class="md-nav__link">
+      <a href="../../../git/git_windows/" class="md-nav__link">
         Git в Windows
       </a>
     </li>
@@ -1078,14 +1123,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
       
@@ -1108,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../../../django/intro/" class="md-nav__link">
         Что такое Django?
       </a>
     </li>
@@ -1120,59 +1163,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Создание проекта Django
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../django/init/" class="md-nav__link">
         Создание проекта Django
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    Установка
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    Первый запуск проекта
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1184,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../creating_app/" class="md-nav__link">
+      <a href="../../../django/creating_app/" class="md-nav__link">
         Создание приложения в проекте
       </a>
     </li>
@@ -1198,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routing/" class="md-nav__link">
+      <a href="../../../django/routing/" class="md-nav__link">
         Маршрутизация и шаблоны URL
       </a>
     </li>
@@ -1212,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redirect_and_status/" class="md-nav__link">
+      <a href="../../../django/redirect_and_status/" class="md-nav__link">
         Переадресация и отправка статусных кодов
       </a>
     </li>
@@ -1226,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../creating_models/" class="md-nav__link">
+      <a href="../../../django/creating_models/" class="md-nav__link">
         Создание моделей
       </a>
     </li>
@@ -1274,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../js/dom/" class="md-nav__link">
+      <a href="../../../js/dom/" class="md-nav__link">
         Работа с DOM деревом
       </a>
     </li>
@@ -1315,15 +1310,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    Установка
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    Первый запуск проекта
+  <a href="#fetchall-fetchone-fetchmany" class="md-nav__link">
+    Получение всех записей. Методы fetchall(), fetchone(), fetchmany()
   </a>
   
 </li>
@@ -1343,66 +1331,70 @@
                   
 
 
-<h1 id="django">Создание Django проекта</h1>
-<p>Рассмотрим процесс установки фреймворка, создание проекта и его структуру, а также запустим проект на локальном сервере.</p>
-<h2 id="_1">Установка</h2>
-<hr />
-<p>Устанавливаем проект при помощи утилиты <code>pip</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install django
+<h1 id="select">SELECT. Получение записей</h1>
+<p>DQL (Data Query Language) - используется для выборки данных из таблиц базы данных. Эта группа включает в себя один основной оператор - SELECT, который может быть модифицирован операторми WHERE, GROUP BY, ORDER BY.</p>
+<p>SQL запрос на получение всех записей из таблицы users:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;users&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Символ <code>*</code> означает, что будут выведены все поля для полученных записей. Вместо него указать список полей, например показать имена и города всех пользователей:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="ss">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;city&quot;</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Теперь в нашем проекте установлен фреймворк, а также в каталоге <code>.venv\Scripts\</code> появилась утилита важная утилита <code>django-admin.exe</code>. Она предоставляет ряд команд для управления нашим проектом.</p>
-<p>При помощи команды <code>startproject</code> мы можем создать проект:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>django-admin startproject blog
+<p>Перед совершением SELECT запросов, заполним таблицу записями с пользователями:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;CREATE TABLE IF NOT EXISTS &quot;users&quot; (</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="s1">    &quot;name&quot;  TEXT,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="s1">    &quot;age&quot;   INTEGER,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="s1">    &quot;city&quot;  TEXT</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="s1">    );&#39;&#39;&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="c1"># создаем список кортежей с данными для добавления</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">users_data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Анна&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;Москва&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>                  <span class="p">(</span><span class="s1">&#39;Иван&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;Санкт-Петербург&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>                  <span class="p">(</span><span class="s1">&#39;Мария&#39;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;Москва&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>                  <span class="p">(</span><span class="s1">&#39;Алексей&#39;</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="s1">&#39;Новосибирск&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>                  <span class="p">(</span><span class="s1">&#39;Дмитрий&#39;</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="s1">&#39;Казань&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>                  <span class="p">(</span><span class="s1">&#39;Ксения&#39;</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="s1">&#39;Москва&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>                  <span class="p">(</span><span class="s1">&#39;Андрей&#39;</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="s1">&#39;Санкт-Петербург&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>                  <span class="p">(</span><span class="s1">&#39;Елена&#39;</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">&#39;Краснодар&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>                  <span class="p">(</span><span class="s1">&#39;Николай&#39;</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="s1">&#39;Москва&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>                  <span class="p">(</span><span class="s1">&#39;Светлана&#39;</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="s1">&#39;Казань&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>                  <span class="p">(</span><span class="s1">&#39;Петр&#39;</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="s1">&#39;Новосибирск&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>                  <span class="p">(</span><span class="s1">&#39;Ольга&#39;</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="s1">&#39;Санкт-Петербург&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>                  <span class="p">(</span><span class="s1">&#39;Сергей&#39;</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;Краснодар&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>                  <span class="p">(</span><span class="s1">&#39;Алена&#39;</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="s1">&#39;Москва&#39;</span><span class="p">),</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>                  <span class="p">(</span><span class="s1">&#39;Артем&#39;</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="s1">&#39;Казань&#39;</span><span class="p">)]</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>    <span class="c1"># используем метод executemany для добавления данных в таблицу</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s1">&#39;INSERT INTO users (name, age, city) VALUES (?, ?, ?)&#39;</span><span class="p">,</span> <span class="n">users_data</span><span class="p">)</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    <span class="c1"># подтверждаем изменения в базе данных</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </code></pre></div>
-<blockquote>
-<p>После команды <code>startproject</code> указывается произвольное навание проекта (в данном случае - <code>blog</code>). В названии проекта не разрешено использовать спецсим    волы</p>
-</blockquote>
-<hr />
-<p>После создания проекта мы можем наблюдать следующую струтуру файлов</p>
-<p><img alt="Структура проекта Django" src="/assets/django/init/project-structure.png" /></p>
-<p>Давайте рассмотрим созданные файлы:</p>
-<ul>
-<li>
-<p><code>manage.py</code> - Специальный файл, занимающийся управлением <strong><em>приложениями</em></strong> внутри нашего проекта</p>
-</li>
-<li>
-<p><code>blog</code> - Пакет конфигурации. Главное <strong><em>приложение</em></strong>. В себе содержит следующие файлы:</p>
-<ul>
-<li><code>__init__.py</code> - Стандартный файл во всех модулях в Python. Сообщает о том, что текущий каталог является модулем. <a href="https://docs.python.org/3/tutorial/modules.html">Читать подробнее здесь</a>.</li>
-<li><code>settings.py</code> - Содержит настройки конфигурации проекта.</li>
-<li><code>urls.py</code> -  Cодержит шаблоны URL-адресов, по сути определяет систему маршрутизации проекта.</li>
-<li><code>wsgi.py</code> - Cодержит свойства конфигурации WSGI (Web Server Gateway Inerface). Он используется при развертывании проекта.</li>
-<li><code>asgi.py</code> - Название файла представляет сокращение от Asynchronous Server Gateway Interface и расширяет возможности WSGI, добавляя поддержку для взаимодействия между асинхронными веб-серверами и приложениями.</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="_2">Первый запуск проекта</h2>
-<p>Теперь мы можем запустить наш проект, для этого воспользуемся файлом <code>manage.py</code> с аргументом <code>runserver</code>. </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>py -m manage runserver
+<h2 id="fetchall-fetchone-fetchmany">Получение всех записей. Методы fetchall(), fetchone(), fetchmany()</h2>
+<p>Выполним запрос, описанный выше и при помощи метода <code>fetchall()</code> поместим все полученные записи в переменную <code>result</code>. В результате мы получим список из записей в виде отдельных кортежей:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users;&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
-<blockquote>
-<p>Чтобы команда выполнилась, вы должны находиться в папке с файлом <code>manage.py</code>. Скорее всего, при запуске проекты вы будете находиться на каталог выше и вы получите ошибку <code>No module named manage</code> . В этом случае необходимо при помощи команды <code>cd &lt;название проекта&gt;</code> перейти в нужный каталог и повторить команду.</p>
-</blockquote>
-<hr />
-<p>После выполнения команды мы должны получить подобное сообщение:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Watching for file changes with StatReloader
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Performing system checks...
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>System check identified no issues (0 silenced).
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Run &#39;python manage.py migrate&#39; to apply them.
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>February 07, 2023 - 23:08:47
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>Django version 4.1.6, using settings &#39;blog.settings&#39;
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Starting development server at http://127.0.0.1:8000/
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>Quit the server with CTRL-BREAK.
+<p>Метод <code>fetchall()</code> имеет критический недостаток: если запрос вернет огромное количество полей, это может привести к нехватке памяти и замедлению работы программы. Хорошей практикой считается использование метода <code>fetchone()</code> в цикле:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users;&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="k">while</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="n">result</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
 </code></pre></div>
-<p>Оно говорит нам что проект успешно запущен на локальном сервере и допступен по адресу http://127.0.0.1:8000/</p>
-<hr />
-<p>При переходе под данному адресу мы должны увидеть заранее подготовленную разработчиками страницу:</p>
-<p><img alt="Стартовая страница django" src="/assets/django/init/running-app.png" /></p>
+<p>Также в качестве альтернативы можно использовать </p>
 
 
   
@@ -1425,7 +1417,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
       
         
-        <a href="../intro/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Что такое Django?" rel="prev">
+        <a href="../03_dml/" class="md-footer__link md-footer__link--prev" aria-label="Назад: DML запросы. INSERT, UPDATE и DELETE" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1434,20 +1426,20 @@
               <span class="md-footer__direction">
                 Назад
               </span>
-              Что такое Django?
+              DML запросы. INSERT, UPDATE и DELETE
             </div>
           </div>
         </a>
       
       
         
-        <a href="../creating_app/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Создание приложения в проекте" rel="next">
+        <a href="../" class="md-footer__link md-footer__link--next" aria-label="Вперед: Заключение" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              Создание приложения в проекте
+              Заключение
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1511,10 +1503,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
       
     
   </body>
