@@ -42,6 +42,7 @@ nav:
         - DDL запросы. Создание, изменение, удаление таблиц: db/sqlite/01_ddl.md
         - Подключение к базе данных через Python: db/sqlite/02_connection.md
         - DML запросы. INSERT, UPDATE и DELETE: db/sqlite/03_dml.md
+        - DQL запрос. SELECT: db/sqlite/04_dql.md
         - Заключение: db/sqlite.md
     - Модули:
       - Datetime. Работа с временем и датой: modules/datetime.md
