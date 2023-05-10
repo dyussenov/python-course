@@ -137,7 +137,7 @@ with connect('database.db') as connection:
 
     with connect('database.db') as connection:
         cur = connection.cursor()
-        cur.execute('SELECT * FROM users WHERE age > 30;')
+        cur.execute('SELECT * FROM users WHERE name LIKE "A%";')
         result = cur.fetchall()
         print(result)
     ```
