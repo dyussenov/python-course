@@ -43,6 +43,7 @@ nav:
         - Подключение к базе данных через Python: db/sqlite/02_connection.md
         - DML запросы. INSERT, UPDATE и DELETE: db/sqlite/03_dml.md
         - DQL запрос. SELECT: db/sqlite/04_dql.md
+        - Функции агрегации и группировка: db/sqlite/05_agregation_grouping.md
         - Заключение: db/sqlite.md
     - Модули:
       - Datetime. Работа с временем и датой: modules/datetime.md
