@@ -1,5 +1,5 @@
 
-# SELECT. Получение записей
+# DQL запрос SELECT. Получение записей
 
 DQL (Data Query Language) - используется для выборки данных из таблиц базы данных. Эта группа включает в себя один основной оператор - SELECT, который может быть модифицирован операторми WHERE, GROUP BY, ORDER BY.
 
@@ -83,3 +83,119 @@ with connect('database.db') as connection:
 
 Также в качестве альтернативы можно использовать метод `fetchmany()`:
 
+```python
+from sqlite3 import connect
+
+with connect('database.db') as connection:
+    cur = connection.cursor()
+    cur.execute('SELECT * FROM users;')
+    results = cur.fetchmany(2)
+    while results:
+        for result in results:
+            print(result)
+        results = cur.fetchmany(2)
+```
+
+Этот код выполняет запрос `SELECT * FROM users;` и извлекает из результата две строки данных за раз, используя метод `fetchmany(2)`. Затем он выводит полученные строки данных на экран с помощью цикла for. После этого он снова вызывает метод `fetchmany(2)`, чтобы извлечь следующие две строки данных, и так продолжается, пока не будут извлечены все строки данных из результата запроса.
+
+> Если SELECT-запрос не находит ни одной строки, то результатом запроса будет пустой набор строк. Это означает, что методы `fetchone()`, `fetchmany()` и `fetchall()` будут возвращать `None`, `[]` и `[]` соответственно.
+
+## SELECT вместе с WHERE
+
+Оператор `WHERE`, который мы ранее использовали вместе с `DELETE` и `UPDATE`, можно также использовать вместе с `INSERT`. Вот несколько примеров их совместного использования:
+
+1. Выбор всех строк, где значение поля `city` равно "Москва":
+
+    ```python
+    from sqlite3 import connect
+
+    with connect('database.db') as connection:
+        cur = connection.cursor()
+        cur.execute('SELECT * FROM users WHERE city = "Москва";')
+        result = cur.fetchall()
+        print(result)
+    ```
+
+2. Выбор всех строк, где значение поля `age` больше 30:
+
+    ```python
+    from sqlite3 import connect
+
+    with connect('database.db') as connection:
+        cur = connection.cursor()
+        cur.execute('SELECT * FROM users WHERE age > 30;')
+        result = cur.fetchall()
+        print(result)
+    ```
+
+3. Выбор всех строк, где значение поля `name` начинается с буквы "А":
+
+    ```python
+    from sqlite3 import connect
+
+    with connect('database.db') as connection:
+        cur = connection.cursor()
+        cur.execute('SELECT * FROM users WHERE age > 30;')
+        result = cur.fetchall()
+        print(result)
+    ```
+
+4. Выбор всех строк, где значение поля `name` содержит букву "н":
+
+    ```python
+    from sqlite3 import connect
+
+    with connect('database.db') as connection:
+        cur = connection.cursor()
+        cur.execute('SELECT * FROM users WHERE name LIKE "%н%";')
+        result = cur.fetchall()
+        print(result)
+    ```
+
+5. Выбор всех строк, где значение поля `city` не равно "Санкт-Петербург":
+
+    ```python
+    from sqlite3 import connect
+
+    with connect('database.db') as connection:
+        cur = connection.cursor()
+        cur.execute('SELECT * FROM users WHERE city != "Санкт-Петербург";')
+        result = cur.fetchall()
+        print(result)
+    ```
+
+6. Выбрать всех пользователей младше 30 лет, проживающих в городе "Москва":
+
+    ```python
+    from sqlite3 import connect
+
+    with connect('database.db') as connection:
+        cur = connection.cursor()
+        cur.execute("SELECT * FROM users WHERE age < 30 AND city = 'Москва'")
+        results = cur.fetchall()
+        print(results)
+    ```
+
+7. Выбрать всех пользователей старше 30 лет, проживающих в городе "Москва" или "Санкт-Петербург":
+
+    ```python
+    from sqlite3 import connect
+
+    with connect('database.db') as connection:
+        cur = connection.cursor()
+        cur.execute("SELECT * FROM users WHERE age > 30 AND (city = 'Москва' OR city = 'Санкт-Петербург')")
+        results = cur.fetchall()
+        print(results)
+    ```
+
+8. Выбрать всех пользователей проживающих в городе "Новосибирск" или "Казань", и младше 30 лет:
+
+    ```python
+    from sqlite3 import connect
+
+    with connect('database.db') as connection:
+        cur = connection.cursor()
+        cur.execute("SELECT * FROM users WHERE city IN ('Новосибирск', 'Казань') AND age < 30")
+        results = cur.fetchall()
+        print(results)
+    ```
