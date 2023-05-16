@@ -1378,7 +1378,7 @@
 <p>Создадим две таблицы - <code>users</code> и <code>orders</code>. Обратите внимание, что у обеих таблиц указано поле <code>id</code> - уникальный идентификатор. Также у него стоит свойство <code>AUTOINCREMENT</code> - оно автоматически выставляет новое значение, которое больше на единицу, чем значение в предыдущей записи. Это избавляет нас от необходимости вручную выставлять <code>id</code> для каждой новой записи.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;mydatabase.db&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;database.db&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="c1"># Создание таблицы пользователей</span>
@@ -1505,7 +1505,7 @@
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
 <p>Результат FULL JOIN:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Shoes&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Shoes&#39;</span><span class="p">)</span>
 </code></pre></div>
 </li>
 </ul>
