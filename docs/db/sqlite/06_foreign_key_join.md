@@ -3,158 +3,201 @@
 
 ## Внешние ключи. Установка связей между таблицами.
 
-Создадим две таблицы - `users` и `orders`. Обратите внимание, что у обеих таблиц указано поле `id` - уникальный идентификатор. Также у него стоит свойство `AUTOINCREMENT` - оно автоматически выставляет новое значение, которое больше на единицу, чем значение в предыдущей записи. Это избавляет нас от необходимости вручную выставлять `id` для каждой новой записи.
+Создадим две таблицы - `customers` и `orders`. Обратите внимание, что у обеих таблиц указано поле `id` - уникальный идентификатор. Также у него стоит свойство `AUTOINCREMENT` - оно автоматически выставляет новое значение, которое больше на единицу, чем значение в предыдущей записи. Это избавляет нас от необходимости вручную выставлять `id` для каждой новой записи.
 
 ```python
-import sqlite3
+from sqlite3 import connect
 
-with sqlite3.connect("database.db") as conn:
-    cursor = conn.cursor()
+# Создаем базу данных и устанавливаем соединение
+with connect('database.db') as connection:
+    cur = connection.cursor()
 
-    # Создание таблицы пользователей
-    cursor.execute("""CREATE TABLE users (
-                            id INTEGER PRIMARY KEY AUTOINCREMENT,
-                            name TEXT NOT NULL,
-                            age INTEGER,
-                            city TEXT
-                            );""")
+    # Создаем таблицу "customers"
+    cur.execute('''CREATE TABLE IF NOT EXISTS customers (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        city TEXT,
+        sex TEXT
+    );''')
 
-    # Создание таблицы заказов
-    cursor.execute("""CREATE TABLE orders (
-                            id INTEGER PRIMARY KEY AUTOINCREMENT,
-                            user_id INTEGER,
-                            product TEXT NOT NULL,
-                            price REAL,
-                            FOREIGN KEY(user_id) REFERENCES users(id)
-                            );""")
+    # Создаем таблицу "orders"
+    cur.execute('''CREATE TABLE IF NOT EXISTS orders (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        customer_id INTEGER,
+        total REAL,
+        FOREIGN KEY (customer_id) REFERENCES customers (id)
+    );''')
 
-    cursor.execute("INSERT INTO users (name, age, city) VALUES ('John Doe', 25, 'New York')")
-    cursor.execute("INSERT INTO users (name, age, city) VALUES ('Jane Smith', 30, 'Los Angeles')")
-    cursor.execute("INSERT INTO users (name, age, city) VALUES ('Bob Johnson', 40, 'Chicago')")
-
-    # Добавление заказов
-    cursor.execute("INSERT INTO orders (user_id, product, price) VALUES (1, 'Shoes', 49.99)")
-    cursor.execute("INSERT INTO orders (user_id, product, price) VALUES (2, 'T-shirt', 19.99)")
-    cursor.execute("INSERT INTO orders (user_id, product, price) VALUES (3, 'Hat', 9.99)")
-
-    conn.commit()
+    # Подтверждаем изменения в базе данных
+    connection.commit()
 ```
 
-Также в таблице orders присутствует новое для вас поле - `FOREIGN KEY(user_id) REFERENCES users(id)`, которое используется для создания связи (внешнего ключа) между двумя таблицами. Он указывает, что значения в столбце текущей таблицы (в данном случае `user_id` в таблице orders) должны быть ссылками на значения в столбце другой таблицы (в данном случае `id` в таблице `users`).
+Также в таблице orders присутствует новое для вас поле - `FOREIGN KEY(customer_id) REFERENCES customers(id)`, которое используется для создания связи (внешнего ключа) между двумя таблицами. Он указывает, что значения в столбце текущей таблицы (в данном случае `customer_id` в таблице orders) должны быть ссылками на значения в столбце другой таблицы (в данном случае `id` в таблице `customers`):
 
-В приведенном примере, выражение `FOREIGN KEY(user_id) REFERENCES users(id)` говорит о следующем:
-
-- `user_id` - это столбец в таблице orders, который будет содержать ссылки на значения столбца id в таблице users.
+- `customer_id` - это столбец в таблице orders, который будет содержать ссылки на значения столбца id в таблице users.
     
-- `users(id)` - указывает, что связь будет установлена с таблицей `users` и столбцом `id` в ней.
+- `customers(id)` - указывает, что связь будет установлена с таблицей `users` и столбцом `id` в ней.
 
 Таким образом, поле `user_id` в таблице `orders` будет содержать только те значения, которые существуют в столбце `id` таблицы `users`. Если вы попытаетесь вставить значение в поле `user_id`, которого нет в столбце `id` таблицы `users`, будет сгенерировано исключение или ошибка, в зависимости от настроек базы данных.
 
 В результате использования внешнего ключа, вы можете создавать связи между таблицами и выполнять операции, такие как обновление, удаление или выборка данных из связанных таблиц, чтобы получить целостность и связность данных.
 
-## Оператор JOIN
-
-Оператор `JOIN` в SQL используется для объединения данных из двух или более таблиц на основе совпадающих значений в указанных столбцах. Он позволяет комбинировать строки из разных таблиц в один результат, основываясь на заданных условиях соединения.
-
-Оператор `JOIN` имеет различные типы, включая:
-
-- `INNER JOIN`: Возвращает только те строки, для которых есть совпадение в обеих таблицах. Он объединяет строки, основываясь на совпадении значений в указанных столбцах.
-
-- `LEFT JOIN` (или `LEFT OUTER JOIN`): Возвращает все строки из левой (первой) таблицы и соответствующие строки из правой (второй) таблицы. Если в правой таблице нет совпадающих строк, возвращается NULL.
-
-- `RIGHT JOIN` (или `RIGHT OUTER JOIN`): Возвращает все строки из правой (второй) таблицы и соответствующие строки из левой (первой) таблицы. Если в левой таблице нет совпадающих строк, возвращается `NULL`.
-
-- `FULL JOIN` (или `FULL OUTER JOIN`): Возвращает все строки из обеих таблиц и соответствующие строки по условию совпадения. Если в одной из таблиц нет совпадающих строк, возвращается `NULL`.
-
-- `CROSS JOIN`: Производит комбинаторное объединение всех строк из двух таблиц. В результате получается декартово произведение строк из обеих таблиц.
-
-Оператор `JOIN` обычно используется с условием соединения, указывающим, по каким столбцам нужно сравнивать значения для объединения строк. Обычно используются операторы сравнения, такие как "=", ">", "<", "!=" и другие.
-
 ---
+
+Теперь напишем скрипт, который будет заполнять базу данных случайными пользователями и заказами:
 
 ```python
 from sqlite3 import connect
+from random import randint, choice
 
+# Создаем списки имен для мужчин и женщин
+male_names = ["Александр", "Дмитрий", "Михаил", "Андрей", "Сергей", "Иван", "Алексей", "Виктор", "Николай", "Олег",
+              "Артем", "Владимир"]
+female_names = ["Анна", "Елена", "Ольга", "Ирина", "Наталья", "Мария", "Татьяна", "Юлия", "Екатерина", "Ксения",
+                "Алина", "Полина"]
+
+# Создаем список городов
+cities = ["Астана", "Алматы", "Шымкент", "Караганда", "Актау", "Атырау", "Актобе", "Тараз", "Усть-Каменогорск", "Павлодар",
+          "Костанай", "Кызылорда", "Семей", "Уральск", "Туркестан", "Кокшетау", "Талдыкорган", "Аксай", "Рудный", "Темиртау",
+          "Экибастуз", "Жезказган", "Сарыагаш", "Жанаозен", "Риддер"]
+
+# Создаем список заказов
+orders = []
+
+# Генерируем 200 случайных заказов
+for order_id in range(1, 201):
+    customer_id = randint(1, 25)  # Случайно выбираем идентификатор клиента от 1 до 25
+    total = round(randint(50, 500) + randint(0, 99) / 100, 2)  # Случайно генерируем общую стоимость заказа
+    orders.append((order_id, customer_id, total))
+
+# Создаем базу данных и устанавливаем соединение
 with connect('database.db') as connection:
     cur = connection.cursor()
-    cur.execute('SELECT * FROM users JOIN orders ON users.id = orders.user_id')
-    result = cur.fetchall()
-    print(result)
+
+    # Заполняем таблицу "customers" данными
+    for customer_id in range(1, 26):
+        if customer_id % 2 == 0:
+            name = choice(female_names)
+            sex = "Женский"
+        else:
+            name = choice(male_names)
+            sex = "Мужской"
+        city = choice(cities)
+        cur.execute("INSERT INTO customers (id, name, city, sex) VALUES (?, ?, ?, ?)",
+                    (customer_id, name, city, sex))
+
+    # Заполняем таблицу "orders" данными
+    for order in orders:
+        cur.execute("INSERT INTO orders (id, customer_id, total) VALUES (?, ?, ?)", order)
+
+    # Подтверждаем изменения в базе данных
+    connection.commit()
 ```
 
+## Оператор JOIN
 
-- INNER JOIN:
+Оператор `JOIN` в SQL используется для объединения данных из двух или более таблиц на основе совпадающих значений в указанных столбцах. Он позволяет комбинировать строки из разных таблиц в один результат, основываясь на заданных условиях соединения. Запрос с JOIN в связке с SELECT выглядит следующим образом:
 
-    ```python
-    from sqlite3 import connect
+```sql
+SELECT name, city, sex, total
+FROM customers
+JOIN orders ON customers.id=orders.customer_id;
+```
 
-    with connect('database.db') as connection:
-        cur = connection.cursor()
-        cur.execute('SELECT * FROM users INNER JOIN orders ON users.id = orders.user_id')
-        result = cur.fetchall()
-        print(result)
+Давайте разберем каждую строчку запроса:
+
+- ```SELECT name, city, sex, total``` - Эта часть указывает, какие столбцы вы хотите выбрать из объединенных таблиц. Здесь вы выбираете столбцы `name`, `city`, `sex` из таблицы `customers` и столбец `total` из таблицы `orders`. 
+
+    Важно заметить, что если в ваших таблицах будут дублироваться названия полей, то следует указать в префиксе название таблицы. Так выглядел бы запрос, если бы в таблице `orders` существовало поле `city`:
+
+    ```sql
+    SELECT name, customers.city, sex, total, orders.city
     ```
 
-    Результат INNER JOIN:
+- ```FROM customers``` - Указывает, что первая таблица, которую мы используем для объединения.
 
-    ```python
-    [(1, 'John', 30, 'New York', 1, 1, 'Shoes'),  (1, 'John', 30, 'New York', 2, 1, 'T-shirt'),  (2, 'Jane', 25, 'Los Angeles', 3, 2, 'Hat'),  (3, 'Bob', 35, 'Chicago', 4, 3, 'Pants')]
+- ```JOIN orders ON customers.id=orders.customer_id;``` - Эта часть указывает, что мы объединяем таблицу `orders` с таблицей `customers` на основе условия равенства `customers.id=orders.customer_id`. То есть, строки будут объединены, когда значения столбца `id` в таблице `customers` совпадают со значениями столбца `customer_id` в таблице `orders`.
 
-    ```
+## JOIN с функциями агрегации, группировкой и сортировкой
 
-    
-- LEFT JOIN:
+> Следующие запросы сложно переварить, не понимая как работают функции агрегации, группировки и сортировка. Если есть проблемы с их пониманием, то прочтите еще раз статью, посвященную им!
 
-    ```python
-    from sqlite3 import connect
+Для начала, попробуем вывести сумму денег, потраченных каждым покупателем:
 
-    with connect('database.db') as connection:
-        cur = connection.cursor()
-        cur.execute('SELECT * FROM users LEFT JOIN orders ON users.id = orders.user_id')
-        result = cur.fetchall()
-        print(result)
-    ```
+```sql
+SELECT customers.name, SUM(orders.total) AS total_sum
+FROM customers
+JOIN orders ON customers.id = orders.customer_id
+GROUP BY customers.id;
+```
 
-    Результат LEFT JOIN:
+Разберем данный запрос:
 
-    ```python
-    [(1, 'John', 30, 'New York', 1, 1, 'Shoes'),  (1, 'John', 30, 'New York', 2, 1, 'T-shirt'),  (2, 'Jane', 25, 'Los Angeles', 3, 2, 'Hat'),  (3, 'Bob', 35, 'Chicago', 4, 3, 'Pants')]
-    ```
+- `SELECT customers.name, SUM(orders.total) AS total_sum` - Мы начинаем запрос с оператора `SELECT`, указывая столбцы, которые мы хотим выбрать. В данном случае, мы выбираем name из таблицы `customers` и сумму `total` из таблицы `orders`. Мы также используем `AS` для переименования столбца суммы заказов в `total_sum`.
 
-- RIGHT JOIN:
+- `FROM customers` - Здесь мы указываем, из какой таблицы мы выбираем данные. В данном случае, мы выбираем данные из таблицы `customers`.
 
-    ```python
-    from sqlite3 import connect
+- `JOIN orders ON customers.id = orders.customer_id`: Мы используем оператор JOIN для объединения таблиц `customers` и `orders`. Указываем `ON`, чтобы задать условие объединения. В данном случае, мы объединяем таблицы по поле `id` из `customers` и полю `customer_id` из `orders`.
 
-    with connect('database.db') as connection:
-        cur = connection.cursor()
-        cur.execute('SELECT * FROM users RIGHT JOIN orders ON users.id = orders.user_id')
-        result = cur.fetchall()
-        print(result)
-    ```
+- `GROUP BY customers.id`: Мы используем оператор GROUP BY для группировки результатов по полю `id` из таблицы `customers`. Это означает, что строки будут сгруппированы по уникальным значениям `id` покупателей.
 
+---
 
-- Результат RIGHT JOIN:
+Похожий запрос, который позволит увидеть сумму потраченных денег для каждого пола:
 
+```sql
+SELECT customers.sex, SUM(orders.total) AS total_spent
+FROM customers
+JOIN orders ON customers.id = orders.customer_id
+GROUP BY customers.sex;
+```
 
-    ```python
-    [(1, 'John', 30, 'New York', 1, 1, 'Shoes'),  (1, 'John', 30, 'New York', 2, 1, 'T-shirt'),  (2, 'Jane', 25, 'Los Angeles', 3, 2, 'Hat'),  (3, 'Bob', 35, 'Chicago', 4, 3, 'Pants')]
-    ```
+---
 
-    FULL JOIN:
+Получить список всех покупателей вместе с информацией о количестве сделанных ими заказов:
 
-    ```python
-    from sqlite3 import connect
+```sql
+SELECT customers.id, customers.name, COUNT(orders.id) AS order_count
+FROM customers
+LEFT JOIN orders ON customers.id = customer_id
+GROUP BY customers.id;
+```
 
-    with connect('database.db') as connection:
-        cur = connection.cursor()
-        cur.execute('SELECT * FROM users FULL JOIN orders ON users.id = orders.user_id')
-        result = cur.fetchall()
-        print(result)
-    ```
+---
 
-    Результат FULL JOIN:
+Сколько денег потратили в определенном городе:
 
-    ```python
-    (1, 'John', 30, 'New York', 1, 1, 'Shoes')
-    ```
+```sql
+SELECT city, SUM(orders.id) AS order_count
+FROM customers
+LEFT JOIN orders ON customers.id = customer_id
+GROUP BY city;
+```
+
+## INNER, LEFT, RIGHT, FULL JOIN
+
+Разные виды оператора `JOIN` предоставляют различные способы объединения данных из нескольких таблиц. Каждый вид `JOIN` имеет свою специфику и применяется в разных сценариях в зависимости от требуемого результата.
+
+### INNER JOIN (внутреннее объединение, используется по умолчанию):
+
+`INNER JOIN` объединяет строки из двух таблиц только тогда, когда условие соответствия выполняется.
+Результатом `INNER JOIN` является набор строк, которые удовлетворяют условию соответствия.
+Возвращаются только те строки, где значение ключа в обеих таблицах совпадает.
+
+### LEFT JOIN (левое объединение):
+
+`LEFT JOIN` возвращает все строки из левой (первой) таблицы и соответствующие строки из правой (второй) таблицы.
+Если для строки в левой таблице нет соответствующих строк в правой таблице, то для соответствующих столбцов правой таблицы будут возвращены `NULL` значения.
+Левая таблица является сохраняющейся (`preserved`) таблицей, а правая таблица - таблицей, которая может содержать `NULL` значения.
+
+### RIGHT JOIN (правое объединение):
+
+`RIGHT JOIN` возвращает все строки из правой (второй) таблицы и соответствующие строки из левой (первой) таблицы.
+Если для строки в правой таблице нет соответствующих строк в левой таблице, то для соответствующих столбцов левой таблицы будут возвращены `NULL` значения.
+Правая таблица является сохраняющейся (preserved) таблицей, а левая таблица - таблицей, которая может содержать `NULL` значения.
+
+### FULL JOIN (полное объединение):
+
+```FULL JOIN``` возвращает все строки из обеих таблиц.
+Если для строки в одной таблице нет соответствующей строки в другой таблице, то для соответствующих столбцов будет возвращено ```NULL``` значение.
+Результатом ```FULL JOIN``` является объединение строк из обеих таблиц, где некоторые значения могут быть `NULL`.
