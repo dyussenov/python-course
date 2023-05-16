@@ -8,7 +8,7 @@
 ```python
 import sqlite3
 
-with sqlite3.connect("mydatabase.db") as conn:
+with sqlite3.connect("database.db") as conn:
     cursor = conn.cursor()
 
     # Создание таблицы пользователей
