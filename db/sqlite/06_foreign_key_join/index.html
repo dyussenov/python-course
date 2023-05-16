@@ -964,6 +964,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#join_1" class="md-nav__link">
+    JOIN с функциями агрегации, группировкой и сортировкой
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inner-left-right-full-join" class="md-nav__link">
+    INNER, LEFT, RIGHT, FULL JOIN
+  </a>
+  
+    <nav class="md-nav" aria-label="INNER, LEFT, RIGHT, FULL JOIN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-join" class="md-nav__link">
+    INNER JOIN (внутреннее объединение, используется по умолчанию):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-join" class="md-nav__link">
+    LEFT JOIN (левое объединение):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-join" class="md-nav__link">
+    RIGHT JOIN (правое объединение):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-join" class="md-nav__link">
+    FULL JOIN (полное объединение):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1358,6 +1406,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#join_1" class="md-nav__link">
+    JOIN с функциями агрегации, группировкой и сортировкой
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inner-left-right-full-join" class="md-nav__link">
+    INNER, LEFT, RIGHT, FULL JOIN
+  </a>
+  
+    <nav class="md-nav" aria-label="INNER, LEFT, RIGHT, FULL JOIN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-join" class="md-nav__link">
+    INNER JOIN (внутреннее объединение, используется по умолчанию):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-join" class="md-nav__link">
+    LEFT JOIN (левое объединение):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-join" class="md-nav__link">
+    RIGHT JOIN (правое объединение):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-join" class="md-nav__link">
+    FULL JOIN (полное объединение):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1375,140 +1471,176 @@
 
 <h1 id="_1">Внешние ключи и объединение таблиц</h1>
 <h2 id="_2">Внешние ключи. Установка связей между таблицами.</h2>
-<p>Создадим две таблицы - <code>users</code> и <code>orders</code>. Обратите внимание, что у обеих таблиц указано поле <code>id</code> - уникальный идентификатор. Также у него стоит свойство <code>AUTOINCREMENT</code> - оно автоматически выставляет новое значение, которое больше на единицу, чем значение в предыдущей записи. Это избавляет нас от необходимости вручную выставлять <code>id</code> для каждой новой записи.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
+<p>Создадим две таблицы - <code>customers</code> и <code>orders</code>. Обратите внимание, что у обеих таблиц указано поле <code>id</code> - уникальный идентификатор. Также у него стоит свойство <code>AUTOINCREMENT</code> - оно автоматически выставляет новое значение, которое больше на единицу, чем значение в предыдущей записи. Это избавляет нас от необходимости вручную выставлять <code>id</code> для каждой новой записи.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;database.db&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="c1"># Создание таблицы пользователей</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;CREATE TABLE users (</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s2">                            id INTEGER PRIMARY KEY AUTOINCREMENT,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s2">                            name TEXT NOT NULL,</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s2">                            age INTEGER,</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s2">                            city TEXT</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="s2">                            );&quot;&quot;&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="c1"># Создание таблицы заказов</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;CREATE TABLE orders (</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="s2">                            id INTEGER PRIMARY KEY AUTOINCREMENT,</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="s2">                            user_id INTEGER,</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="s2">                            product TEXT NOT NULL,</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="s2">                            price REAL,</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="s2">                            FOREIGN KEY(user_id) REFERENCES users(id)</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="s2">                            );&quot;&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Создаем базу данных и устанавливаем соединение</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="c1"># Создаем таблицу &quot;customers&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;CREATE TABLE IF NOT EXISTS customers (</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s1">        id INTEGER PRIMARY KEY AUTOINCREMENT,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s1">        name TEXT,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s1">        city TEXT,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="s1">        sex TEXT</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="s1">    );&#39;&#39;&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="c1"># Создаем таблицу &quot;orders&quot;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;CREATE TABLE IF NOT EXISTS orders (</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="s1">        id INTEGER PRIMARY KEY AUTOINCREMENT,</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="s1">        customer_id INTEGER,</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="s1">        total REAL,</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="s1">        FOREIGN KEY (customer_id) REFERENCES customers (id)</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="s1">    );&#39;&#39;&#39;</span><span class="p">)</span>
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO users (name, age, city) VALUES (&#39;John Doe&#39;, 25, &#39;New York&#39;)&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO users (name, age, city) VALUES (&#39;Jane Smith&#39;, 30, &#39;Los Angeles&#39;)&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO users (name, age, city) VALUES (&#39;Bob Johnson&#39;, 40, &#39;Chicago&#39;)&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="c1"># Добавление заказов</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO orders (user_id, product, price) VALUES (1, &#39;Shoes&#39;, 49.99)&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO orders (user_id, product, price) VALUES (2, &#39;T-shirt&#39;, 19.99)&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO orders (user_id, product, price) VALUES (3, &#39;Hat&#39;, 9.99)&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="c1"># Подтверждаем изменения в базе данных</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </code></pre></div>
-<p>Также в таблице orders присутствует новое для вас поле - <code>FOREIGN KEY(user_id) REFERENCES users(id)</code>, которое используется для создания связи (внешнего ключа) между двумя таблицами. Он указывает, что значения в столбце текущей таблицы (в данном случае <code>user_id</code> в таблице orders) должны быть ссылками на значения в столбце другой таблицы (в данном случае <code>id</code> в таблице <code>users</code>).</p>
-<p>В приведенном примере, выражение <code>FOREIGN KEY(user_id) REFERENCES users(id)</code> говорит о следующем:</p>
+<p>Также в таблице orders присутствует новое для вас поле - <code>FOREIGN KEY(customer_id) REFERENCES customers(id)</code>, которое используется для создания связи (внешнего ключа) между двумя таблицами. Он указывает, что значения в столбце текущей таблицы (в данном случае <code>customer_id</code> в таблице orders) должны быть ссылками на значения в столбце другой таблицы (в данном случае <code>id</code> в таблице <code>customers</code>):</p>
 <ul>
 <li>
-<p><code>user_id</code> - это столбец в таблице orders, который будет содержать ссылки на значения столбца id в таблице users.</p>
+<p><code>customer_id</code> - это столбец в таблице orders, который будет содержать ссылки на значения столбца id в таблице users.</p>
 </li>
 <li>
-<p><code>users(id)</code> - указывает, что связь будет установлена с таблицей <code>users</code> и столбцом <code>id</code> в ней.</p>
+<p><code>customers(id)</code> - указывает, что связь будет установлена с таблицей <code>users</code> и столбцом <code>id</code> в ней.</p>
 </li>
 </ul>
 <p>Таким образом, поле <code>user_id</code> в таблице <code>orders</code> будет содержать только те значения, которые существуют в столбце <code>id</code> таблицы <code>users</code>. Если вы попытаетесь вставить значение в поле <code>user_id</code>, которого нет в столбце <code>id</code> таблицы <code>users</code>, будет сгенерировано исключение или ошибка, в зависимости от настроек базы данных.</p>
 <p>В результате использования внешнего ключа, вы можете создавать связи между таблицами и выполнять операции, такие как обновление, удаление или выборка данных из связанных таблиц, чтобы получить целостность и связность данных.</p>
-<h2 id="join">Оператор JOIN</h2>
-<p>Оператор <code>JOIN</code> в SQL используется для объединения данных из двух или более таблиц на основе совпадающих значений в указанных столбцах. Он позволяет комбинировать строки из разных таблиц в один результат, основываясь на заданных условиях соединения.</p>
-<p>Оператор <code>JOIN</code> имеет различные типы, включая:</p>
-<ul>
-<li>
-<p><code>INNER JOIN</code>: Возвращает только те строки, для которых есть совпадение в обеих таблицах. Он объединяет строки, основываясь на совпадении значений в указанных столбцах.</p>
-</li>
-<li>
-<p><code>LEFT JOIN</code> (или <code>LEFT OUTER JOIN</code>): Возвращает все строки из левой (первой) таблицы и соответствующие строки из правой (второй) таблицы. Если в правой таблице нет совпадающих строк, возвращается NULL.</p>
-</li>
-<li>
-<p><code>RIGHT JOIN</code> (или <code>RIGHT OUTER JOIN</code>): Возвращает все строки из правой (второй) таблицы и соответствующие строки из левой (первой) таблицы. Если в левой таблице нет совпадающих строк, возвращается <code>NULL</code>.</p>
-</li>
-<li>
-<p><code>FULL JOIN</code> (или <code>FULL OUTER JOIN</code>): Возвращает все строки из обеих таблиц и соответствующие строки по условию совпадения. Если в одной из таблиц нет совпадающих строк, возвращается <code>NULL</code>.</p>
-</li>
-<li>
-<p><code>CROSS JOIN</code>: Производит комбинаторное объединение всех строк из двух таблиц. В результате получается декартово произведение строк из обеих таблиц.</p>
-</li>
-</ul>
-<p>Оператор <code>JOIN</code> обычно используется с условием соединения, указывающим, по каким столбцам нужно сравнивать значения для объединения строк. Обычно используются операторы сравнения, такие как "=", "&gt;", "&lt;", "!=" и другие.</p>
 <hr />
+<p>Теперь напишем скрипт, который будет заполнять базу данных случайными пользователями и заказами:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users JOIN orders ON users.id = orders.user_id&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">choice</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Создаем списки имен для мужчин и женщин</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">male_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Александр&quot;</span><span class="p">,</span> <span class="s2">&quot;Дмитрий&quot;</span><span class="p">,</span> <span class="s2">&quot;Михаил&quot;</span><span class="p">,</span> <span class="s2">&quot;Андрей&quot;</span><span class="p">,</span> <span class="s2">&quot;Сергей&quot;</span><span class="p">,</span> <span class="s2">&quot;Иван&quot;</span><span class="p">,</span> <span class="s2">&quot;Алексей&quot;</span><span class="p">,</span> <span class="s2">&quot;Виктор&quot;</span><span class="p">,</span> <span class="s2">&quot;Николай&quot;</span><span class="p">,</span> <span class="s2">&quot;Олег&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>              <span class="s2">&quot;Артем&quot;</span><span class="p">,</span> <span class="s2">&quot;Владимир&quot;</span><span class="p">]</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">female_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Анна&quot;</span><span class="p">,</span> <span class="s2">&quot;Елена&quot;</span><span class="p">,</span> <span class="s2">&quot;Ольга&quot;</span><span class="p">,</span> <span class="s2">&quot;Ирина&quot;</span><span class="p">,</span> <span class="s2">&quot;Наталья&quot;</span><span class="p">,</span> <span class="s2">&quot;Мария&quot;</span><span class="p">,</span> <span class="s2">&quot;Татьяна&quot;</span><span class="p">,</span> <span class="s2">&quot;Юлия&quot;</span><span class="p">,</span> <span class="s2">&quot;Екатерина&quot;</span><span class="p">,</span> <span class="s2">&quot;Ксения&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                <span class="s2">&quot;Алина&quot;</span><span class="p">,</span> <span class="s2">&quot;Полина&quot;</span><span class="p">]</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Создаем список городов</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Астана&quot;</span><span class="p">,</span> <span class="s2">&quot;Алматы&quot;</span><span class="p">,</span> <span class="s2">&quot;Шымкент&quot;</span><span class="p">,</span> <span class="s2">&quot;Караганда&quot;</span><span class="p">,</span> <span class="s2">&quot;Актау&quot;</span><span class="p">,</span> <span class="s2">&quot;Атырау&quot;</span><span class="p">,</span> <span class="s2">&quot;Актобе&quot;</span><span class="p">,</span> <span class="s2">&quot;Тараз&quot;</span><span class="p">,</span> <span class="s2">&quot;Усть-Каменогорск&quot;</span><span class="p">,</span> <span class="s2">&quot;Павлодар&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>          <span class="s2">&quot;Костанай&quot;</span><span class="p">,</span> <span class="s2">&quot;Кызылорда&quot;</span><span class="p">,</span> <span class="s2">&quot;Семей&quot;</span><span class="p">,</span> <span class="s2">&quot;Уральск&quot;</span><span class="p">,</span> <span class="s2">&quot;Туркестан&quot;</span><span class="p">,</span> <span class="s2">&quot;Кокшетау&quot;</span><span class="p">,</span> <span class="s2">&quot;Талдыкорган&quot;</span><span class="p">,</span> <span class="s2">&quot;Аксай&quot;</span><span class="p">,</span> <span class="s2">&quot;Рудный&quot;</span><span class="p">,</span> <span class="s2">&quot;Темиртау&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>          <span class="s2">&quot;Экибастуз&quot;</span><span class="p">,</span> <span class="s2">&quot;Жезказган&quot;</span><span class="p">,</span> <span class="s2">&quot;Сарыагаш&quot;</span><span class="p">,</span> <span class="s2">&quot;Жанаозен&quot;</span><span class="p">,</span> <span class="s2">&quot;Риддер&quot;</span><span class="p">]</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1"># Создаем список заказов</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">orders</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1"># Генерируем 200 случайных заказов</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="k">for</span> <span class="n">order_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">201</span><span class="p">):</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    <span class="n">customer_id</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>  <span class="c1"># Случайно выбираем идентификатор клиента от 1 до 25</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">total</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span> <span class="o">+</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Случайно генерируем общую стоимость заказа</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">orders</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">order_id</span><span class="p">,</span> <span class="n">customer_id</span><span class="p">,</span> <span class="n">total</span><span class="p">))</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="c1"># Создаем базу данных и устанавливаем соединение</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>    <span class="c1"># Заполняем таблицу &quot;customers&quot; данными</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    <span class="k">for</span> <span class="n">customer_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">26</span><span class="p">):</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>        <span class="k">if</span> <span class="n">customer_id</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>            <span class="n">name</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">female_names</span><span class="p">)</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>            <span class="n">sex</span> <span class="o">=</span> <span class="s2">&quot;Женский&quot;</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>            <span class="n">name</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">male_names</span><span class="p">)</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>            <span class="n">sex</span> <span class="o">=</span> <span class="s2">&quot;Мужской&quot;</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>        <span class="n">city</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">cities</span><span class="p">)</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO customers (id, name, city, sex) VALUES (?, ?, ?, ?)&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>                    <span class="p">(</span><span class="n">customer_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">sex</span><span class="p">))</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>    <span class="c1"># Заполняем таблицу &quot;orders&quot; данными</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>    <span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">orders</span><span class="p">:</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO orders (id, customer_id, total) VALUES (?, ?, ?)&quot;</span><span class="p">,</span> <span class="n">order</span><span class="p">)</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>    <span class="c1"># Подтверждаем изменения в базе данных</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </code></pre></div>
+<h2 id="join">Оператор JOIN</h2>
+<p>Оператор <code>JOIN</code> в SQL используется для объединения данных из двух или более таблиц на основе совпадающих значений в указанных столбцах. Он позволяет комбинировать строки из разных таблиц в один результат, основываясь на заданных условиях соединения. Запрос с JOIN в связке с SELECT выглядит следующим образом:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">city</span><span class="p">,</span><span class="w"> </span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">customers</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">orders</span><span class="p">.</span><span class="n">customer_id</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Давайте разберем каждую строчку запроса:</p>
 <ul>
 <li>
-<p>INNER JOIN:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users INNER JOIN orders ON users.id = orders.user_id&#39;</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</code></pre></div>
-<p>Результат INNER JOIN:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Shoes&#39;</span><span class="p">),</span>  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;T-shirt&#39;</span><span class="p">),</span>  <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;Los Angeles&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Hat&#39;</span><span class="p">),</span>  <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="s1">&#39;Chicago&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Pants&#39;</span><span class="p">)]</span>
+<p><code>SELECT name, city, sex, total</code> - Эта часть указывает, какие столбцы вы хотите выбрать из объединенных таблиц. Здесь вы выбираете столбцы <code>name</code>, <code>city</code>, <code>sex</code> из таблицы <code>customers</code> и столбец <code>total</code> из таблицы <code>orders</code>. </p>
+<p>Важно заметить, что если в ваших таблицах будут дублироваться названия полей, то следует указать в префиксе название таблицы. Так выглядел бы запрос, если бы в таблице <code>orders</code> существовало поле <code>city</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">city</span><span class="p">,</span><span class="w"> </span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="p">,</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">city</span><span class="w"></span>
 </code></pre></div>
 </li>
 <li>
-<p>LEFT JOIN:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users LEFT JOIN orders ON users.id = orders.user_id&#39;</span><span class="p">)</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</code></pre></div>
-<p>Результат LEFT JOIN:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Shoes&#39;</span><span class="p">),</span>  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;T-shirt&#39;</span><span class="p">),</span>  <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;Los Angeles&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Hat&#39;</span><span class="p">),</span>  <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="s1">&#39;Chicago&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Pants&#39;</span><span class="p">)]</span>
-</code></pre></div>
+<p><code>FROM customers</code> - Указывает, что первая таблица, которую мы используем для объединения.</p>
 </li>
 <li>
-<p>RIGHT JOIN:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users RIGHT JOIN orders ON users.id = orders.user_id&#39;</span><span class="p">)</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</code></pre></div>
-</li>
-<li>
-<p>Результат RIGHT JOIN:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Shoes&#39;</span><span class="p">),</span>  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;T-shirt&#39;</span><span class="p">),</span>  <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;Los Angeles&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Hat&#39;</span><span class="p">),</span>  <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="s1">&#39;Chicago&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Pants&#39;</span><span class="p">)]</span>
-</code></pre></div>
-<p>FULL JOIN:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">connect</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">with</span> <span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users FULL JOIN orders ON users.id = orders.user_id&#39;</span><span class="p">)</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</code></pre></div>
-<p>Результат FULL JOIN:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Shoes&#39;</span><span class="p">)</span>
-</code></pre></div>
+<p><code>JOIN orders ON customers.id=orders.customer_id;</code> - Эта часть указывает, что мы объединяем таблицу <code>orders</code> с таблицей <code>customers</code> на основе условия равенства <code>customers.id=orders.customer_id</code>. То есть, строки будут объединены, когда значения столбца <code>id</code> в таблице <code>customers</code> совпадают со значениями столбца <code>customer_id</code> в таблице <code>orders</code>.</p>
 </li>
 </ul>
+<h2 id="join_1">JOIN с функциями агрегации, группировкой и сортировкой</h2>
+<blockquote>
+<p>Следующие запросы сложно переварить, не понимая как работают функции агрегации, группировки и сортировка. Если есть проблемы с их пониманием, то прочтите еще раз статью, посвященную им!</p>
+</blockquote>
+<p>Для начала, попробуем вывести сумму денег, потраченных каждым покупателем:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">orders</span><span class="p">.</span><span class="n">total</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_sum</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">customers</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">customer_id</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Разберем данный запрос:</p>
+<ul>
+<li>
+<p><code>SELECT customers.name, SUM(orders.total) AS total_sum</code> - Мы начинаем запрос с оператора <code>SELECT</code>, указывая столбцы, которые мы хотим выбрать. В данном случае, мы выбираем name из таблицы <code>customers</code> и сумму <code>total</code> из таблицы <code>orders</code>. Мы также используем <code>AS</code> для переименования столбца суммы заказов в <code>total_sum</code>.</p>
+</li>
+<li>
+<p><code>FROM customers</code> - Здесь мы указываем, из какой таблицы мы выбираем данные. В данном случае, мы выбираем данные из таблицы <code>customers</code>.</p>
+</li>
+<li>
+<p><code>JOIN orders ON customers.id = orders.customer_id</code>: Мы используем оператор JOIN для объединения таблиц <code>customers</code> и <code>orders</code>. Указываем <code>ON</code>, чтобы задать условие объединения. В данном случае, мы объединяем таблицы по поле <code>id</code> из <code>customers</code> и полю <code>customer_id</code> из <code>orders</code>.</p>
+</li>
+<li>
+<p><code>GROUP BY customers.id</code>: Мы используем оператор GROUP BY для группировки результатов по полю <code>id</code> из таблицы <code>customers</code>. Это означает, что строки будут сгруппированы по уникальным значениям <code>id</code> покупателей.</p>
+</li>
+</ul>
+<hr />
+<p>Похожий запрос, который позволит увидеть сумму потраченных денег для каждого пола:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">orders</span><span class="p">.</span><span class="n">total</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_spent</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">customers</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">customer_id</span><span class="w"></span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">sex</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<p>Получить список всех покупателей вместе с информацией о количестве сделанных ими заказов:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">orders</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">order_count</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">customers</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">customer_id</span><span class="w"></span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<p>Сколько денег потратили в определенном городе:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">city</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">orders</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">order_count</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">customers</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">customer_id</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">city</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h2 id="inner-left-right-full-join">INNER, LEFT, RIGHT, FULL JOIN</h2>
+<p>Разные виды оператора <code>JOIN</code> предоставляют различные способы объединения данных из нескольких таблиц. Каждый вид <code>JOIN</code> имеет свою специфику и применяется в разных сценариях в зависимости от требуемого результата.</p>
+<h3 id="inner-join">INNER JOIN (внутреннее объединение, используется по умолчанию):</h3>
+<p><code>INNER JOIN</code> объединяет строки из двух таблиц только тогда, когда условие соответствия выполняется.
+Результатом <code>INNER JOIN</code> является набор строк, которые удовлетворяют условию соответствия.
+Возвращаются только те строки, где значение ключа в обеих таблицах совпадает.</p>
+<h3 id="left-join">LEFT JOIN (левое объединение):</h3>
+<p><code>LEFT JOIN</code> возвращает все строки из левой (первой) таблицы и соответствующие строки из правой (второй) таблицы.
+Если для строки в левой таблице нет соответствующих строк в правой таблице, то для соответствующих столбцов правой таблицы будут возвращены <code>NULL</code> значения.
+Левая таблица является сохраняющейся (<code>preserved</code>) таблицей, а правая таблица - таблицей, которая может содержать <code>NULL</code> значения.</p>
+<h3 id="right-join">RIGHT JOIN (правое объединение):</h3>
+<p><code>RIGHT JOIN</code> возвращает все строки из правой (второй) таблицы и соответствующие строки из левой (первой) таблицы.
+Если для строки в правой таблице нет соответствующих строк в левой таблице, то для соответствующих столбцов левой таблицы будут возвращены <code>NULL</code> значения.
+Правая таблица является сохраняющейся (preserved) таблицей, а левая таблица - таблицей, которая может содержать <code>NULL</code> значения.</p>
+<h3 id="full-join">FULL JOIN (полное объединение):</h3>
+<p><code>FULL JOIN</code> возвращает все строки из обеих таблиц.
+Если для строки в одной таблице нет соответствующей строки в другой таблице, то для соответствующих столбцов будет возвращено <code>NULL</code> значение.
+Результатом <code>FULL JOIN</code> является объединение строк из обеих таблиц, где некоторые значения могут быть <code>NULL</code>.</p>
 
 
   
