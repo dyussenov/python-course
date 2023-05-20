@@ -1401,7 +1401,7 @@
                   
 
 
-<h1 id="_1">Создание классов и объектов</h1>
+<h1 id="_1">Основные понятия: Класс, объект, метод</h1>
 <p>Классы и объекты - это основа объектно-ориентированного программирования в Python. Классы представляют собой шаблоны, которые определяют свойства и методы, а объекты - это экземпляры классов, которые содержат конкретные значения свойств.</p>
 <h2 id="python">Создание классов в Python</h2>
 <p>Для создания класса в Python используется ключевое слово <code>class</code>. Например, мы можем создать класс <code>Person</code>, который будет иметь два свойства - <code>name</code> и <code>age</code>:</p>
@@ -1420,17 +1420,16 @@
 <h2 id="_2">Методы и свойства</h2>
 <p>Методы и свойства - это функции и переменные, которые принадлежат классу или объекту. Методы обычно используются для выполнения действий с объектом или для возврата значения, а свойства - для доступа к значениям объекта.</p>
 <p>Например, мы можем добавить метод <code>say_hello</code>, который будет выводить приветствие с именем и возрастом объекта:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Copy</span> <span class="n">code</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, my name is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> and I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">person1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">person1</span><span class="o">.</span><span class="n">say_hello</span><span class="p">()</span> <span class="c1"># выводит &quot;Hello, my name is Alice and I am 25 years old.&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, my name is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> and I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">person1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">person1</span><span class="o">.</span><span class="n">say_hello</span><span class="p">()</span> <span class="c1"># выводит &quot;Hello, my name is Alice and I am 25 years old.&quot;</span>
 </code></pre></div>
 <p>В этом примере мы добавляем метод <code>say_hello</code> в класс <code>Person</code>. Метод принимает параметр <code>self</code>, который указывает на текущий объект. Метод выводит строку с именем и возрастом объекта, используя значения свойств <code>name</code> и <code>age</code>.</p>
 <p>Также мы можем добавить свойства, которые будут содержать данные объекта. Например, мы можем добавить свойство <code>height</code>:</p>
@@ -1448,7 +1447,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">person1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">170</span><span class="p">)</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">person1</span><span class="o">.</span><span class="n">height</span><span class="p">)</span> <span class="c1"># выводит 170</span>
 </code></pre></div>
-<p>В этом примере мы создаем объект "<code>person1</code>" класса <code>Person</code> с именем <code>Alice</code>, возрастом <code>25</code> и ростом <code>170</code>. Затем мы выводим значение свойства <code>height</code> объекта <code>person1</code>.</p>
+<p>В этом примере мы создаем объект <code>person1</code> класса <code>Person</code> с именем <code>Alice</code>, возрастом <code>25</code> и ростом <code>170</code>. Затем мы выводим значение свойства <code>height</code> объекта <code>person1</code>.</p>
 <h2 id="_3">Заключение</h2>
 <p>В этой статье мы рассмотрели создание классов и объектов в Python, а также методы и свойства, которые могут быть определены в классе. Классы и объекты - это важные понятия в объектно-ориентированном программировании, которые позволяют создавать модели объектов, которые могут быть использованы в программе для выполнения определенных задач.</p>
 
