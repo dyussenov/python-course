@@ -1,11 +1,17 @@
 site_name: База знаний
 site_url: https://wiki.dyussenov.dev/
-site_description: Справочник по Python
+site_description: Справочник по программированию
 site_author: Асет Дюсенов
-copyright: 2020-2023, Школа компьютерных технологий IT Center
+copyright: 2020-2023, Асет Дюсенов
+
+# Repository
+repo_name: dyussenov/python-course
+repo_url: https://github.com/dyussenov/python-course
+
+
 nav:
     - Старт: index.md
-    - Основы языка Python:
+    - Python Core:
       - Способы создания переменных: basic/variables.md
       - Ввод и вывод данных. Функции print() и input(): basic/input.md
       - If, else, elif: basic/if.md
@@ -66,9 +72,6 @@ nav:
     - JavaScript:
       - Работа с DOM деревом: js/dom.md
 
-markdown_extensions:
-    - smarty
-
 theme:
   name: material
   custom_dir: overrides
@@ -85,8 +88,6 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default 
-
-
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -97,10 +98,19 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+  features:
+    # - header.autohide
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - navigation.expand
+
 use_directory_urls: true
 markdown_extensions:
   - attr_list
   - md_in_html
+  - smarty
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -111,7 +121,4 @@ extra:
   analytics:
     provider: google
     property: G-GPHQZETNLC
-  social:
-      - icon: fontawesome/brands/instagram
-        link: 'https://www.instagram.com/it_center_krg/'
-        name: IT Center on instagram
+
