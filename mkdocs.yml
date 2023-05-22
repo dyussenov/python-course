@@ -69,6 +69,7 @@ nav:
       - Создание моделей: django/creating_models.md
     - Aiogram:
       - Введение: aiogram/intro.md
+      - Эхо-бот: aiogram/echo-bot.md
     - JavaScript:
       - Работа с DOM деревом: js/dom.md
 
