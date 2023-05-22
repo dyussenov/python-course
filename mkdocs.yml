@@ -61,6 +61,8 @@ nav:
       - Маршрутизация и шаблоны URL: django/routing.md
       - Переадресация и отправка статусных кодов: django/redirect_and_status.md
       - Создание моделей: django/creating_models.md
+    - Aiogram:
+      - Введение: aiogram/intro.md
     - JavaScript:
       - Работа с DOM деревом: js/dom.md
 
