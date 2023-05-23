@@ -12,14 +12,14 @@
         <meta name="author" content="Асет Дюсенов">
       
       
-        <link rel="canonical" href="https://wiki.dyussenov.dev/basic/text_files/files_read/">
+        <link rel="canonical" href="https://wiki.dyussenov.dev/basic/oop/03_incapsulation/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>Открытие и чтение файлов - База знаний</title>
+        <title>Инкапсуляция - База знаний</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Открытие и чтение файлов
+              Инкапсуляция
             
           </span>
         </div>
@@ -815,14 +815,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" checked>
       
       
       
@@ -843,93 +841,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Открытие и чтение файлов
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../text_files/files_read/" class="md-nav__link">
         Открытие и чтение файлов
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    О текстовых файлах
-  </a>
-  
-    <nav class="md-nav" aria-label="О текстовых файлах">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    Текстовые файлы
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    Бинарные файлы
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open" class="md-nav__link">
-    Открытие файла. Функция open()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#read-seek-tell" class="md-nav__link">
-    Методы read(), seek() и tell(). Посимвольное чтение
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#readline-readlines" class="md-nav__link">
-    Методы readline() и readlines(). Построчное чтение
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -941,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../files_write/" class="md-nav__link">
+      <a href="../../text_files/files_write/" class="md-nav__link">
         Запись в файлы
       </a>
     </li>
@@ -960,12 +876,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_11" type="checkbox" id="__nav_2_11" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11" type="checkbox" id="__nav_2_11" checked>
       
       
       
@@ -988,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oop/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         Введение в ООП
       </a>
     </li>
@@ -1002,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oop/create/" class="md-nav__link">
+      <a href="../create/" class="md-nav__link">
         Классы, объекты, методы
       </a>
     </li>
@@ -1014,11 +932,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../oop/03_incapsulation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Инкапсуляция
       </a>
+      
     </li>
   
 
@@ -1616,62 +1544,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    О текстовых файлах
-  </a>
-  
-    <nav class="md-nav" aria-label="О текстовых файлах">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    Текстовые файлы
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    Бинарные файлы
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open" class="md-nav__link">
-    Открытие файла. Функция open()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#read-seek-tell" class="md-nav__link">
-    Методы read(), seek() и tell(). Посимвольное чтение
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#readline-readlines" class="md-nav__link">
-    Методы readline() и readlines(). Построчное чтение
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1684,238 +1556,13 @@
                 
                   
 
-  <a href="https://github.com/dyussenov/python-course/edit/master/docs/basic/text_files/files_read.md" title="Редактировать страницу" class="md-content__button md-icon">
+  <a href="https://github.com/dyussenov/python-course/edit/master/docs/basic/oop/03_incapsulation.md" title="Редактировать страницу" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="_1">Открытие и чтение текстовых файлов</h1>
-<h2 id="_2">О текстовых файлах</h2>
-<p>Большие объемы данных хранят не в списках или словарях, а в файлах и базах данных. В этом уроке изучим особенности работы с текстовыми файлами в Python. Файл — это всего лишь набор данных, сохраненный в виде последовательности битов на компьютере.</p>
-<p>В Python существует два типа файлов:</p>
-<ul>
-<li>Текстовые</li>
-<li>Бинарные</li>
-</ul>
-<h3 id="_3">Текстовые файлы</h3>
-<p>Это файлы с человекочитаемым содержимым. В них хранятся последовательности символов, которые понимает человек. Блокнот и другие стандартные редакторы умеют читать и редактировать этот тип файлов.</p>
-<p>Текст может храниться в двух форматах: <code>.txt</code> — простой текст и <code>.rtf</code> формат обогащенного текста.</p>
-<h3 id="_4">Бинарные файлы</h3>
-<p>В бинарных файлах данные отображаются в закодированной форме (с использованием только нулей (0) и единиц (1) вместо простых символов). В большинстве случаев это просто последовательности битов.</p>
-<p>Они хранятся в формате <code>.bin</code>.</p>
-<h2 id="open">Открытие файла. Функция <code>open()</code></h2>
-<p>В Python есть встроенная функция <code>open()</code>. С ее помощью можно открыть любой файл на компьютере. Технически Python создает на его основе объект:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">access_mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-</code></pre></div>
-<p>Где,</p>
-<ul>
-<li><code>file_name</code> - имя открываемого файла</li>
-<li><code>access_mode</code> - режим открытия файла. Он может быть: для чтения, записи и т. д. По умолчанию используется режим чтения (r), если другое не указано. Далее полный список режимов открытия файла</li>
-<li><code>encoding</code> - кодировка, используется для корректного чтения файлов не на латинице. Рекомендуется использовать значения <code>'utf-8'</code> или <code>cp1252</code>.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Режим</th>
-<th>Описание</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>r</code></td>
-<td>Только для чтения.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>w</code></td>
-<td>Только для записи. Создаст новый файл, если не найдет с указанным именем.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>rb</code></td>
-<td>Только для чтения (бинарный).</td>
-<td></td>
-</tr>
-<tr>
-<td><code>wb</code></td>
-<td>Только для записи (бинарный). Создаст новый файл, если не найдет с указанным именем.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>r+</code></td>
-<td>Для чтения и записи.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>rb+</code></td>
-<td>Для чтения и записи (бинарный).</td>
-<td></td>
-</tr>
-<tr>
-<td><code>w+</code></td>
-<td>Для чтения и записи. Создаст новый файл для записи, если не найдет с указанным именем.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>wb+</code></td>
-<td>Для чтения и записи (бинарный). Создаст новый файл для записи, если не найдет с указанным именем.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>a</code></td>
-<td>Откроет для добавления нового содержимого. Создаст новый файл для записи, если не найдет с указанным именем.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>a+</code></td>
-<td>Откроет для добавления нового содержимого. Создаст новый файл для чтения записи, если не найдет с указанным именем.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>ab</code></td>
-<td>Откроет для добавления нового содержимого (бинарный). Создаст новый файл для записи, если не найдет с указанным именем.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>ab+</code></td>
-<td>Откроет для добавления нового содержимого (бинарный). Создаст новый файл для чтения записи, если не найдет с указанным именем.</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p>Создадим текстовый файл <code>example.txt</code> и сохраним его в рабочей директории:</p>
-<p><img alt="'txt'" src="/assets/txt.jpg" /></p>
-<p>Следующий код используется для его открытия:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="read-seek-tell">Методы <code>read()</code>, <code>seek()</code> и <code>tell()</code>. Посимвольное чтение</h2>
-<p>Для того, чтобы считать последовательность отдельных символов используется метод <code>read()</code>. В качестве аргумента передается количество символок, которые нужно считать:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span> <span class="c1">#выводим первые 4 символа</span>
-</code></pre></div>
-<p>Вывод:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>This
-</code></pre></div>
-<hr />
-<p>При использовании метода <code>read()</code> виртуальный &ldquo;курсор&rdquo; перемещается на заданное количество символов (в нашем случае на 4). Благодаря этому мы можем повторно вызвать этот метод и получить следующие сиволы:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
-</code></pre></div>
-<p>Вывод:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>This
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a> is 
-</code></pre></div>
-<blockquote>
-<p>В данном примере при втором вызове функции <code>print()</code> мы получили только слово <code>is</code>, хотя считывали 4 символа. Никакой ошибки нет, так как слово окружено пробелами, которые считаются полноценными символами.</p>
-</blockquote>
-<hr />
-<p>Мы также можем узнать текущее положение виртуального курсора при помощи метода <code>tell()</code> и переместить вирутальный курсор в любое место при помощи <code>seek()</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span> <span class="c1">#выводим первые 4 сивола</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#перемещаем курсор на 10 позицию</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">pos</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span> <span class="c1">#сохраняем в переменную текущую позицию</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Позиция курсора:&#39;</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span> <span class="c1">#считываем следующие 4 символа начиная с 10</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">pos</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span> <span class="c1">#сохраняем в переменную новую позицию</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Позиция курсора:&#39;</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
-</code></pre></div>
-<p>Вывод:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>This
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Позиция курсора 10
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>text
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Позиция курсора 14
-</code></pre></div>
-<h2 id="readline-readlines">Методы <code>readline()</code> и <code>readlines()</code>. Построчное чтение</h2>
-<p>Считывать файл посимвольно не всегда удобно. Во многих задачах более уместным будет чтение файла <em>построчно</em>. Для примера обновим содержимое нашего текстового файла:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Не выходи из комнаты, не совершай ошибку.
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Зачем тебе Солнце, если ты куришь Шипку?
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>За дверью бессмысленно всё, особенно — возглас счастья.
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Только в уборную — и сразу же возвращайся.
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>О, не выходи из комнаты, не вызывай мотора.
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Потому что пространство сделано из коридора
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>и кончается счетчиком. А если войдет живая
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>милка, пасть разевая, выгони не раздевая.
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>Иосиф Бродский
-</code></pre></div>
-<hr />
-<p>При помощи <code>readline()</code> считаем первою строку текстового файла:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
-</code></pre></div>
-<p>Вывод:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Не выходи из комнаты, не совершай ошибку.
-</code></pre></div>
-<hr />
-<p>Интересная деталь: символы на кирилице занимают 2 бита, а не 1. Поэтому вызвав метод <code>tell()</code> мы получим значение гораздо больше, чем количество сиволов в прочитанной строке:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">())</span>
-</code></pre></div>
-<p>Вывод:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Не выходи из комнаты, не совершай ошибку.
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>75
-</code></pre></div>
-<hr />
-<p>Пример с использованием двух методов <code>readline()</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
-</code></pre></div>
-<p>Вывод:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Не выходи из комнаты, не совершай ошибку.
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Зачем тебе Солнце, если ты куришь Шипку?
-</code></pre></div>
-<blockquote>
-<p>Лишние пустые строки - не баг, а фича. Метод <code>readline()</code> определяет конец строки по спецсимволу <code>\n</code> (переход на новую строку). Так как этот спецсимвол является частю прочитанной строки - он выводится вместе с ней. А также спецсимвол <code>\n</code> по умолчанию используется в функции <code>print()</code>. Чтобы избежать лишних пустых строк нужно вызывать функцию <code>print()</code> с аргументом <code>end=''</code></p>
-</blockquote>
-<hr />
-<p>Объект <code>f</code> является итерируемым. Поэтому весь файл можно построчно вывести при помощи цикла <code>for</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</code></pre></div>
-<p>Вывод:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Не выходи из комнаты, не совершай ошибку.
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Зачем тебе Солнце, если ты куришь Шипку?
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>За дверью бессмысленно всё, особенно — возглас счастья.
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>Только в уборную — и сразу же возвращайся.
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>О, не выходи из комнаты, не вызывай мотора.
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>Потому что пространство сделано из коридора
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>и кончается счетчиком. А если войдет живая
-<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>милка, пасть разевая, выгони не раздевая.
-<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
-<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>Иосиф Бродский
-</code></pre></div>
-<hr />
-<p>И наконец, если мы хотим прочитать весь файл целиком и сразу можно воспользоваться методом <code>readlines()</code>. Он возвращает список, в котором каждый элемент это отдельная строка из файла:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
-</code></pre></div>
-<p>Вывод:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>[&#39;Не выходи из комнаты, не совершай ошибку.\n&#39;, &#39;Зачем тебе Солнце, если ты куришь Шипку?\n&#39;, &#39;За дверью бессмысленно всё, особенно — возглас счастья.\n&#39;, &#39;Только в уборную — и сразу же возвращайся.\n&#39;, &#39;\n&#39;, &#39;О, не выходи из комнаты, не вызывай мотора.\n&#39;, &#39;Потому что пространство сделано из коридора\n&#39;, &#39;и кончается счетчиком. А если войдет живая\n&#39;, &#39;милка, пасть разевая, выгони не раздевая.\n&#39;, &#39;\n&#39;, &#39;Иосиф Бродский&#39;]
-</code></pre></div>
-<blockquote>
-<p>Следует быть аккуратным при использовании данного метода. Открытие больших файлов занимает большой объем оперативной памяти. Например, при открытии целой книги &ldquo;Война и мир&rdquo; вы можете потратить неприлично огромные 4мб памяти.</p>
-</blockquote>
-<hr />
-<p>И, напоследок, наш файл после открытия и работы с ним необходимо закрыть, чтобы освободить занятую память. Правильный вариант предыдущего скрипта:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</code></pre></div>
+<h1 id="_1">Инкапсуляция</h1>
 
 
   
@@ -1943,7 +1590,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
       
         
-        <a href="../../functions/decorators/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Декораторы" rel="prev">
+        <a href="../create/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Классы, объекты, методы" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1952,20 +1599,20 @@
               <span class="md-footer__direction">
                 Назад
               </span>
-              Декораторы
+              Классы, объекты, методы
             </div>
           </div>
         </a>
       
       
         
-        <a href="../files_write/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Запись в файлы" rel="next">
+        <a href="../../../db/sqlite/sql/" class="md-footer__link md-footer__link--next" aria-label="Вперед: SQL и реляционные базы данных" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              Запись в файлы
+              SQL и реляционные базы данных
             </div>
           </div>
           <div class="md-footer__button md-icon">

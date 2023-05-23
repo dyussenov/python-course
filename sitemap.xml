@@ -126,6 +126,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.dyussenov.dev/basic/oop/03_incapsulation/</loc>
+         <lastmod>2023-05-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.dyussenov.dev/basic/oop/create/</loc>
          <lastmod>2023-05-23</lastmod>
          <changefreq>daily</changefreq>
