@@ -42,7 +42,9 @@ nav:
       - ООП:
         - Введение в ООП: basic/oop/intro.md
         - Классы, объекты, методы: basic/oop/create.md
-        - Инкапсуляция: basic/oop/03_incapsulation.md
+        - Инкапсуляция: basic/oop/03_encapsulation.md
+        - Наследование: basic/oop/04_inheritance.md
+        - Полфиморфизм: basic/oop/05_polymorphism.md
     - Базы данных:
       - SQLite 3:
         - SQL и реляционные базы данных: db/sqlite/sql.md
