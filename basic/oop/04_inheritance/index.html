@@ -12,14 +12,14 @@
         <meta name="author" content="Асет Дюсенов">
       
       
-        <link rel="canonical" href="https://wiki.dyussenov.dev/basic/oop/create/">
+        <link rel="canonical" href="https://wiki.dyussenov.dev/basic/oop/04_inheritance/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>Классы, объекты, методы - База знаний</title>
+        <title>Наследование - База знаний</title>
       
     
     
@@ -83,11 +83,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          Перейти к содержанию
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -116,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Классы, объекты, методы
+              Наследование
             
           </span>
         </div>
@@ -918,80 +913,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Классы, объекты, методы
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../create/" class="md-nav__link">
         Классы, объекты, методы
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    Создание классов в Python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    Создание объектов в Python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    Методы
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#__init__" class="md-nav__link">
-    Магический метод __init__()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    Заключение
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1015,11 +941,19 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../04_inheritance/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Наследование
       </a>
+      
     </li>
   
 
@@ -1628,51 +1562,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    Создание классов в Python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    Создание объектов в Python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    Методы
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#__init__" class="md-nav__link">
-    Магический метод __init__()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    Заключение
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1686,161 +1575,15 @@
                 
                   
 
-  <a href="https://github.com/dyussenov/python-course/edit/master/docs/basic/oop/create.md" title="Редактировать страницу" class="md-content__button md-icon">
+  <a href="https://github.com/dyussenov/python-course/edit/master/docs/basic/oop/04_inheritance.md" title="Редактировать страницу" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="_1">Основные понятия: Класс, объект, метод, поле</h1>
-<p>Классы и объекты - это основа объектно-ориентированного программирования в Python. Классы представляют собой шаблоны, которые определяют свойства и методы, а объекты - это экземпляры классов, которые содержат конкретные значения свойств.</p>
-<h2 id="python">Создание классов в Python</h2>
-<p><strong><em>Класс</em></strong> - это шаблон или описание, на основе которого будут создаваться <strong><em>объекты</em></strong>. Описание осуществляется при помощи <strong><em>свойств</em></strong> и <strong><em>методов</em></strong>. Например, если у нас есть класс &ldquo;Автомобиль&rdquo;, он может иметь свойства, такие как &ldquo;марка&rdquo;, &ldquo;модель&rdquo; и &ldquo;год выпуска&rdquo;, а также методы, такие как &ldquo;завести&rdquo;, &ldquo;остановиться&rdquo; и &ldquo;поехать&rdquo;.</p>
-<p>Для создания класса в Python используется ключевое слово <code>class</code>. Давайте создадим класс <code>Car</code>, который описывали ранее. Начнем с определения класса и его свойств - <code>brand</code>, <code>model</code>, <code>year</code> и <code>is_running</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">brand</span> <span class="o">=</span> <span class="s1">&#39;Toyota&#39;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;Camry&#39;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">year</span> <span class="o">=</span> <span class="mi">2023</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">is_running</span> <span class="o">=</span> <span class="kc">False</span>
-</code></pre></div>
-<p>После создания класса мы получаем доступ к описанным свойствам и методам (методы пока не реализованы):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">brand</span> <span class="o">=</span> <span class="s1">&#39;Toyota&#39;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;Camry&#39;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">year</span> <span class="o">=</span> <span class="mi">2023</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">is_running</span> <span class="o">=</span> <span class="kc">False</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">Car</span><span class="o">.</span><span class="n">brand</span><span class="p">,</span> <span class="n">Car</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
-</code></pre></div>
-<blockquote>
-<p>Вместо термина &ldquo;свойство&rdquo; иногда используются &ldquo;атрибут&rdquo; или &ldquo;поле&rdquo;</p>
-</blockquote>
-<h2 id="python_1">Создание объектов в Python</h2>
-<p><strong><em>Объект</em></strong> - это экземпляр <strong><em>класса</em></strong>, который имеет те же свойства и методы, что и его родительский класс. Создать объект можно следующим образом:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">brand</span> <span class="o">=</span> <span class="s1">&#39;Toyota&#39;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;Camry&#39;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">year</span> <span class="o">=</span> <span class="mi">2023</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">is_running</span> <span class="o">=</span> <span class="kc">False</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">car1</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">car1</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;Land Cruiser&#39;</span> <span class="c1"># Переопределение свойства model</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">car1</span><span class="o">.</span><span class="n">model</span><span class="p">)</span> <span class="c1"># В объекте - новое значение</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">Car</span><span class="o">.</span><span class="n">model</span><span class="p">)</span> <span class="c1"># В классе - старое</span>
-</code></pre></div>
-<p>В этом примере мы создали <strong><em>объект</em></strong> <code>car1</code> и указали, что <strong><em>свойство</em></strong> <code>model</code> имеет значение <code>'Land Cruiser'</code>. При этом, <strong><em>значение свойства</em></strong> в <strong><em>классе</em></strong> осталось прежним, а <strong><em>объекты</em></strong> создаваемые в будущем будут иметь это значение:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">brand</span> <span class="o">=</span> <span class="s1">&#39;Toyota&#39;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;Camry&#39;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">year</span> <span class="o">=</span> <span class="mi">2023</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">is_running</span> <span class="o">=</span> <span class="kc">False</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">car1</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">car1</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;Land Cruiser&#39;</span> <span class="c1"># Переопределение свойства model</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">car1</span><span class="o">.</span><span class="n">model</span><span class="p">)</span> <span class="c1"># В объекте - новое значение</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">Car</span><span class="o">.</span><span class="n">model</span><span class="p">)</span> <span class="c1"># В классе - старое</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">car2</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span> <span class="c1"># Cоздание нового объекта</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">car2</span><span class="o">.</span><span class="n">model</span><span class="p">)</span> <span class="c1"># Свойство model имеет значние &#39;Camry&#39;</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="n">Car</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;Highlander&#39;</span> <span class="c1"># Переопределение свойства в классе</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="n">car3</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span> <span class="c1"># Cоздание нового объекта</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">car3</span><span class="o">.</span><span class="n">model</span><span class="p">)</span> <span class="c1"># У объекта, созданного после смены свойства в классе новое значение</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">car2</span><span class="o">.</span><span class="n">model</span><span class="p">)</span> <span class="c1"># У объекта, созданного до смены свойства в классе также сменилось значение</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="nb">print</span><span class="p">(</span><span class="n">car1</span><span class="o">.</span><span class="n">model</span><span class="p">)</span> <span class="c1"># У объекта, созданного до смены свойства в классе, но с переопределенным свойством все осталось прежним</span>
-</code></pre></div>
-<blockquote>
-<p>Когда вы переопределяетете свойство внутри объекта - вы создаете новое имя в пространсте имен этого объекта и поэтому изменение поля в классе не затрагивает переопределенное свойство в объекте!</p>
-</blockquote>
-<h2 id="_2">Методы</h2>
-<p>Методы - это функции, которые принадлежат классу или объекту. Методы обычно используются для выполнения действий с объектом или для возврата значения.</p>
-<p>Определим внутри нашего класса метод, который будет заводить наш автомобиль:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">brand</span> <span class="o">=</span> <span class="s1">&#39;Toyota&#39;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;Camry&#39;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">year</span> <span class="o">=</span> <span class="mi">2023</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">is_running</span> <span class="o">=</span> <span class="kc">False</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span><span class="p">:</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span> <span class="o">=</span> <span class="kc">True</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The car has started.&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The car is already running.&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">car1</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="n">car1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-</code></pre></div>
-<p>В этом примере мы добавляем <strong><em>метод</em></strong> <code>start</code> в класс <code>Car</code>. <strong><em>Метод</em></strong> принимает особый аргумент <code>self</code>, который указывает на текущий объект. Проще говоря - self нужен для того, чтобы интерпертатор понял, для какого конкретного объекта вызывается метод и свойства какого объекта задействовать в них.</p>
-<blockquote>
-<p>При определении метода, <code>self</code> всегда указывается первым аргументом, но при вызове этого метода - ничего не передается. Это можно наблюдать в примере кода, написанном ранее - метод start принимает один аргумент, но при вызове ничего не передается. Это происходит благодаря тому, что python без вашего участия заполняет данный аргумент. </p>
-</blockquote>
-<h2 id="__init__">Магический метод <code>__init__()</code></h2>
-<p>Объекты зачастую имеют значения полей отличные от определенных в классе (не все автомобили тойоты, тем более камри). Было бы удобно указывать значения полей объекта на этапе его создания. Такую возможность нам предоставляет <strong><em>магический метод</em></strong> <code>__init__()</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">brand</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;new car created!&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">brand</span> <span class="o">=</span> <span class="n">brand</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span> <span class="o">=</span> <span class="kc">False</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span><span class="p">:</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span> <span class="o">=</span> <span class="kc">True</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The car has started.&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The car is already running.&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="n">car1</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;Lada&#39;</span><span class="p">,</span> <span class="s1">&#39;Priora&#39;</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="n">car1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">car1</span><span class="o">.</span><span class="n">brand</span><span class="p">,</span> <span class="n">car1</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">car1</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
-</code></pre></div>
-<p>Этот метод вызывается автоматически при создании объекта, поэтому и называется магическим. Аргументы, требуемые для этого метода указываются также в момент создания объекта.</p>
-<blockquote>
-<p>Метод <code>__init__()</code> не единственный магический метод в python!</p>
-</blockquote>
-<hr />
-<p>Расширим функционал нашего класса новыми методами:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">brand</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">brand</span> <span class="o">=</span> <span class="n">brand</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span> <span class="o">=</span> <span class="kc">False</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span><span class="p">:</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span> <span class="o">=</span> <span class="kc">True</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The car has started.&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The car is already running.&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span><span class="p">:</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span> <span class="o">=</span> <span class="kc">False</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The car has stopped.&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The car is already stopped.&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
-<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    <span class="k">def</span> <span class="nf">drive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">distance</span><span class="p">):</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_running</span><span class="p">:</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The car is driving for </span><span class="si">{</span><span class="n">distance</span><span class="si">}</span><span class="s2"> kilometers.&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The car needs to be started first.&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>
-<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="n">car1</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&quot;Toyota&quot;</span><span class="p">,</span> <span class="s2">&quot;Camry&quot;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
-<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>
-<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="c1"># Вызов методов</span>
-<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="n">car1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>  <span class="c1"># Завести автомобиль</span>
-<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="n">car1</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>  <span class="c1"># Автомобиль едет 50 километров</span>
-<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="n">car1</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>  <span class="c1"># Остановить автомобиль</span>
-</code></pre></div>
-<h2 id="_3">Заключение</h2>
-<p>В этой статье мы рассмотрели создание классов и объектов в Python, а также методы и свойства, которые могут быть определены в классе. Классы и объекты - это важные понятия в объектно-ориентированном программировании, которые позволяют создавать модели объектов, которые могут быть использованы в программе для выполнения определенных задач.</p>
+  <h1>Наследование</h1>
+
+
 
 
   
@@ -1868,7 +1611,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
       
         
-        <a href="../intro/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Введение в ООП" rel="prev">
+        <a href="../03_encapsulation/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Инкапсуляция" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1877,20 +1620,20 @@
               <span class="md-footer__direction">
                 Назад
               </span>
-              Введение в ООП
+              Инкапсуляция
             </div>
           </div>
         </a>
       
       
         
-        <a href="../03_encapsulation/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Инкапсуляция" rel="next">
+        <a href="../05_polymorphism/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Полфиморфизм" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              Инкапсуляция
+              Полфиморфизм
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -126,7 +126,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.dyussenov.dev/basic/oop/03_incapsulation/</loc>
+         <loc>https://wiki.dyussenov.dev/basic/oop/03_encapsulation/</loc>
+         <lastmod>2023-05-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.dyussenov.dev/basic/oop/04_inheritance/</loc>
+         <lastmod>2023-05-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.dyussenov.dev/basic/oop/05_polymorphism/</loc>
          <lastmod>2023-05-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
