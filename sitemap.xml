@@ -2,267 +2,272 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://wiki.dyussenov.dev/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/aiogram/echo-bot/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/aiogram/intro/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/exception/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/if/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/input/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/lesson5-for/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/typehints/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/variables/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/while-python/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/datatypes/bytestring/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/datatypes/collections/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/datatypes/comprehensions/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/datatypes/datatypes-intro/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/datatypes/dict/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/datatypes/lesson4-lists/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/datatypes/lesson6-slices/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/datatypes/lesson6-strings/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/datatypes/set/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/datatypes/tuples/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/functions/args/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/functions/decorators/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/functions/functions/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/functions/lambda/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/functions/recurtion/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/oop/03_encapsulation/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/oop/04_inheritance/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/oop/05_polymorphism/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/oop/create/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/oop/intro/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/text_files/files_read/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/basic/text_files/files_write/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/db/sqlite/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/db/sqlite/01_ddl/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/db/sqlite/02_connection/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/db/sqlite/03_dml/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/db/sqlite/04_dql/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/db/sqlite/05_agregation_grouping/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/db/sqlite/06_foreign_key_join/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/db/sqlite/sql/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/django/creating_app/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/django/creating_models/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/django/init/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/django/intro/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/django/redirect_and_status/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/django/routing/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/git/git_windows/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/js/dom/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/modules/datetime/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/modules/faker/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.dyussenov.dev/modules/pathlib/</loc>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/modules/prettytable/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/modules/requests/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.dyussenov.dev/modules/venv/</loc>
-         <lastmod>2023-05-25</lastmod>
+         <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

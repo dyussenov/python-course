@@ -12,14 +12,14 @@
         <meta name="author" content="Асет Дюсенов">
       
       
-        <link rel="canonical" href="https://wiki.dyussenov.dev/basic/lesson5-for/">
+        <link rel="canonical" href="https://wiki.dyussenov.dev/modules/pathlib/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>Цикл for - База знаний</title>
+        <title>Pathlib. Работа с путями - База знаний</title>
       
     
     
@@ -83,11 +83,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#for" class="md-skip">
-          Перейти к содержанию
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -116,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Цикл for
+              Pathlib. Работа с путями
             
           </span>
         </div>
@@ -231,15 +226,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../variables/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../basic/variables/" class="md-tabs__link">
         Python Core
       </a>
     </li>
@@ -272,13 +265,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../modules/datetime/" class="md-tabs__link">
+      <a href="../datetime/" class="md-tabs__link md-tabs__link--active">
         Модули
       </a>
     </li>
@@ -413,14 +408,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -443,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../variables/" class="md-nav__link">
+      <a href="../../basic/variables/" class="md-nav__link">
         Способы создания переменных
       </a>
     </li>
@@ -457,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../input/" class="md-nav__link">
+      <a href="../../basic/input/" class="md-nav__link">
         Ввод и вывод данных. Функции print() и input()
       </a>
     </li>
@@ -471,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../if/" class="md-nav__link">
+      <a href="../../basic/if/" class="md-nav__link">
         If, else, elif
       </a>
     </li>
@@ -485,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../while-python/" class="md-nav__link">
+      <a href="../../basic/while-python/" class="md-nav__link">
         Цикл while
       </a>
     </li>
@@ -497,66 +490,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Цикл for
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../basic/lesson5-for/" class="md-nav__link">
         Цикл for
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#range" class="md-nav__link">
-    Функция range()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    Задачи
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -594,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/datatypes-intro/" class="md-nav__link">
+      <a href="../../basic/datatypes/datatypes-intro/" class="md-nav__link">
         Типы данных
       </a>
     </li>
@@ -608,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/lesson6-strings/" class="md-nav__link">
+      <a href="../../basic/datatypes/lesson6-strings/" class="md-nav__link">
         Строки
       </a>
     </li>
@@ -622,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/lesson4-lists/" class="md-nav__link">
+      <a href="../../basic/datatypes/lesson4-lists/" class="md-nav__link">
         Списки
       </a>
     </li>
@@ -636,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/comprehensions/" class="md-nav__link">
+      <a href="../../basic/datatypes/comprehensions/" class="md-nav__link">
         Генераторы списков
       </a>
     </li>
@@ -650,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/tuples/" class="md-nav__link">
+      <a href="../../basic/datatypes/tuples/" class="md-nav__link">
         Кортежи
       </a>
     </li>
@@ -664,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/dict/" class="md-nav__link">
+      <a href="../../basic/datatypes/dict/" class="md-nav__link">
         Словари
       </a>
     </li>
@@ -678,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/set/" class="md-nav__link">
+      <a href="../../basic/datatypes/set/" class="md-nav__link">
         Множества
       </a>
     </li>
@@ -692,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/collections/" class="md-nav__link">
+      <a href="../../basic/datatypes/collections/" class="md-nav__link">
         Коллекции
       </a>
     </li>
@@ -706,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/lesson6-slices/" class="md-nav__link">
+      <a href="../../basic/datatypes/lesson6-slices/" class="md-nav__link">
         Срезы
       </a>
     </li>
@@ -720,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datatypes/bytestring/" class="md-nav__link">
+      <a href="../../basic/datatypes/bytestring/" class="md-nav__link">
         Byte-строки
       </a>
     </li>
@@ -741,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exception/" class="md-nav__link">
+      <a href="../../basic/exception/" class="md-nav__link">
         Исключения. Try, except, finally
       </a>
     </li>
@@ -755,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../typehints/" class="md-nav__link">
+      <a href="../../basic/typehints/" class="md-nav__link">
         Аннотации типов
       </a>
     </li>
@@ -795,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/functions/" class="md-nav__link">
+      <a href="../../basic/functions/functions/" class="md-nav__link">
         Создание функций
       </a>
     </li>
@@ -809,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/args/" class="md-nav__link">
+      <a href="../../basic/functions/args/" class="md-nav__link">
         args и kwargs
       </a>
     </li>
@@ -823,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/recurtion/" class="md-nav__link">
+      <a href="../../basic/functions/recurtion/" class="md-nav__link">
         Рекурсия в функциях
       </a>
     </li>
@@ -837,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/lambda/" class="md-nav__link">
+      <a href="../../basic/functions/lambda/" class="md-nav__link">
         Анонимные функции
       </a>
     </li>
@@ -851,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/decorators/" class="md-nav__link">
+      <a href="../../basic/functions/decorators/" class="md-nav__link">
         Декораторы
       </a>
     </li>
@@ -898,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../text_files/files_read/" class="md-nav__link">
+      <a href="../../basic/text_files/files_read/" class="md-nav__link">
         Открытие и чтение файлов
       </a>
     </li>
@@ -912,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../text_files/files_write/" class="md-nav__link">
+      <a href="../../basic/text_files/files_write/" class="md-nav__link">
         Запись в файлы
       </a>
     </li>
@@ -959,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/intro/" class="md-nav__link">
+      <a href="../../basic/oop/intro/" class="md-nav__link">
         Введение в ООП
       </a>
     </li>
@@ -973,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/create/" class="md-nav__link">
+      <a href="../../basic/oop/create/" class="md-nav__link">
         Классы, объекты, методы
       </a>
     </li>
@@ -987,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/03_encapsulation/" class="md-nav__link">
+      <a href="../../basic/oop/03_encapsulation/" class="md-nav__link">
         Инкапсуляция
       </a>
     </li>
@@ -1001,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/04_inheritance/" class="md-nav__link">
+      <a href="../../basic/oop/04_inheritance/" class="md-nav__link">
         Наследование
       </a>
     </li>
@@ -1015,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop/05_polymorphism/" class="md-nav__link">
+      <a href="../../basic/oop/05_polymorphism/" class="md-nav__link">
         Полфиморфизм
       </a>
     </li>
@@ -1221,12 +1159,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -1249,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/datetime/" class="md-nav__link">
+      <a href="../datetime/" class="md-nav__link">
         Datetime. Работа с временем и датой
       </a>
     </li>
@@ -1263,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/prettytable/" class="md-nav__link">
+      <a href="../prettytable/" class="md-nav__link">
         Prettytable. Красивые таблицы
       </a>
     </li>
@@ -1277,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/requests/" class="md-nav__link">
+      <a href="../requests/" class="md-nav__link">
         Requests. Запросы
       </a>
     </li>
@@ -1291,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/faker/" class="md-nav__link">
+      <a href="../faker/" class="md-nav__link">
         Faker. Генерация фейковых данных
       </a>
     </li>
@@ -1305,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modules/venv/" class="md-nav__link">
+      <a href="../venv/" class="md-nav__link">
         Virtualenv. Создание виртуального окружения
       </a>
     </li>
@@ -1317,11 +1257,19 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../modules/pathlib/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Pathlib. Работа с путями
       </a>
+      
     </li>
   
 
@@ -1626,37 +1574,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#range" class="md-nav__link">
-    Функция range()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    Задачи
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1670,139 +1587,15 @@
                 
                   
 
-  <a href="https://github.com/dyussenov/python-course/edit/master/docs/basic/lesson5-for.md" title="Редактировать страницу" class="md-content__button md-icon">
+  <a href="https://github.com/dyussenov/python-course/edit/master/docs/modules/pathlib.md" title="Редактировать страницу" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="for">Цикл <code>for</code></h1>
-<p>Вы уже знакомы с циклом <code>while</code>, а также перебором списков с его помощью. Помимо него, в Python есть цикл <code>for</code>, для которого перебор списков (и не только) это основная цель.</p>
-<p>Для начала рассмотрим, как при помощи каждого из них происходит перебор элементов списка. Начнем с знакомого нам <code>while</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">,</span> <span class="s1">&#39;Blue&#39;</span><span class="p">,</span> <span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">]</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">):</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
-</code></pre></div>
-<p>Теперь рассмотрим <code>for</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">,</span> <span class="s1">&#39;Blue&#39;</span><span class="p">,</span> <span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">]</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-</code></pre></div>
-<p>Впечатляет простота и лаконичность записи в примере с циклом <code>for</code>. Давайте разберемся подробно в синтаксисе. После <code>for</code> необходимо создать переменную (<code>colors</code>), которая будет на каждой итерации цикла принимать поочередно каждое значение из последовательности (<code>colors</code>), указанной после <code>in</code>. Далее в теле цикла мы можем использовать эту переменную как нам угодно.</p>
-<p>Важный нюанс - переменная, указанная после <code>for</code> является <em>копией</em> значения из списка. Это значит, что она никак не может влиять на оригинальный список:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">prices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">105</span><span class="p">]</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">for</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">prices</span><span class="p">:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">price</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span> <span class="c1">#значения в списке не изменились</span>
-</code></pre></div>
-<p>Также, последоавтельность можно указывать не переменной, а прописать сразу после <code>in</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">,</span> <span class="s1">&#39;Blue&#39;</span><span class="p">:</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-</code></pre></div>
-<p>В цикле <code>for</code> можно использовать ранее изученные <code>break</code>, <code>continue</code> и <code>else</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">,</span> <span class="s1">&#39;Blue&#39;</span><span class="p">,</span> <span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">]</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1">#цикл для поиска синего цвета в списке</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">if</span> <span class="n">color</span> <span class="o">==</span> <span class="s1">&#39;Blue&#39;</span><span class="p">:</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="c1">#если синий найден, то сообщаем об этом и останавливаем цикл</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We found blue color!&#39;</span><span class="p">)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="k">break</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="c1">#иначе сообщаем об отсутствии синего в списке</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;there is no blue color in list&#39;</span><span class="p">)</span> 
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">#вывод нечетных чисел из списка</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">#если число четное, то пропускаем итерацию</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="k">continue</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="range">Функция <code>range()</code></h2>
-<p>Цикл <code>for</code> отлично подходит для прохождения по коллекциям. Но как его использовать для повторения заданного количества раз? Здесь пригодится встроенная функция <code>range()</code>. &ldquo;Range&rdquo; переводится как &ldquo;диапазон&rdquo; и это хорошо отражает её суть.</p>
-<p>В зависимости от количества переданных аргументов изменяется поведение функции. Если передать 1 число, то функция создаст диапозон от 0 до указанного числа:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="c1">#равносильно for i in 0, 1, 2, 3, 4, 5:</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div>
-<p>При передачи двух аргументов будет сгенерирован диапозон от первого до второго <strong>невключительно</strong>. Поэтому важно чтобы первый аргумент был меньше второго. Для разнообразия в примере в качестве аргументов будем использовать переменные, не стоит забывать что это допустимо и в некоторых случаях необходимо:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="c1">#равносильно for i in 0, 1, 2, 3, 4:</span>
-</code></pre></div>
-<p>При добавлении третьего аргумента он задаст шаг, через который будет генерироваться последовательность:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">step</span> <span class="o">=</span> <span class="mi">2</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span> <span class="c1"># равносильно for i in 0, 2, 4, 6, 8</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div>
-<p>Также если шаг сделать отрицательным, а первый аргумент больше второго, то можно получить обратный отсчет спомощью цикла <code>for</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">step</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="summary">Summary</h2>
-<p>Цикл <code>for</code> - это один из наиболее универсальных и часто используемых инструментов в Python. Он позволяет проходить по элементам любой последовательности (например, списку или строке) и выполнять над ними определенные действия.</p>
-<p>В заключении по теме цикла <code>for</code> в Python можно отметить следующие моменты:</p>
-<ul>
-<li>
-<p>Цикл <code>for</code> позволяет проходить по элементам любой последовательности, включая списки, кортежи, строки и даже словари.</p>
-</li>
-<li>
-<p>Цикл <code>for</code> может быть использован совместно с операторами continue и break для управления выполнением цикла.</p>
-</li>
-<li>
-<p>В цикле <code>for</code> можно использовать встроенные функции и методы, такие как <code>range()</code> или <code>enumerate()</code>.</p>
-</li>
-<li>
-<p>Цикл <code>for</code> может быть использован для решения многих задач, связанных с обработкой и анализом данных.</p>
-</li>
-</ul>
-<p>Цикл <code>for</code> - это важный инструмент для программирования на Python, который может быть использован для решения широкого круга задач. Кроме того, использование цикла <code>for</code> может существенно упростить написание кода и сделать его более читаемым и понятным.</p>
-<h2 id="_1">Задачи</h2>
-<ul>
-<li>
-<p>Напишите программу, которая выводит все числа от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит сумму всех чисел от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит среднее арифметическое всех чисел от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит сумму всех чисел в заданном списке.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит среднее арифметическое всех чисел в заданном списке.</p>
-</li>
-<li>
-<p>Напишите программу, которая выводит все четные числа от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит сумму всех четных чисел от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит среднее арифметическое всех четных чисел от 1 до 10.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит максимальное и минимальное значения в заданном списке чисел.</p>
-</li>
-<li>
-<p>Напишите программу, которая находит наиболее часто встречающийся элемент в заданном списке.</p>
-</li>
-</ul>
+  <h1>Pathlib. Работа с путями</h1>
+
+
 
 
   
@@ -1830,7 +1623,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
       
         
-        <a href="../while-python/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Цикл while" rel="prev">
+        <a href="../venv/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Virtualenv. Создание виртуального окружения" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1839,20 +1632,20 @@
               <span class="md-footer__direction">
                 Назад
               </span>
-              Цикл while
+              Virtualenv. Создание виртуального окружения
             </div>
           </div>
         </a>
       
       
         
-        <a href="../datatypes/datatypes-intro/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Типы данных" rel="next">
+        <a href="../../git/git_windows/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Git в Windows" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              Типы данных
+              Git в Windows
             </div>
           </div>
           <div class="md-footer__button md-icon">

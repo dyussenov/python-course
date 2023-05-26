@@ -1270,6 +1270,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../modules/pathlib/" class="md-nav__link">
+        Pathlib. Работа с путями
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1593,9 +1607,27 @@
 <h1 id="_1">Наследование</h1>
 <p>Наследование - один из трех основных принципов ООП. Суть наследования в создании новых классов на основе уже существующих. Такие новые классы называют <em>дочерними</em> или <em>подклассами</em>, а те, от которых они были созданы - <em>родительскими</em> или <em>суперклассами</em>.</p>
 <p>Смысл наследования заключается в том, что дочерние классы наследуют методы и поля родительских:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Parent</span><span class="p">:</span> <span class="c1"># создаем родительский класс</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;Parent value&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">def</span> <span class="nf">show_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Parent</span><span class="p">):</span> <span class="c1"># создаем дочерний класс</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;child created!&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">child_obj</span> <span class="o">=</span> <span class="n">Child</span><span class="p">()</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">child_obj</span><span class="o">.</span><span class="n">show_value</span><span class="p">()</span> <span class="c1"># получаем доступ к методу родительского класса</span>
 </code></pre></div>
-<p>Зачастую наследование решает проблему дублирования кода. Предположим, что мы пришем игру</p>
+<p>Вывод:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>child created!
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Parent value
+</code></pre></div>
+<hr />
+<p>Зачастую наследование решает проблему дублирования кода. Предположим, что мы пришем игру, в которой есть 2 схожие сущности: игрок и бот. Вот как бы выглядел код без использования наследования:</p>
 
 
   
