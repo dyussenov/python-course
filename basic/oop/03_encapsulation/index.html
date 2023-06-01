@@ -1957,16 +1957,16 @@
 <p>Класс &ldquo;Библиотека&rdquo; должен иметь следующие методы:</p>
 <ul>
 <li>
-<p>Метод добавить_книгу(book), который будет принимать объект класса &ldquo;Книга&rdquo; и добавлять его в коллекцию книг библиотеки.</p>
+<p>Метод add_book(book), который будет принимать объект класса &ldquo;Книга&rdquo; и добавлять его в коллекцию книг библиотеки.</p>
 </li>
 <li>
-<p>Метод удалить_книгу(book), который будет принимать объект класса &ldquo;Книга&rdquo; и удалять его из коллекции книг библиотеки.</p>
+<p>Метод delete_book(book), который будет принимать объект класса &ldquo;Книга&rdquo; и удалять его из коллекции книг библиотеки.</p>
 </li>
 <li>
-<p>Метод показать_книги(), который будет выводить информацию о всех книгах в коллекции библиотеки (название, автор, доступность). Должен возвращать список из объектов книг.</p>
+<p>Метод show_books(), который будет выводить информацию о всех книгах в коллекции библиотеки (название, автор, доступность). Должен возвращать список из объектов книг.</p>
 </li>
 <li>
-<p>Метод найти_книгу(title), который будет принимать название книги и возвращать объект класса &ldquo;Книга&rdquo;, соответствующий этому названию, если такая книга присутствует в коллекции библиотеки. Если книга не найдена, метод должен выводить сообщение об этом.</p>
+<p>Метод find_book(title), который будет принимать название книги и возвращать объект класса &ldquo;Книга&rdquo;, соответствующий этому названию, если такая книга присутствует в коллекции библиотеки. Если книга не найдена, метод должен выводить сообщение об этом.</p>
 </li>
 </ul>
 <p>Примечания:</p>
@@ -1984,24 +1984,24 @@
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">book2</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s2">&quot;Преступление и наказание&quot;</span><span class="p">,</span> <span class="s2">&quot;Федор Достоевский&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">book3</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s2">&quot;Гарри Поттер и философский камень&quot;</span><span class="p">,</span> <span class="s2">&quot;Джоан Роулинг&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">library</span><span class="o">.</span><span class="n">добавить_книгу</span><span class="p">(</span><span class="n">book1</span><span class="p">)</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">library</span><span class="o">.</span><span class="n">добавить_книгу</span><span class="p">(</span><span class="n">book2</span><span class="p">)</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="n">library</span><span class="o">.</span><span class="n">добавить_книгу</span><span class="p">(</span><span class="n">book3</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="n">book1</span><span class="p">)</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="n">book2</span><span class="p">)</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="n">library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="n">book3</span><span class="p">)</span>
 <a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="n">library</span><span class="o">.</span><span class="n">показать_книги</span><span class="p">()</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="n">library</span><span class="o">.</span><span class="n">show_books</span><span class="p">()</span>
 <a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="c1"># Вывод:</span>
 <a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c1"># Книга: Война и мир, Автор: Лев Толстой, Доступность: True</span>
 <a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="c1"># Книга: Преступление и наказание, Автор: Федор Достоевский, Доступность: True</span>
 <a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="c1"># Книга: Гарри Поттер и философский камень, Автор: Джоан Роулинг, Доступность: True</span>
 <a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="n">library</span><span class="o">.</span><span class="n">удалить_книгу</span><span class="p">(</span><span class="n">book2</span><span class="p">)</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="n">library</span><span class="o">.</span><span class="n">delete_book</span><span class="p">(</span><span class="n">book2</span><span class="p">)</span>
 <a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="n">library</span><span class="o">.</span><span class="n">показать_книги</span><span class="p">()</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="n">library</span><span class="o">.</span><span class="n">show_books</span><span class="p">()</span>
 <a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="c1"># Вывод:</span>
 <a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="c1"># Книга: Война и мир, Автор: Лев Толстой, Доступность: True</span>
 <a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="c1"># Книга: Гарри Поттер и философский камень, Автор: Джоан Роулинг, Доступность: True</span>
 <a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
-<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="n">book</span> <span class="o">=</span> <span class="n">library</span><span class="o">.</span><span class="n">найти_книгу</span><span class="p">(</span><span class="s2">&quot;Гарри Поттер и философский камень&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="n">book</span> <span class="o">=</span> <span class="n">library</span><span class="o">.</span><span class="n">find_book</span><span class="p">(</span><span class="s2">&quot;Гарри Поттер и философский камень&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="nb">print</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
 <a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="c1"># Вывод: &lt;Book: Гарри Поттер и философский камень, Автор: Джоан Роулинг, Доступность: True&gt;</span>
 </code></pre></div>
