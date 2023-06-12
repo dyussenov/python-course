@@ -39,6 +39,7 @@ nav:
       - Файлы:
         - Открытие и чтение файлов: basic/text_files/files_read.md
         - Запись в файлы: basic/text_files/files_write.md
+      - Assert: basic/assert.md
       - ООП:
         - Введение в ООП: basic/oop/intro.md
         - Классы, объекты, методы: basic/oop/create.md
