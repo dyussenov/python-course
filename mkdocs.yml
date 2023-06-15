@@ -63,6 +63,7 @@ nav:
       - Faker. Генерация фейковых данных: modules/faker.md
       - Virtualenv. Создание виртуального окружения: modules/venv.md
       - Pathlib. Работа с путями: modules/pathlib.md
+      - Pytest. Тестирование: modules/pytest.md
     - Git:
       - Git в Windows: git/git_windows.md
     - Django:
