@@ -64,6 +64,7 @@ nav:
       - Virtualenv. Создание виртуального окружения: modules/venv.md
       - Pathlib. Работа с путями: modules/pathlib.md
       - Pytest. Тестирование: modules/pytest.md
+      - Flake8. Линтеры: modules/flake8.md
     - Git:
       - Git в Windows: git/git_windows.md
     - Django:
