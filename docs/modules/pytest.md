@@ -41,6 +41,59 @@ pytest
 
 pytest автоматически обнаружит и запустит все файлы с тестами в текущей директории и ее поддиректориях. В нашем случае он найдет файл test_example.py и выполнит тестовую функцию test_add. Если все тесты пройдут успешно, вы увидите соответствующий вывод в терминале.
 
+В качестве демонстрации создадим проект со следующей структурой:
+
+```
+project/
+├── my_module.py
+└── tests/
+    └── test_my_module.py
+```
+
+где:
+
+- `project/`: Главная директория проекта.
+
+- `my_module.py`: Файл с определением функции multiply:
+
+    ```python
+    def multiply(x, y):
+        return x * y
+    ```
+    
+- `tests/`: Директория с тестами.
+
+- `test_my_module.py`: Файл с тестовыми функциями для функции multiply:
+
+    ```python
+    import pytest
+    from my_module import multiply
+
+    def test_multiply():
+        assert multiply(2, 3) == 6
+        assert multiply(5, 10) == 50
+        assert multiply(-4, 8) == -32
+
+    def test_multiply_with_zero():
+        assert multiply(0, 10) == 0
+        assert multiply(5, 0) == 0
+        assert multiply(0, 0) == 0
+
+    def test_multiply_with_negative_numbers():
+        assert multiply(-2, -3) == 6
+        assert multiply(-5, 10) == -50
+        assert multiply(-4, -8) == 32
+
+    def test_multiply_with_float_numbers():
+        assert multiply(2.5, 4) == 10.0
+        assert multiply(3, 1.5) == 4.5
+        assert multiply(0.5, 0.5) == 0.25
+    ```
+
+Запустить тестирование можно находясь в корневоей директории при помощи команды `pytest`.
+
+
+
 ## Дополнительные возможности pytest
 
 pytest предоставляет множество дополнительных возможностей для более продвинутого тестирования. Вот несколько примеров:
