@@ -58,13 +58,14 @@ nav:
         - Заключение: db/sqlite.md
     - Модули:
       - Datetime. Работа с временем и датой: modules/datetime.md
-      - Prettytable. Красивые таблицы: modules/prettytable.md
+      - Json в Python: modules/json.md
       - Requests. Запросы: modules/requests.md
       - Faker. Генерация фейковых данных: modules/faker.md
       - Virtualenv. Создание виртуального окружения: modules/venv.md
       - Pathlib. Работа с путями: modules/pathlib.md
       - Pytest. Тестирование: modules/pytest.md
       - Flake8. Линтеры: modules/flake8.md
+      - Prettytable. Красивые таблицы: modules/prettytable.md
     - Git:
       - Git в Windows: git/git_windows.md
     - Django:
