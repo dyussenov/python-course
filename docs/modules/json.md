@@ -145,25 +145,25 @@ print(json_string)
 
 1. Создайте JSON файл tasks.json, который будет представлять базу данных для управления списком задач. JSON файл должен содержать следующую структуру:
 
-```json
-{
-  "tasks": [
+    ```json
     {
-      "id": 1,
-      "title": "Task 1",
-      "description": "Do something",
-      "completed": false
-    },
-    {
-      "id": 2,
-      "title": "Task 2",
-      "description": "Do something else",
-      "completed": true
-    },
-    ...
-  ]
-}
-```
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Task 1",
+          "description": "Do something",
+          "completed": false
+        },
+        {
+          "id": 2,
+          "title": "Task 2",
+          "description": "Do something else",
+          "completed": true
+        },
+        ...
+      ]
+    }
+    ```
 
 2. Напишите программу на Python, которая будет выполнять следующие функции:
 

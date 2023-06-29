@@ -66,6 +66,8 @@ nav:
       - Pytest. Тестирование: modules/pytest.md
       - Flake8. Линтеры: modules/flake8.md
       - Prettytable. Красивые таблицы: modules/prettytable.md
+    - WEB:
+      - Протокол HTTP: web/http.md
     - Git:
       - Git в Windows: git/git_windows.md
     - Django:
