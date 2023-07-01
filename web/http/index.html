@@ -1455,6 +1455,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#query-string" class="md-nav__link">
+    Query string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#http_2" class="md-nav__link">
     HTTP методы
   </a>
@@ -1902,6 +1909,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#query-string" class="md-nav__link">
+    Query string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#http_2" class="md-nav__link">
     HTTP методы
   </a>
@@ -2014,6 +2028,13 @@
 <p>Тело запроса: <code>{"name": "John", "email": "john@example.com"}</code>. В нашем случае это данные в формате JSON, как и сообщалось в заголовке <code>Content-Type</code>. Также бывают случаи, когда тело запроса остается пустым. Например у метода <code>GET</code> не может быть тела запроса.</p>
 </li>
 </ol>
+<h2 id="query-string">Query string</h2>
+<p>Помимо тела, информацию о запросе можно передать прямо в стартовой строке запроса. Для этого к URI нужно добавить знак вопроса <code>?</code> и прописать данные в формате <code>ключ=значение</code>, а пары разделить через <code>&amp;</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://www.example.com/search?q=apple&amp;category=fruits
+</code></pre></div>
+<blockquote>
+<p>Зачастую query-string используется именно с GET запросами, но строгой привязки к этому типу запросов нет. Вы можете исспользовать query-string с любым методом запросов.</p>
+</blockquote>
 <h2 id="http_2">HTTP методы</h2>
 <p>Различные методы HTTP существуют для разделения и определения различных типов операций, которые могут быть выполнены над ресурсами. Они обеспечивают удобство и гибкость при выполнении операций получения, создания, обновления и удаления данных на сервере. Мы можем обращаться к одному и тому же ресурсу, но с разными запросами: GET - чтобы получить, PUT - чтобы заменить, DELETE - чтобы удалить. Рассмотрим подробнее каждый из них:</p>
 <ul>
@@ -2121,13 +2142,13 @@
 </blockquote>
 <h2 id="http_4">Структура HTTP ответа</h2>
 <p>Во многом HTTP ответ похож на запрос. Ниже приведен пример успешного ответа на запрос:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="na">Content-Length</span><span class="o">:</span> <span class="l">1024</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">   </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span><span class="w"></span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">Content-Length</span><span class="o">:</span> <span class="l">1024</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">   </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Видимым отличием от HTTP запроса является стартовая строка. Стркутра стартовой строки HTTP ответа:</p>
 <ul>
@@ -2142,23 +2163,23 @@
 </li>
 </ul>
 <p>Также существуют заголовки, которые возвращаются только при ответе:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="err">200 OK</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="err">Access-Control-Allow-Origin: *</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="err">Connection: Keep-Alive</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="err">Content-Encoding: gzip</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="err">Content-Type: text/html; charset=utf-8</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="err">Date: Mon, 18 Jul 2016 16:06:00 GMT</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="err">Etag: &quot;c561c68d0ba92bbeb8b0f612a9199f722e3a621a&quot;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="err">Keep-Alive: timeout=5, max=997</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="err">Last-Modified: Mon, 18 Jul 2016 02:36:04 GMT</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="err">Server: Apache</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="err">Set-Cookie: mykey=myvalue; expires=Mon, 17-Jul-2017 16:06:00 GMT; Max-Age=31449600; Path=/; secure</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="err">Transfer-Encoding: chunked</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="err">Vary: Cookie, Accept-Encoding</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="err">X-Backend-Server: developer2.webapp.scl3.mozilla.com</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="err">X-Cache-Info: not cacheable; meta data too large</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="err">X-kuma-revision: 1085259</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="err">x-frame-options: DENY</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="err">200 OK</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="err">Access-Control-Allow-Origin: *</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="err">Connection: Keep-Alive</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="err">Content-Encoding: gzip</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="err">Content-Type: text/html; charset=utf-8</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="err">Date: Mon, 18 Jul 2016 16:06:00 GMT</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="err">Etag: &quot;c561c68d0ba92bbeb8b0f612a9199f722e3a621a&quot;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="err">Keep-Alive: timeout=5, max=997</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="err">Last-Modified: Mon, 18 Jul 2016 02:36:04 GMT</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="err">Server: Apache</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="err">Set-Cookie: mykey=myvalue; expires=Mon, 17-Jul-2017 16:06:00 GMT; Max-Age=31449600; Path=/; secure</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="err">Transfer-Encoding: chunked</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="err">Vary: Cookie, Accept-Encoding</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="err">X-Backend-Server: developer2.webapp.scl3.mozilla.com</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="err">X-Cache-Info: not cacheable; meta data too large</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="err">X-kuma-revision: 1085259</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="err">x-frame-options: DENY</span>
 </code></pre></div>
 <h2 id="-http">Статус-коды HTTP</h2>
 <p>Статус-код в протоколе HTTP представляет числовой код, который возвращается сервером в ответ на запрос клиента. Он предоставляет информацию о результате выполнения запроса и состоянии ответа. Статус-коды используются для обозначения различных сценариев и условий, которые могут возникать при обработке HTTP запросов.</p>
