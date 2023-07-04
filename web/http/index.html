@@ -1496,6 +1496,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#https" class="md-nav__link">
+    HTTPS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-curl" class="md-nav__link">
+    GET-запрос Curl
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1950,6 +1964,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#https" class="md-nav__link">
+    HTTPS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-curl" class="md-nav__link">
+    GET-запрос Curl
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2299,6 +2327,27 @@
 </tr>
 </tbody>
 </table>
+<h2 id="https">HTTPS</h2>
+<p>HTTPS (HyperText Transfer Protocol Secure) - это защищенный протокол передачи гипертекста. Он является комбинацией стандартного протокола HTTP и протокола шифрования SSL/TLS (Secure Sockets Layer/Transport Layer Security). HTTPS обеспечивает безопасное и зашифрованное соединение между веб-браузером пользователя и веб-сервером, что позволяет защитить конфиденциальность и целостность передаваемых данных.</p>
+<p>Чтобы установить HTTPS-соединение, браузеру и серверу надо договориться о симметричном ключе. Для этого сначала браузер и сервер обмениваются асимметрично зашифрованными сообщениями, где указывают секретный ключ и далее общаются при помощи симметричного шифрования.</p>
+<p>Функции протокола HTTPS:
+1. Шифрование данных. При использовании HTTPS все данные, передаваемые между клиентом (обычно веб-браузером) и сервером, шифруются с использованием криптографических алгоритмов. Это предотвращает возможность перехвата и чтения данных злоумышленниками.
+2. Аутентификация. Посетители уверены, что переходят на официальный сайт компании, а не на дубликат, сделанный злоумышленником.
+3. Сохранение данных. Протокол фиксирует все изменения данных. Если злоумышленник всё-таки пытался взломать защиту, об этом можно узнать из сохранённых данных.</p>
+<h2 id="get-curl">GET-запрос Curl</h2>
+<p>Чтобы отправить HTTP-запрос GET через URL в терминале, вы можете использовать утилиту curl:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>curl &lt;URL&gt;
+</code></pre></div>
+<p>Ниже представлен пример простого GET-запроса Curl:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl https://example.com/
+</code></pre></div>
+<p>Ответ сервера на ваш запрос Curl:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>HTTP/1.1 <span class="m">200</span> OK
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Content-Type: text/html
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Content-Length: <span class="m">643</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="o">[</span>html-код<span class="o">]</span>
+</code></pre></div>
 
 
   
