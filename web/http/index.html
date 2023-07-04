@@ -1986,6 +1986,7 @@
 <blockquote>
 <p>Диалог является отчасти односторонним, так как только клиент способен отправлять запросы. Сервер же способен только ждать этот запрос и отправить ответ после его обработки.</p>
 </blockquote>
+<p><img alt="query string" src="/assets/web/http/http протокол.png" /></p>
 <h2 id="http_1">Структура HTTP запроса</h2>
 <p>Ниже представлен пример простого HTTP запроса:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">POST</span> <span class="nn">/api/users</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
@@ -2028,10 +2029,12 @@
 <p>Тело запроса: <code>{"name": "John", "email": "john@example.com"}</code>. В нашем случае это данные в формате JSON, как и сообщалось в заголовке <code>Content-Type</code>. Также бывают случаи, когда тело запроса остается пустым. Например у метода <code>GET</code> не может быть тела запроса.</p>
 </li>
 </ol>
+<p><img alt="структура запроса" src="/assets/web/http/структура запроса.png" /></p>
 <h2 id="query-string">Query string</h2>
 <p>Помимо тела, информацию о запросе можно передать прямо в стартовой строке запроса. Для этого к URI нужно добавить знак вопроса <code>?</code> и прописать данные в формате <code>ключ=значение</code>, а пары разделить через <code>&amp;</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://www.example.com/search?q=apple&amp;category=fruits
 </code></pre></div>
+<p><img alt="query string" src="/assets/web/http/query-string.png" /></p>
 <blockquote>
 <p>Зачастую query-string используется именно с GET запросами, но строгой привязки к этому типу запросов нет. Вы можете исспользовать query-string с любым методом запросов.</p>
 </blockquote>
