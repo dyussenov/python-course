@@ -68,6 +68,7 @@ nav:
       - Prettytable. Красивые таблицы: modules/prettytable.md
     - WEB:
       - Протокол HTTP: web/http.md
+      - Curl: web/curl.md
     - Git:
       - Git в Windows: git/git_windows.md
     - Django:
