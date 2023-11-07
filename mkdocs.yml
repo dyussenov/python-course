@@ -79,6 +79,7 @@ nav:
       - Переадресация и отправка статусных кодов: django/redirect_and_status.md
       - Создание моделей: django/creating_models.md
       - Модели с изображениями: django/image_model.md
+      - Регистрация, аутентификация: django/auth.md
     - Aiogram:
       - Введение: aiogram/intro.md
       - Эхо-бот: aiogram/echo-bot.md
