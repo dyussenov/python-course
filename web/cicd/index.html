@@ -12,14 +12,14 @@
         <meta name="author" content="Асет Дюсенов">
       
       
-        <link rel="canonical" href="https://wiki.dyussenov.dev/aiogram/intro/">
+        <link rel="canonical" href="https://wiki.dyussenov.dev/web/cicd/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>Введение - База знаний</title>
+        <title>Настройка CI/CD - База знаний</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#cicd" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Введение
+              Настройка CI/CD
             
           </span>
         </div>
@@ -292,7 +292,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../web/http/" class="md-tabs__link">
+      <a href="../http/" class="md-tabs__link">
         WEB
       </a>
     </li>
@@ -334,15 +334,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../aiogram/intro/" class="md-tabs__link">
         Aiogram
       </a>
     </li>
@@ -1405,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../web/http/" class="md-nav__link">
+      <a href="../http/" class="md-nav__link">
         Протокол HTTP
       </a>
     </li>
@@ -1419,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../web/curl/" class="md-nav__link">
+      <a href="../curl/" class="md-nav__link">
         Curl
       </a>
     </li>
@@ -1633,14 +1631,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
@@ -1661,59 +1657,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Введение
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../aiogram/intro/" class="md-nav__link">
         Введение
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    Что такое телеграм бот?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    Создание бота
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1725,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../echo-bot/" class="md-nav__link">
+      <a href="../../aiogram/echo-bot/" class="md-nav__link">
         Эхо-бот
       </a>
     </li>
@@ -1895,15 +1843,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    Что такое телеграм бот?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    Создание бота
+  <a href="#_1" class="md-nav__link">
+    Подготовка сервера
   </a>
   
 </li>
@@ -1922,65 +1863,23 @@
                 
                   
 
-  <a href="https://github.com/dyussenov/python-course/edit/master/docs/aiogram/intro.md" title="Редактировать страницу" class="md-content__button md-icon">
+  <a href="https://github.com/dyussenov/python-course/edit/master/docs/web/cicd.md" title="Редактировать страницу" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="_1">Телеграм боты</h1>
-<h2 id="_2">Что такое телеграм бот?</h2>
-<p>Телеграм бот с точки зрения пользователя это аккаунт, с которым можно взаимодействовать и в ответ получать нужную иформацию или услугу. Что можно отправить боту:</p>
+<h1 id="cicd">Настройка CI/CD</h1>
+<h2 id="_1">Подготовка сервера</h2>
 <ul>
-<li>
-<p>Текстовые сообщения: обычное сообщение, ничего особенного</p>
-</li>
-<li>
-<p>Команды: как правило это слово или фраза, перед которой стоит символ <code>/</code>. Отправляется как обычное сообщение. Типичные команды, которые реализованы практически во всех ботах - <code>/start</code> и <code>/help</code>.</p>
-</li>
-<li>
-<p>Медиафайлы: Фотографии, видео, аудио, документы и голосовые сообщения. Боты могут обрабатывать и анализировать эти медиафайлы в соответствии с их функциональностью.</p>
-</li>
-<li>
-<p>Местоположение: Пользователи могут отправлять боту свое текущее местоположение, что может быть полезно, например, для получения информации о ближайших объектах или услугах.</p>
-</li>
-<li>
-<p>Клавиатуры и кнопки: Боты могут предоставлять пользователю интерактивные элементы, такие как кнопки и клавиатуры, чтобы упростить взаимодействие. Пользователь может нажать на кнопку или выбрать определенный вариант ответа с помощью клавиатуры.</p>
-</li>
-<li>
-<p>Опросы и голосования: Боты могут предоставлять пользователю возможность участвовать в опросах или голосованиях, отправлять свои ответы и просматривать результаты.</p>
-</li>
-<li>
-<p>Инлайн-запросы: Пользователи могут отправлять боту инлайн-запросы, которые позволяют получать результаты в режиме реального времени, например, при поиске информации или выполнении операций.</p>
-</li>
-<li>
-<p>Опросы и голосования: Боты могут предоставлять пользователю возможность участвовать в опросах или голосованиях, отправлять свои ответы и просматривать результаты.</p>
-</li>
+<li>Установить git</li>
 </ul>
-<hr />
-<p>С ботом пользователь может взаимодействовать через:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo apt install git
+</code></pre></div>
 <ul>
-<li>
-<p>Личные сообщения: Вы можете написать боту, открыв его профиль и отправив сообщение в поле ввода. Бот ответит вам лично.</p>
-</li>
-<li>
-<p>Группы и супергруппы: Вы можете добавить бота в групповой чат или супергруппу. В этом случае бот сможет видеть сообщения, отправленные всеми участниками чата, и реагировать на них в соответствии с его программированием.</p>
-</li>
-<li>
-<p>Каналы: Бот может быть добавлен в канал в качестве администратора или быть настроен для автоматической обработки и публикации сообщений в канале.</p>
-</li>
-<li>
-<p>Inline-режим: Боты могут быть добавлены в inline-режим, что позволяет использовать их в любом чате для быстрого получения результатов поиска, информации и других функций.</p>
-</li>
+<li>Установить Docker</li>
 </ul>
-<h2 id="_3">Создание бота</h2>
-<p>Все, что от вас требуется - найти официального бота для создания ботов - <code>@BotFather</code> и отправить ему команду <code>/newbot</code>. </p>
-<p><img alt="botfather" src="/assets/aiogram/botfather.png" /></p>
-<p>После указания стартовых данных для нашего бота мы получим секретный <em>токен</em>. Тот, кто владеет этим токеном - владеет этим ботом, поэтому следует держать токен в тайне. </p>
-<p>Данный токен будет использоваться в процессе написания приложения и поэтому следует сохранить его в нашем проекте.</p>
-<hr />
-<p>Теперь у нас все готово к созданию бота. Создайте новый проект и установите aiogram:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install aiogram
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>
 </code></pre></div>
 
 
@@ -2004,42 +1903,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
-      
-        
-        <a href="../../django/auth/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Регистрация, аутентификация" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Назад
-              </span>
-              Регистрация, аутентификация
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../echo-bot/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Эхо-бот" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Вперед
-              </span>
-              Эхо-бот
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
