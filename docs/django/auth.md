@@ -131,6 +131,8 @@
   </html>
   ```
 
+   Здесь, в темплейте главной страницы мы можем видеть пример обращения к пользователю:
+
   ```html
   <!-- templates/home.html -->
 
@@ -235,10 +237,196 @@
   from django.urls import reverse_lazy
   from django.views.generic.edit import CreateView
 
-  from .forms import CustomUserCreationForm
+  from .forms import CustomUser CreationForm
 
   class SignUpView(CreateView):
       form_class = CustomUserCreationForm
       success_url = reverse_lazy('login')
       template_name = 'signup.html'
   ```
+
+## Обращение к модели пользователя
+
+В примерах выше мы уже обращались к модели пользователя внутри темплейта, теперь же разберемся как работать с ней внутри функций представления на примере функционала создания текстовых постов. Для начала создадим приложение для постов и зарегистрируем его в списке установленных приложений:
+
+```shell
+python3 -m manage startapp posts
+```
+
+```python
+# config/settings.py
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'users.apps.UsersConfig',
+    'posts.apps.PostsConfig', # new
+]
+```
+
+---
+
+Теперь создадим простейшую модель поста - мы будем сохранять только автора и текст поста:
+
+```python
+# posts/models
+
+from django.db import models
+
+from users.models import CustomUser
+
+
+class Post(models.Model):
+    author = models.ForeignKey(to=CustomUser, on_delete=models.CASCADE)
+    text = models.TextField()
+```
+
+> Обратите внимание на то, что модель CustomUser импортируется из другого модуля (приложения) - users.
+
+---
+
+Форма будет принимать только текст поста:
+
+```python
+# posts/forms
+
+from django import forms
+from .models import Post
+
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ('text',)
+```
+
+Функция-представления для обработки и отрисовки этой формы:
+
+```python
+# posts/views
+
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+
+from .forms import PostForm
+from .models import Post
+
+
+@login_required
+def add_post(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            return redirect('show-posts')
+    else:
+        form = PostForm()
+    return render(request, 'add-post.html', {'form': form})
+```
+
+Здесть стоит отметить:
+
+- ```@login_required``` - декоратор, запрещает обращаться к представлению неаутентифицированным пользователям, так как добавлять посты могут только аутентифицированные пользователи;
+
+- ```post = form.save(commit=False)``` - создаем модель на основе формы, но не записываем в БД, так как в форме мы не передали пользователя;
+
+- ```post.author = request.user``` - внутри объекта ```request.user``` хранится наш CustomUser, со всеми вытекающими полями.
+
+---
+
+Также добавим функцию представление для отображения всех постов:
+
+```python
+# posts/views
+
+def show_posts(request):
+    posts = Post.objects.all()
+    context = {
+        'posts': posts
+    }
+    return render(request, 'posts.html', context=context)
+```
+
+---
+
+Добавим темлпейты для представлениий, созданных выше:
+
+```html
+ <!-- templates/posts.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Create post{% endblock %}
+
+{% block content %}
+<h2>All posts</h2>
+<ul>
+  {% for post in posts %}
+  <li>
+    <b>{{ post.author.username }}</b>
+    <p>{{ post.text }}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
+```
+
+```html
+ <!-- templates/add-post.html -->
+
+ {% extends 'base.html' %}
+
+{% block title %}Create post{% endblock %}
+
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add post</button>
+</form>
+{% endblock %}
+```
+
+---
+
+Настроим маршрутизацию. Добавим пути приложения в глобальный файл urls.py:
+
+```python
+# config/urls
+
+from django.contrib import admin
+from django.urls import path, include
+from django.views.generic.base import TemplateView
+
+urlpatterns = [
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('', include('posts.urls')), # new
+    path('admin/', admin.site.urls),
+    path('users/', include('users.urls')),
+    path('users/', include('django.contrib.auth.urls')),
+]
+```
+
+И настроим пути внутри приложения:
+
+```python
+# posts/urls
+
+from django.urls import path
+from .views import add_post, show_posts
+
+urlpatterns = [
+    path('add-post/', add_post, name='add-post'),
+    path('posts/', show_posts, name='show-posts')
+]
+```
+
+---
+
+Теперь мы имеем возможость добавлять посты, которые привязаны к конкретным пользователям.
