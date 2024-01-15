@@ -69,6 +69,7 @@ nav:
     - WEB:
       - Протокол HTTP: web/http.md
       - Curl: web/curl.md
+      - Makefile: web/makefile.md
     - Git:
       - Git в Windows: git/git_windows.md
     - Django:
