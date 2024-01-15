@@ -19,7 +19,7 @@
     
     
       
-        <title>makefile - База знаний</title>
+        <title>Makefile - База знаний</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              makefile
+              Makefile
             
           </span>
         </div>
@@ -286,13 +286,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../http/" class="md-tabs__link">
+      <a href="../http/" class="md-tabs__link md-tabs__link--active">
         WEB
       </a>
     </li>
@@ -1375,12 +1377,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -1420,6 +1424,122 @@
       <a href="../curl/" class="md-nav__link">
         Curl
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Makefile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Makefile
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#make-makefile" class="md-nav__link">
+    Что такое make и makefile?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefile_1" class="md-nav__link">
+    Из чего состоит makefile
+  </a>
+  
+    <nav class="md-nav" aria-label="Из чего состоит makefile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Цель
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Переменные
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Зависимости
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefile_2" class="md-nav__link">
+    Условия в makefile
+  </a>
+  
+    <nav class="md-nav" aria-label="Условия в makefile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ifeq-ifneq" class="md-nav__link">
+    ifeq (если равно), ifneq (если не равно)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ifdef-ifndef" class="md-nav__link">
+    ifdef (если определено), ifndef (если не определено)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1836,6 +1956,82 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#make-makefile" class="md-nav__link">
+    Что такое make и makefile?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefile_1" class="md-nav__link">
+    Из чего состоит makefile
+  </a>
+  
+    <nav class="md-nav" aria-label="Из чего состоит makefile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Цель
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Переменные
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Зависимости
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefile_2" class="md-nav__link">
+    Условия в makefile
+  </a>
+  
+    <nav class="md-nav" aria-label="Условия в makefile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ifeq-ifneq" class="md-nav__link">
+    ifeq (если равно), ifneq (если не равно)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ifdef-ifndef" class="md-nav__link">
+    ifdef (если определено), ifndef (если не определено)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1855,9 +2051,121 @@
 
 
 <h1 id="makefile">makefile</h1>
-<blockquote>
-<p>В данном материале мейкфайлы будут рассматриваться в контексте развертывания бекендов на языке python. </p>
-</blockquote>
+<h2 id="make-makefile">Что такое make и makefile?</h2>
+<p><code>make</code> - утилита, автоматизирующая рутинные действия в терминале. Изначально создавалась для упрощения сборки проектов на C++, но затем перекочевала в остальные отрасли (тут будут примеры для питона). make работает в UNIX-подобных системах, но также существуют аналоги для Windows.</p>
+<p><code>makefile</code> - текстовый файл, содержащий список команд для make. Использует собственный синтаксис, легкий в понимании и простой в изучении.</p>
+<hr />
+<p>Допустим, вы вместе с командой разработчиков пишете проект на python. В команде принято перед пушем коммита в репозиторий пройти линтер и запустить тесты. Посмотрим, сколько нужно выполнить команд:</p>
+<ul>
+<li>Прогнать форматтеры: <code>python3 -m isort</code> и <code>python3 -m black</code></li>
+<li>Прогнать линтер: <code>python3 -m pylint</code></li>
+<li>Поднять базу для тестов: <code>docker-compose -f docker-compose.yml up -d --remove-orphans</code></li>
+<li>Запустить миграции для тестовой базы: <code>alembic upgrade head</code></li>
+<li>Запустить тесты: <code>python3 -m pytest</code></li>
+</ul>
+<p>Используя make вышеперечисленные команды можно сократить до такого вида:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ make format
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ make lint
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$ make <span class="nb">test</span>
+</code></pre></div>
+<h2 id="makefile_1">Из чего состоит makefile</h2>
+<p>Синтаксис простого make правила:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">цель (target)</span><span class="o">:</span> зависимости (<span class="n">dependencies</span>)
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    команды для командной строки
+</code></pre></div>
+<h3 id="_1">Цель</h3>
+<p><strong>Цель (target)</strong> - такое название эта часть правила получила потому что изначально тут указывалось имя файла, который должен быть сгенерирован в результате вызова этого правила (вспоминмаем, что изначально make был создан для упрощения сборки проектов на C++). Однако, не всегда требуется создание какого-то файла, поэтому допускается в качестве цели указывать название задачи, которую выполняет правило. Например: цель <code>format</code> для запуска форматтеров <code>python3 -m isort &amp;&amp; python3 -m black</code>.</p>
+<hr />
+<p>В качестве примера, создадим файл с названием <code>Makefile</code> и пропишем в нем простейшее правило:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">hello</span><span class="o">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="nb">echo</span> <span class="s2">&quot;hello world!&quot;</span>
+</code></pre></div>
+<p>Попробуем вызвать наше правило. При вызове утилиты make она будет искать файл с названием <code>Makefile</code> и искать необходимое правило в нем:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ make hello
+</code></pre></div>
+<p>Получаем такой результат:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span> <span class="s2">&quot;hello world!&quot;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>hello world!
+</code></pre></div>
+<p>Как можно заметить, make передал команду <code>echo "hello world!"</code> из правила в терминал, где она была выполнена.</p>
+<hr />
+<h3 id="_2">Переменные</h3>
+<p>Теперь можно попробовать добавить <em>переменные</em> в makefile. Пример создания и использования переменной:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">PYTHON</span> <span class="o">=</span> python3
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nv">VENV_DIR</span> <span class="o">=</span> venv
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nf">venv</span><span class="o">:</span> <span class="c"># правило для создания виртуального окружения</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">$(</span>PYTHON<span class="k">)</span> -m venv <span class="k">$(</span>VENV_DIR<span class="k">)</span>
+</code></pre></div>
+<p>Теперь, при вызове <code>make venv</code> будет выполнена команда <code>python3 -m venv venv</code>. Также прошу обратить внимаение, что в примере продемонстрировано использование комментариев.</p>
+<hr />
+<h3 id="_3">Зависимости</h3>
+<p>А теперь разберемся с <em>зависимостями</em>. В зависимостях указываются цели которые должны быть выполнены или файлы которе должны присутствовать в директории. Разберем на примере:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">PYTHON</span> <span class="o">=</span> python3
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nf">run</span><span class="o">:</span> <span class="n">main</span>.<span class="n">py</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="k">$(</span>PYTHON<span class="k">)</span> -m main
+</code></pre></div>
+<p>Здесь при попытке вызвать <code>make run</code> без файла main.py в директории мы получим ошибку от make:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>make: *** No rule to make target <span class="s1">&#39;main.py&#39;</span>, needed by <span class="s1">&#39;run&#39;</span>.  Stop.
+</code></pre></div>
+<p>Из текста сообщения понятно, что утилита make попыталась найти цель <code>main.py</code>, которая необходима для цели <code>run</code>. Чтобы двигаться дальше у нас есть два пути:</p>
+<ul>
+<li>
+<p>Вручную создать файл <code>main.py</code>. Тогда утилита make обнаружит цель main.py, что в свою очередь удовлетворит зависимости цели <code>run</code>.</p>
+</li>
+<li>
+<p>Указать правило для цели main.py. В данной конфигурации цель будет срабатывать даже если в директории изначально отсутствовал файл зависимости:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">PYTHON</span> <span class="o">=</span> python3
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nf">run</span><span class="o">:</span> <span class="n">main</span>.<span class="n">py</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="k">$(</span>PYTHON<span class="k">)</span> -m main
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nf">main.py</span><span class="o">:</span> <span class="n">clean</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="nb">echo</span> <span class="s1">&#39;print(&quot;hello world&quot;)&#39;</span> &gt;&gt; main.py
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="nf">clean</span><span class="o">:</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    rm -rf __pycache__ <span class="o">&amp;&amp;</span> rm -f main.py
+</code></pre></div>
+</li>
+</ul>
+<hr />
+<p>Зависимости позволяют удобно управлять последовательностью выполнения целей, что может быть крайне полезно. Например, в процессе разработки вам необходим запущенный контейнер с базой данных, поэтому создадим цель для запуска контейнера:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">db</span><span class="o">:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    docker-compose -f docker-compose.yml up -d --remove-orphans
+</code></pre></div>
+<p>А теперь допустим, что вам для unit-тестирования тоже необходима база данных, но не факт что на момент запуска тестов есть контейнер с базой. Тут нам и пригождаются зависимости:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">db</span><span class="o">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    docker-compose -f docker-compose.yml up -d --remove-orphans
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nf">migrate</span><span class="o">:</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    alembic upgrade head
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="nf">test</span><span class="o">:</span> <span class="n">db</span> <span class="n">migrate</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    python3 -m pytest --verbosity<span class="o">=</span><span class="m">2</span> --showlocals --log-level<span class="o">=</span>DEBUG
+</code></pre></div>
+<p>В данном примере перед запуском тестов будет поднят контейнер с базой и произведены актуальные миграции.</p>
+<h2 id="makefile_2">Условия в makefile</h2>
+<p>Условия в make позволяют сделать выполнение целей более гибким. Для создания условий у нас есть несколько операторов: <code>ifeq</code>, <code>ifneq</code>, <code>ifdef</code> и <code>ifndef</code>. У каждого оператора можно указать <code>else</code>, а также каждый оператор должен быть закрыт при помощи <code>endif</code>.</p>
+<h3 id="ifeq-ifneq">ifeq (если равно), ifneq (если не равно)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="cp">ifeq ($(shell test -e &#39;.env&#39; &amp;&amp; echo -n yes),yes)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="cp">    include .env</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="cp">endif</span>
+</code></pre></div>
+<h3 id="ifdef-ifndef">ifdef (если определено), ifndef (если не определено)</h3>
+<p>В данном примере если не установить хост и порт, то будут использоваться значения по умолчанию:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="cp">ifndef APP_PORT</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nv">APP_PORT</span> <span class="o">=</span> <span class="m">8000</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="cp">endif</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="cp">ifndef APP_HOST</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="nv">APP_HOST</span> <span class="o">=</span> <span class="m">127</span>.0.0.1
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="cp">endif</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="nf">run</span><span class="o">:</span> <span class="c"># Запустить веб-сервер</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    uvicorn main:app --host APP_HOST --port APP_PORT
+</code></pre></div>
 
 
   
@@ -1880,6 +2188,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+      
+        
+        <a href="../curl/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Curl" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              Curl
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../git/git_windows/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Git в Windows" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              Git в Windows
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
