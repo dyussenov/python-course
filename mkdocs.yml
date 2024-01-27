@@ -56,6 +56,8 @@ nav:
         - Функции агрегации и группировка: db/sqlite/05_agregation_grouping.md
         - Внешние ключи. Объединение таблиц: db/sqlite/06_foreign_key_join.md
         - Заключение: db/sqlite.md
+      - Postgresql:
+        - Запуск через docker контейнер: db/postgresql/install.md
     - Модули:
       - Datetime. Работа с временем и датой: modules/datetime.md
       - Json в Python: modules/json.md
