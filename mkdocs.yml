@@ -74,6 +74,7 @@ nav:
       - Makefile: web/makefile.md
     - Git:
       - Git в Windows: git/git_windows.md
+      - Удаление файлов в репозитории: git/git_delete.md
     - Django:
       - Что такое Django?: django/intro.md
       - Создание проекта Django: django/init.md
