@@ -72,3 +72,31 @@ my_function()
 В этом примере мы определяем декоратор ```timer```, который принимает функцию в качестве аргумента. Декоратор определяет внутреннюю функцию wrapper, которая измеряет время выполнения функции и выводит его в консоль. Декоратор возвращает функцию wrapper, которая заменяет исходную функцию.
 
 Затем мы используем декоратор ```@timer``` перед определением функции ```my_function```. Это эквивалентно вызову функции ```timer``` с аргументом ```my_function``` и присваиванию результата обратно в ```my_function```. Теперь при вызове ```my_function``` будет выполняться не только ее основной код, но и измерение времени выполнения.
+
+Декоратор кеширования
+
+```python
+def cache(func):
+    storage = {}
+
+    def wrapper(*args):
+        if args not in storage.keys():
+            res = func(*args)
+            storage[args] = res
+            print(f"{args}:{res} added to storage")
+            return res
+        else:
+            print(f"res took from cache")
+            return storage[args]
+
+    return wrapper
+
+
+@cache
+def summa(a: int | float, b: int | float) -> int | float:
+    return a + b
+
+
+print(summa(1, 2))
+print(summa(1, 2))
+```
