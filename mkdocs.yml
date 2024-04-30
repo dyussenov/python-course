@@ -93,7 +93,8 @@ nav:
         - Введение: orm/sqlalchemy/start.md
     - JavaScript:
       - Работа с DOM деревом: js/dom.md
-
+    - Linux:
+      - Работа с пользователями: devops/users.md
 theme:
   name: material
   custom_dir: overrides
